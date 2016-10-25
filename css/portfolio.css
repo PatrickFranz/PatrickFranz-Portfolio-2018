@@ -1,0 +1,41 @@
+/*
+Color Palette: http://paletton.com/#uid=33y0u0kg2qD6qHMb3vDlnlkr4fC
+*/
+html{
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'open sans', sans-serif;
+}
+#topNavBar{
+  display: flex;
+  position: relative;
+  background: #496C89;
+  border-bottom: 1px solid #113350;
+  font-size: 2rem;
+  color: #fff;
+}
+
+#topNavBar span{
+  padding: 2rem
+}
+
+nav{
+  margin: 0 auto;
+  
+}
+
+nav li{
+  display: inline-block;
+  color: #113350;
+  padding: 2rem 4rem;
+  transition: all ease 0.5s;
+}
+
+nav li:hover{
+  color: #A3B8C9;
+  background: #113350;
+}
+
+#search{
+  float: right;
+}
