@@ -1,41 +1,382 @@
 /*
-Color Palette: http://paletton.com/#uid=33y0u0kg2qD6qHMb3vDlnlkr4fC
+Color Palette: http://paletton.com/#uid=73e0K0kjuEL99UueQN2nxxct6t+
+http://flatcolors.net/palette/889-three
+
 */
-html{
+
+* {
   box-sizing: border-box;
+}
+html{
   font-size: 10px;
   font-family: 'open sans', sans-serif;
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 #topNavBar{
   display: flex;
   position: relative;
-  background: #496C89;
-  border-bottom: 1px solid #113350;
+  background: #F1654C;
+  border-bottom: 1px solid #00B5B5;
   font-size: 2rem;
-  color: #fff;
+  color: #F0F0F0;
 }
 
 #topNavBar span{
-  padding: 2rem
+  margin: 3rem 2rem 0;;
 }
 
 nav{
   margin: 0 auto;
-  
 }
 
 nav li{
   display: inline-block;
-  color: #113350;
-  padding: 2rem 4rem;
+  color: #3E4651;
+  padding: 3rem 4rem;
   transition: all ease 0.5s;
 }
 
 nav li:hover{
-  color: #A3B8C9;
-  background: #113350;
+  color: #F0F0F0;
+  background: #00B5B5;
+  border-right: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;
+  cursor: pointer;
 }
 
 #search{
+  position: relative;
   float: right;
+}
+
+#search label{
+  position: absolute;
+  bottom: 2rem;
+  font-size: 1.5rem;
+  left: 0;
+  transition: all 1s;
+}
+
+#search input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  border-bottom: 1px solid darkgray;
+}
+
+#search input[type='image']{
+  position: absolute;
+  right: 0;
+  bottom: 3rem;
+  width: 3rem;
+  border: none;
+}
+
+#search input:focus + label{
+  transform: translateY(-2rem) scale(0.8);
+}
+
+#port-sections{
+  margin: 2rem 10rem;
+}
+
+.font-md{
+  font-size: 1.5rem;
+}
+
+.project--info{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.project--info-links{
+  font-size: 1.5rem;
+  
+  text-decoration: underline; 
+}
+
+.center-title{
+  text-align: center;
+}
+
+.project--info-links a{
+  margin: 1rem 3rem;
+}
+
+.sec-contianer{
+  position: relative;
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 15rem;
+}
+
+
+#port--about-sec article{
+  display: flex;
+}
+
+#port--about-sec article div{
+  flex: 1;
+}
+
+#port--about-pic{
+  text-align: center;
+}
+
+#port--contact-sec{
+  text-align: center;
+}
+
+#tab-container{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative; 
+}
+
+#project--tabs{
+  display: flex;
+  height: 600px;
+  width: 250px;
+  flex-direction: column;
+  overflow-y: auto;
+  background: lightgrey;
+}
+
+.project--tab-content{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top:0;
+  left: 25rem;
+  padding: 2rem;
+  width: 900px;
+  height: 600px;
+  background: #848D82;
+}
+
+.carousel--image{
+  position: relative;
+  background: transparent;
+  width: 600px;
+  height: 350px;
+  
+}
+
+.carousel--image img{
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: 400px;
+
+}
+
+.project--carousel-frame{
+  position: relative;
+  left: 4rem;
+  display: flex;
+  z-index: 20;
+}
+
+
+.project--carousel{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  overflow: auto;
+}
+
+.c-control{
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #335D96;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c-control:hover{
+  color: #FFFF66;
+}
+
+#project--p1{
+  position: absolute;
+  background: url('../img/ss-calc-01.png') center no-repeat;
+  z-index: 1;
+}
+
+#project--tabs > input[type="radio"]{
+  display: none;
+}
+
+.carousel--radio-buttons{
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0;
+  z-index: 10;
+}
+
+.project--tab-content input[type="radio"]{
+  display: none;
+  z-index: 100;
+}
+
+.carousel--radio-buttons label{
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #212020;
+  transition: all ease 0.5s;
+}
+
+.project--tab-content > input:checked + section label{
+  background: #212020;
+}
+
+.carousel--radio-buttons > label:hover{
+  background: #212020;
+  cursor: pointer;
+}
+
+#project--tabs > label{
+  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  line-height: 3.5;
+  color: #212020;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  user-select: none;
+}
+
+#project--tabs > label:hover{
+  background: #848D82;
+  color: #F0F0F0;
+}
+
+#project--tabs > input:checked + label{
+  background: #848D82;
+  color: #F0F0F0;
+}
+
+#port--about-sec img{
+  margin: 0 5rem;
+  width: 300px;
+}
+
+.section--title{
+  text-align: center;
+  font-size: 7rem;
+  color: #3E4651;
+}
+
+.placeholder{
+  height: 400px;
+}
+
+.b{
+  border: 1px dashed red;
+}
+
+.hide{
+  display: none;
+}
+
+.tab--input ~ label{
+  padding-right: 0;
+  font-size: 0.5rem;
+}
+
+.tab--input + label + .project--tab-content{
+  display: none;
+}
+
+.tab--input:checked + label + .project--tab-content{
+  display: flex;
+}
+
+.carousel--input + div{
+  display: none;
+}
+
+.carousel--input:checked + div{
+  display: flex;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.block{
+  display: block;
+}
+
+.middle{
+  padding: 10%;
+}
+
+footer{
+  margin: 5rem 0 0;
+  padding: 2rem;
+  background: #F1654C;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#skill-graphs{
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.bar-graphs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10rem;
+}
+
+.graph-titles{
+  margin: 4rem 0 0;
+}
+
+.modal{
+  background: #3E4651;
+  justify-content: center;
+  align-items: center;
+  color: #F0F0F0;
+  font-size: 3rem;
+  height: 100vh;
+  opacity: 0.5
+}
+
+#search-na{
+  display: none;
+}
+
+#search-na:target{
+  display: flex;
+  position: absolute;
+  top: 0;
 }
