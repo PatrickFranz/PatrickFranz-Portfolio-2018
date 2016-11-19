@@ -167,7 +167,8 @@ nav li:hover{
 }
 
 #port--about-pic{
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 #port--contact-sec{
@@ -175,7 +176,7 @@ nav li:hover{
 }
 
 #tab-container{
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
   position: relative; 
 }
@@ -183,7 +184,7 @@ nav li:hover{
 #project--tabs{
   display: flex;
   height: 600px;
-  width: 250px;
+  width: 225px;
   flex-direction: column;
   overflow-y: auto;
   background: lightgrey;
@@ -194,7 +195,7 @@ nav li:hover{
   display: flex;
   flex-direction: column;
   top:0;
-  left: 25rem;
+  left: 22.5rem;
   padding: 2rem;
   width: 900px;
   height: 600px;
@@ -322,8 +323,9 @@ nav li:hover{
   color: #3E4651;
 }
 
-.section-text{
-  font-size:
+.section-text p{
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .placeholder{
