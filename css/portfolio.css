@@ -19,11 +19,15 @@ a{
 
 #topNavBar{
   display: flex;
-  position: relative;
-  background: #F1654C;
-  border-bottom: 1px solid #00B5B5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 0 2rem;
+  background: #6F2974;
+  border-bottom: 0.5rem solid #A976AD;
   font-size: 2rem;
   color: #F0F0F0;
+  z-index: 90;
 }
 
 #topNavBar span{
@@ -36,16 +40,16 @@ nav{
 
 nav li{
   display: inline-block;
-  color: #3E4651;
+  color: #F0F0F0;
   padding: 3rem 4rem;
   transition: all ease 0.5s;
 }
 
 nav li:hover{
-  color: #F0F0F0;
-  background: #00B5B5;
-  border-right: 1px solid #F0F0F0;
-  border-left: 1px solid #F0F0F0;
+  color: #3E4651;
+  background: #A976AD;
+  /*border-right: 1px solid #F0F0F0;
+  border-left: 1px solid #F0F0F0;*/
   cursor: pointer;
 }
 
@@ -67,8 +71,10 @@ nav li:hover{
   background: transparent;
   border: none;
   font-size: 2rem;
+  color: inherit;
   outline: none;
-  border-bottom: 1px solid darkgray;
+  border-radius: 0;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 #search input[type='image']{
@@ -83,8 +89,32 @@ nav li:hover{
   transform: translateY(-2rem) scale(0.8);
 }
 
-#port-sections{
-  margin: 2rem 10rem;
+#port--about-sec{
+  background: url('../img/bg-mt-thor.jpg') no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
+}
+
+#port--project-sec{
+   background: url('../img/bg-ski-sweden.jpg') no-repeat;
+  background-size: cover;
+   padding-bottom: 10rem;
+}
+
+#port--skills-sec{
+   background: url('../img/bg-surf-oxnard.jpg') no-repeat;
+   background-size: cover;
+   padding-bottom: 10rem;
+}
+
+#port--contact-sec{
+   background: url('../img/bg-goldengate.jpg') no-repeat;
+   background-size: cover;
+   padding-bottom: 10rem;
+}
+
+#port--about-sec > section{
+  font-size: 3rem;
 }
 
 .font-md{
@@ -113,11 +143,18 @@ nav li:hover{
   margin: 1rem 3rem;
 }
 
-.sec-contianer{
+.sec-container{
   position: relative;
   font-size: 2rem;
   line-height: 2;
-  margin-bottom: 15rem;
+  min-height: 110vh;
+  margin: 0 15rem;
+}
+
+.sec-container:before{
+  display: block;
+  content: ' ';
+  height: 10rem;
 }
 
 
@@ -255,9 +292,9 @@ nav li:hover{
 }
 
 #project--tabs > label{
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 2rem 3rem;
-  line-height: 3.5;
+  line-height: 3;
   color: #212020;
   transition: all ease 0.5s;
   cursor: pointer;
@@ -283,6 +320,10 @@ nav li:hover{
   text-align: center;
   font-size: 7rem;
   color: #3E4651;
+}
+
+.section-text{
+  font-size:
 }
 
 .placeholder{
@@ -337,7 +378,6 @@ nav li:hover{
 }
 
 footer{
-  margin: 5rem 0 0;
   padding: 2rem;
   background: #F1654C;
   text-align: center;
@@ -362,21 +402,45 @@ footer{
 }
 
 .modal{
-  background: #3E4651;
+  position: fixed;
+  top: 0;
+  background-color: rgba(62, 70, 81, 0.75);
   justify-content: center;
   align-items: center;
-  color: #F0F0F0;
-  font-size: 3rem;
+  color: #FFF;
+  font-size: 4rem;
   height: 100vh;
-  opacity: 0.5
+  width: 100vw;
+  user-select: none;
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+.modal-header{
+  position: absolute;
+  font-size: 8rem;
+  border: 0.5rem solid #F0F0F0;
+  border-radius: 50%;
+  width: 9rem;
+  text-align: center;
+  top: 10rem;
+  right: 10rem;
+  cursor: pointer;
+  
+}
+
+.modal-header:hover{
+  opacity: 1;
+}
+
+#search-na:target{
+ display: flex;
 }
 
 #search-na{
   display: none;
+  
 }
 
-#search-na:target{
-  display: flex;
-  position: absolute;
-  top: 0;
-}
+
+
