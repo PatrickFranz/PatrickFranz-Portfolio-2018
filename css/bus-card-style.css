@@ -141,6 +141,7 @@
 #bus-card-container .flex-column{
   float: left;
   flex-direction: column;
+  text-align: initial;
 }
 
 #footer{
