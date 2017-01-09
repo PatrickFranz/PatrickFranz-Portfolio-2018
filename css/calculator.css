@@ -1,3 +1,6 @@
+:root{
+  --padding-reg: 0.5rem;
+}
 #calc-body ul{
     display: inline-flex;
 }
@@ -6,11 +9,12 @@
     position: relative;
     background-image: url('../img/lightblue.png');
     margin: 0 auto;
-    width: 45rem;
+    width: 35rem;
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1;
     font-family: 'Cousine', Courier New, monospace;
+    user-select: none;
 }
 
 #screen{    
@@ -47,8 +51,8 @@
 }
 
 .calc--button{
-    padding: 15px 20px;
-    margin:  5px 7px;
+    padding: 10px 15px;
+    margin:  3px 5px;
     font-size: 2em;
     border-radius: 10%;  
     cursor: pointer;   

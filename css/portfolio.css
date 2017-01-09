@@ -3,21 +3,27 @@ Color Palette: http://paletton.com/#uid=73e0K0kjuEL99UueQN2nxxct6t+
 http://flatcolors.net/palette/889-three
 
 */
-
+/*Colors*/
 * {
   box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 10px;
   font-family: 'open sans', sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-#topNavBar{
+strong {
+  font-weight: bold;
+  color: #6F2974;
+}
+
+#topNavBar {
   display: flex;
   position: fixed;
   top: 0;
@@ -28,45 +34,37 @@ a{
   font-size: 2rem;
   color: #F0F0F0;
   z-index: 90;
+  user-select: none;
 }
-
-#topNavBar span{
-  margin: 3rem 2rem 0;;
+#topNavBar span {
+  margin: 3rem 2rem 0;
 }
-
-nav{
+#topNavBar nav {
   margin: 0 auto;
 }
-
-nav li{
+#topNavBar nav li {
   display: inline-block;
   color: #F0F0F0;
   padding: 3rem 4rem;
   transition: all ease 0.5s;
 }
-
-nav li:hover{
+#topNavBar nav li:hover {
   color: #3E4651;
   background: #A976AD;
-  /*border-right: 1px solid #F0F0F0;
-  border-left: 1px solid #F0F0F0;*/
   cursor: pointer;
 }
-
-#search{
+#topNavBar #search {
   position: relative;
   float: right;
 }
-
-#search label{
+#topNavBar #search label {
   position: absolute;
   bottom: 2rem;
   font-size: 1.5rem;
   left: 0;
   transition: all 1s;
 }
-
-#search input{
+#topNavBar #search input {
   width: 100%;
   background: transparent;
   border: none;
@@ -76,167 +74,157 @@ nav li:hover{
   border-radius: 0;
   border-bottom: 1px solid #f0f0f0;
 }
-
-#search input[type='image']{
+#topNavBar #search input[type='image'] {
   position: absolute;
   right: 0;
   bottom: 3rem;
   width: 3rem;
   border: none;
 }
-
-#search input:focus + label{
+#topNavBar #search input:focus + label {
   transform: translateY(-2rem) scale(0.8);
+  -webkit-transform: translateY(-2rem) scale(0.8);
+  -moz-transform: translateY(-2rem) scale(0.8);
+  -ms-transform: translateY(-2rem) scale(0.8);
 }
 
-#port--about-sec{
-  background: url('../img/bg-mt-thor.jpg') no-repeat;
-  background-size: cover;
-  padding-bottom: 10rem;
-}
-
-#port--project-sec{
-   background: url('../img/bg-ski-sweden.jpg') no-repeat;
-  background-size: cover;
-   padding-bottom: 10rem;
-}
-
-#port--skills-sec{
-   background: url('../img/bg-surf-oxnard.jpg') no-repeat;
-   background-size: cover;
-   padding-bottom: 10rem;
-}
-
-#port--contact-sec{
-   background: url('../img/bg-goldengate.jpg') no-repeat;
-   background-size: cover;
-   padding-bottom: 10rem;
-   
-}
-
-#port--about-sec > section{
-  font-size: 3rem;
-}
-
-.font-md{
-  font-size: 1.5rem;
-}
-
-.project--info{
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 2rem;
-}
-
-.project--info-links{
-  font-size: 1.5rem;
-  
-  text-decoration: underline; 
-}
-
-.center-title{
-  text-align: center;
-}
-
-.project--info-links a{
-  margin: 1rem 3rem;
-}
-
-.sec-container{
+#port-sections .sec-container {
   position: relative;
   font-size: 2rem;
   line-height: 2;
   min-height: 110vh;
   margin: 0 15rem;
 }
-
-.sec-container:before{
+#port-sections .sec-container .section--title {
+  text-align: center;
+  font-size: 7rem;
+  color: #3E4651;
+}
+#port-sections .sec-container .section-text p {
+  font-size: 2.5rem;
+  text-align: center;
+}
+#port-sections .sec-container .sec-container:before {
   display: block;
   content: ' ';
   height: 10rem;
 }
-
-
-#port--about-sec article{
-  display: flex;
+#port-sections #port--about-sec {
+  /* Begin ABOUT section */
+  background: url("../img/bg-mt-thor.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
 }
-
-#port--about-sec article div{
+#port-sections #port--about-sec section {
+  font-size: 2.5rem;
+}
+#port-sections #port--about-sec section article {
+  display: flex;
+  flex-direction: row;
+}
+#port-sections #port--about-sec section article div {
   flex: 1;
 }
-
-#port--about-pic{
+#port-sections #port--about-sec section article #port--about-pic {
   display: flex;
   align-items: center;
 }
-
-#port--contact-sec{
-  text-align: center;
+#port-sections .font-md {
+  font-size: 1.5rem;
 }
-
-#tab-container{
-  width: 1100px;
+#port-sections #port--project-sec {
+  /*Begin PROJECT section*/
+  background: url("../img/bg-ski-sweden.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
+}
+#port-sections #port--project-sec #projects-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.75);
+}
+#port-sections #port--project-sec #projects-container #tab-container {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin: 0 auto;
-  position: relative; 
+  padding: 0 1rem;
+  user-select: none;
 }
-
-#project--tabs{
-  display: flex;
-  height: 600px;
-  width: 225px;
-  flex-direction: column;
-  overflow-y: auto;
-  background: lightgrey;
-}
-
-.project--tab-content{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top:0;
-  left: 22.5rem;
+#port-sections #port--project-sec #projects-container #tab-container label {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
   padding: 2rem;
-  width: 900px;
-  height: 600px;
-  background: #848D82;
+  opacity: 0.75;
+  cursor: pointer;
 }
-
-.carousel--image{
-  position: relative;
-  background: transparent;
-  width: 600px;
-  height: 350px;
-  
+#port-sections #port--project-sec #projects-container #tab-container label:hover {
+  opacity: 1;
+  border-right: 1px solid blue;
 }
-
-.carousel--image img{
-  margin: 0 auto;
-  max-width: 600px;
-  max-height: 400px;
-
-}
-
-.project--carousel-frame{
-  position: relative;
-  left: 4rem;
+#port-sections #port--project-sec #projects-container #projects-right {
   display: flex;
-  z-index: 20;
+  position: relative;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
-
-
-.project--carousel{
-  position: absolute;
+#port-sections #port--project-sec #projects-container #projects-right input[name="projects"] {
+  display: none;
+}
+#port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked {
+  opacity: 1;
+  border-right: 1px solid blue;
+}
+#port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + .c-proj {
   display: flex;
-  width: 100%;
+  flex-direction: column;
   height: 100%;
+}
+#port-sections #port--project-sec #projects-container #projects-right .c-proj {
+  display: none;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
+  display: flex;
+  position: relative;
+  flex: 2 1 auto;
   justify-content: center;
   align-content: center;
-  overflow: auto;
+  padding: 3rem 0;
 }
-
-.c-control{
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel input[type="radio"] {
+  display: none;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel video, #port-sections #port--project-sec #projects-container #projects-right .proj-carousel img {
+  width: 100%;
+  height: 100%;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
+  flex: 0 0 auto;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #212020;
+  transition: all ease 0.25s;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
+  background: #212020;
+  cursor: pointer;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel .c-control {
   display: flex;
   align-items: center;
   padding: 0 2rem;
@@ -246,165 +234,100 @@ nav li:hover{
   user-select: none;
   cursor: pointer;
 }
-
-.c-control:hover{
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel .c-control:hover {
   color: #FFFF66;
 }
-
-#project--p1{
-  position: absolute;
-  background: url('../img/ss-calc-01.png') center no-repeat;
-  z-index: 1;
+#port-sections #port--project-sec #projects-container #projects-right .proj-carousel img {
+  padding-bottom: 2rem;
 }
-
-#project--tabs > input[type="radio"]{
+#port-sections #port--project-sec #projects-container #projects-right .carousel--input + div {
   display: none;
 }
-
-.carousel--radio-buttons{
+#port-sections #port--project-sec #projects-container #projects-right .carousel--input:checked + div {
   display: flex;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-desc {
+  display: flex;
+  position: relative;
+  flex: 2 0 auto;
+  flex-direction: column;
   justify-content: center;
-  padding: 2rem 0 0;
-  z-index: 10;
+  border-top: 1px solid darkslategray;
+  width: 100%;
+  font-size: 1.5rem;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a {
+  margin: 1rem 3rem;
+}
+#port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a img {
+  width: 25px;
+  margin-right: 5px;
+}
+#port-sections #port--skills-sec {
+  background: url("../img/bg-surf-oxnard.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
+}
+#port-sections #port--contact-sec {
+  background: url("../img/bg-goldengate.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 10rem;
 }
 
-.project--tab-content input[type="radio"]{
-  display: none;
-  z-index: 100;
+.center-title {
+  text-align: center;
 }
 
-.carousel--radio-buttons label{
-  display: inline-flex;
-  height: 2rem;
-  width: 2rem;
-  margin: 0 1rem;
-  border-radius: 50%;
-  background: transparent;
-  border: 2px solid #212020;
-  transition: all ease 0.5s;
+#port--contact-sec {
+  text-align: center;
 }
 
-.project--tab-content > input:checked + section label{
-  background: #212020;
-}
-
-.carousel--radio-buttons > label:hover{
-  background: #212020;
-  cursor: pointer;
-}
-
-#project--tabs > label{
-  font-size: 2rem;
-  padding: 2rem 3rem;
-  line-height: 3;
-  color: #212020;
-  transition: all ease 0.5s;
-  cursor: pointer;
-  user-select: none;
-}
-
-#project--tabs > label:hover{
-  background: #848D82;
-  color: #F0F0F0;
-}
-
-#project--tabs > input:checked + label{
-  background: #848D82;
-  color: #F0F0F0;
-}
-
-#port--about-sec img{
+#port--about-sec img {
   margin: 0 5rem;
   width: 300px;
 }
 
-.section--title{
-  text-align: center;
-  font-size: 7rem;
-  color: #3E4651;
-}
-
-.section-text p{
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.placeholder{
-  height: 400px;
-}
-
-.b{
-  border: 1px dashed red;
-}
-
-.hide{
-  display: none;
-}
-
-.tab--input ~ label{
-  padding-right: 0;
-  font-size: 0.5rem;
-}
-
-.tab--input + label + .project--tab-content{
-  display: none;
-}
-
-.tab--input:checked + label + .project--tab-content{
-  display: flex;
-}
-
-.carousel--input + div{
-  display: none;
-}
-
-.carousel--input:checked + div{
-  display: flex;
-}
-
-.flex-column{
+.flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
 }
 
-.block{
-  display: block;
-}
-
-.middle{
-  padding: 10%;
-}
-
-footer{
+footer {
   padding: 2rem;
   background: #F1654C;
   text-align: center;
   font-size: 1.5rem;
 }
 
-#skill-graphs{
+#skill-graphs {
   width: 70%;
   margin: 0 auto;
   padding: 2rem 0;
 }
 
-.bar-graphs{
+.bar-graphs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 10rem;
 }
 
-.graph-titles{
+.graph-titles {
   margin: 4rem 0 0;
 }
 
-.modal{
+.modal {
   position: fixed;
   top: 0;
   background-color: rgba(62, 70, 81, 0.75);
@@ -419,7 +342,7 @@ footer{
   z-index: 100;
 }
 
-.modal-header{
+.modal-header {
   position: absolute;
   font-size: 8rem;
   border: 0.5rem solid #F0F0F0;
@@ -429,21 +352,41 @@ footer{
   top: 10rem;
   right: 10rem;
   cursor: pointer;
-  
 }
-
-.modal-header:hover{
+.modal-header:hover {
   opacity: 1;
 }
 
-#search-na:target{
- display: flex;
-}
-
-#search-na{
+#search-na {
   display: none;
-  
+}
+#search-na:target {
+  display: flex;
 }
 
-
-
+@media (max-width: 1200px) {
+  #topNavBar {
+    font-size: 1.5rem;
+  }
+  #topNavBar span {
+    margin: 2rem 1rem 0;
+  }
+  #topNavBar nav li {
+    padding: 2rem 2rem;
+  }
+  #topNavBar #search label {
+    bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  #topNavBar #search input {
+    width: 100%;
+    font-size: 2rem;
+  }
+  #topNavBar #search input[type='image'] {
+    position: absolute;
+    right: 0;
+    bottom: 2rem;
+    width: 2rem;
+    border: none;
+  }
+}

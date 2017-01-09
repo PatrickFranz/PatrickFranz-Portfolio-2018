@@ -86,8 +86,8 @@ input.shipping-text-input{
 }
 
 #login-container{
-    padding: 0px 0px 2rem;
-    width: 100%;
+    padding: 0px 0px 1rem;
+    width: 60rem;
     border-radius: 5px;
     background: #03A9F4;
     

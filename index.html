@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/calculator.css">
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/bus-card-style.css">
   <link rel="stylesheet" href="css/graph.css">
   <link rel="stylesheet" href="css/button.css">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css4family=Open+Sans:300,400,700" rel="stylesheet">
   <title>Showing off Patrick Franz</title>
 </head>
 <body>
@@ -33,7 +36,6 @@
     </span>
   </section>
   <section id='port-sections'>
-    
     <!--ABOUT SECTION-->
     <div id='port--about-sec'>
       <section class='sec-container'>
@@ -56,50 +58,60 @@
 
     <!--PROJECTS SECTION-->
     <div id='port--project-sec'>
-      <section  class='sec-container'>
+      <section class='sec-container'>
         <div class='section--title'>
           <p>[Projects]</p>
         </div>
         <div class='section-text'>
           <p>Here you can find some of the projects I've been working on. </p>
         </div>
-        <div id="tab-container">
-          <div id='project--tabs'> 
-            <!-- Project 1 -->
-            <input id="tab--proj1" class='tab--input' type="radio" name='project--radio' checked>
-            <label for="tab--proj1">Calculator</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj1-1' class='carousel--input' type='radio' name='p1-radio' checked>
-              <div class='project--carousel-frame'>
-                <label for="proj1-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/ss-calc-01.png" alt="Calculator screenshot"> 
+        <div id="projects-container">
+          <div id="tab-container">
+            <label for="project-1">Calculator</label>
+            <label for="project-2">CSS Buttons</label>
+            <label for="project-3">Web Forms</label>
+            <label for="project-4">Product Listing</label>
+            <label for="project-5">User Profile Page</label>
+            <label for="project-6">Image Gallery</label>
+          </div>
+          <!--PROJECT CONTENT-->
+          <div id="projects-right">
+
+            <!--PROJECT 1 -CALCULATOR -->
+            <input type="radio" name="projects" id="project-1" checked>
+            <div class="c-proj">
+              <div class="proj-carousel">                
+                <input id='proj1-1' class='carousel--input' type='radio' name='p1-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj1-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!--Content Here-->
+                      <img src="img/ss-calc-01.png" alt="Calculator screenshot">
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj1-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj1-2' class='carousel--input' type='radio' name='p1-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj1-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
+                  <label for='proj1-2' class='c-control '>&gt;</label>
+                </div>
+                
+                <!--Carousel - Content 2-->
+                <input id='proj1-2' class='carousel--input' type='radio' name='p1-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj1-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
                     <!-- Content HERE -->
                     <img src="img/ss-calc-02.png" alt="Calculator screenshot">
-                  </div> 
+                    </div> 
+                  </div>
+                  <label for='proj1-3' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj1-3' class='c-control '>&gt;</label>
-              </div>
-              <!--Carousel - Content 3-->
-              <input id='proj1-3' class='carousel--input' type='radio' name='p1-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj1-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj1-3' class='carousel--input' type='radio' name='p1-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj1-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='project--caro'>
                     <!-- Content HERE - CALCULATOR -->
                       <section id='calc-body'>        
                         <span id='disp-op'></span>
@@ -157,76 +169,77 @@
                       <script src="js/calc.js"></script>
 
                     <!--CALCULATOR END-->
-                  </div>  
+                    </div>  
+                  </div>
+                  <label for='proj1-1' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj1-1' class='c-control '>&gt;</label>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj1-1"></label>
+                  <label for="proj1-2"></label>
+                  <label for="proj1-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj1-1"></label>
-                <label for="proj1-2"></label>
-                <label for="proj1-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
                 <p>A fully functional calcuator to hone my skills with more complex CSS layouts. JavaScript's event listeners handle the buttons.</p>
                 <div class='project--info-links'>
-                  <a href="http://patrickfranz.github.io/calculator/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/calculator" target="_blank" ><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
+                  <a href="http://patrickfranz.github.io/calculator/" target="_blank"><img src="img/ico-www-1.png" alt="WWW">Project Site</a           
+                  ><a href="https://github.com/PatrickFranz/calculator" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo">Project on Github</a>
                 </div>
               </div>
             </div>
-            
-            <!--Project 2-->
-            <input id="pro2" class='tab--input' type="radio" name='project--radio'>
-            <label for="pro2">CSS Buttons</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj2-1' class='carousel--input' type='radio' name='p2-radio' checked>
-              <div class='project--carousel-frame '>
-                <label for="proj2-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/web-button-1.png" alt="Web button example">
+
+            <!--PROJECT 2 CSS BUTTONS -->
+            <input type="radio" name="projects" id="project-2">
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj2-1' class='carousel--input' type='radio' name='p2-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj2-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!--Content Here-->
+                      <img src="img/web-button-1.png" alt="Web button example">
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj2-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj2-2' class='carousel--input' type='radio' name='p2-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj2-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
+                  <label for='proj2-2' class='c-control '>&gt;</label>
+                </div>
+                
+                <!--Carousel - Content 2-->
+                <input id='proj2-2' class='carousel--input' type='radio' name='p2-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj2-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
                     <!-- Content HERE -->
                     <img src="img/web-button-2.png" alt="Web button example">
-                  </div> 
+                    </div> 
+                  </div>
+                  <label for='proj2-3' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj2-3' class='c-control '>&gt;</label>
-              </div>
-              <!--Carousel - Content 3-->
-              <input id='proj2-3' class='carousel--input' type='radio' name='p2-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj2-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel block middle'>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj2-3' class='carousel--input' type='radio' name='p2-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj2-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
                     <!-- Content HERE -->
-                    <a class="button button-sm">A Small Button</a> <br>
-                    <a class="button button-md">A Medium Button</a> <br>
-                    <a class="button button-lg">A Large Button</a>
-                  </div>  
+                    <i class="button button-sm">A Small Button</i>
+                    <i class="button button-md">A Medium Button</i>
+                    <i class="button button-lg">A Large Button</i>
+                    </div>  
+                  </div>
+                  <label for='proj2-1' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj2-1' class='c-control '>&gt;</label>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj2-1"></label>
+                  <label for="proj2-2"></label>
+                  <label for="proj2-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj2-1"></label>
-                <label for="proj2-2"></label>
-                <label for="proj2-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML and CSS</p>
                 <p>A simple button web component.</p>
                 <div class='project--info-links'>
@@ -235,65 +248,67 @@
                 </div>
               </div>
             </div>
-
-            <!--Project 3-->
-            <input id="pro3" class='tab--input' type="radio" name='project--radio'>
-            <label for="pro3">Web Forms</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj3-1' class='carousel--input' type='radio' name='p3-radio' checked>
-              <div class='project--carousel-frame '>
-                <label for="proj3-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                  <!-- Content HERE -->
-                    <img src="img/web-form-1.png" alt="Login form example">
+      
+            <!--PROJECT 3 - WEB FORMS-->
+            <input type="radio" name="projects" id="project-3">
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj3-1' class='carousel--input' type='radio' name='p3-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj3-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!--Content Here-->
+                      <img src="img/web-form-1.png" alt="Login form example">
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj3-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj3-2' class='carousel--input' type='radio' name='p3-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj3-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                  <!-- Content HERE -->
-                    <img src="img/web-form-2.png" alt="CC form example"> 
-                  </div> 
+                  <label for='proj3-2' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj3-3' class='c-control '>&gt;</label>
-              </div>
-              <!--Carousel - Content 3-->
-              <input id='proj3-3' class='carousel--input' type='radio' name='p3-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj3-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
+                
+                <!--Carousel - Content 2-->
+                <input id='proj3-2' class='carousel--input' type='radio' name='p3-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj3-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
                     <!-- Content HERE -->
-                    <div id="login-container" class=''>
-                      <div id="login-title" class="center-block-content">WELCOME</div>
-                      <div class="center-block-content">
-                        <input class="wide-80-text width80" type="text" id="uname" placeholder="Username"><br>
-                        <input class="wide-80-text" type="password" id="pword" placeholder="Password"><br>              
-                        <input id='login-checkbox' type="checkbox" name="remember"><label for="remember">Remember my username?</label>                  
-                        <div class="center">
-                            <button class="button button-md">Login</button>
+                    <img src="img/web-form-2.png" alt="CC form example"> 
+                    </div> 
+                  </div>
+                  <label for='proj3-3' class='c-control '>&gt;</label>
+                </div>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj3-3' class='carousel--input' type='radio' name='p3-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj3-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <div id="login-container" class=''>
+                        <div id="login-title" class="center-block-content">WELCOME</div>
+                        <div class="center-block-content">
+                          <input class="wide-80-text width80" type="text" id="uname" placeholder="Username"><br>
+                          <input class="wide-80-text" type="password" id="pword" placeholder="Password"><br>              
+                          <input id='login-checkbox' type="checkbox" name="remember"><label for="remember">Remember my username4</label>                  
+                          <div class="center">
+                              <button class="button button-md">Login</button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>  
+                    <!--END Content-->
+                    </div>  
+                  </div>
+                  <label for='proj3-1' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj3-1' class='c-control '>&gt;</label>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj3-1"></label>
+                  <label for="proj3-2"></label>
+                  <label for="proj3-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj3-1"></label>
-                <label for="proj3-2"></label>
-                <label for="proj3-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
                 <p>A numbers of forms covering various scenarios commonly found in websites. The forms use JavaScript and Form Validation API to validate input.</p>
                 <div class='project--info-links'>
@@ -301,58 +316,60 @@
                   ><a href="https://github.com/PatrickFranz/web-forms" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
                 </div>
               </div>
-            </div>
-            
-            <!--Project 4-->
-            <input id="pro4" class='tab--input' type="radio" name='project--radio'>
-            <label for="pro4">Product Listings</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj4-1' class='carousel--input' type='radio' name='p4-radio' checked>
-              <div class='project--carousel-frame '>
-                <label for="proj4-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                  <!-- Content HERE <-->
-                    <img src="img/cart-1.png" alt="Product listing example">
+            </div>  
+
+
+            <!--PROJECT 4 - PRODUCT LISTING -->
+            <input type="radio" name="projects" id="project-4">
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj4-1' class='carousel--input' type='radio' name='p4-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj4-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!--Content Here-->
+                      <img src="img/cart-1.png" alt="Product listing example">
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj4-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj4-2' class='carousel--input' type='radio' name='p4-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj4-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                  <!-- Content HERE -->
-                    <img src="img/cart-2.png" alt="Cart example">
-                  </div> 
+                  <label for='proj4-2' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj4-3' class='c-control '>&gt;</label>
-              </div>
-              <!--Carousel - Content 3-->
-              <input id='proj4-3' class='carousel--input' type='radio' name='p4-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj4-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                  <!-- Content HERE -->
-                    <video height="350"  width="600" src="img/product.webm" autoplay loop>
-                      It looks like your browser doesn't support HTML5.
-                    </video>                  
-                  </div>  
+                
+                <!--Carousel - Content 2-->
+                <input id='proj4-2' class='carousel--input' type='radio' name='p4-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj4-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <img src="img/cart-2.png" alt="Cart example">                    
+                    </div> 
+                  </div>
+                  <label for='proj4-3' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj4-1' class='c-control '>&gt;</label>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj4-3' class='carousel--input' type='radio' name='p4-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj4-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <video height="350"  width="600" src="img/product.webm" autoplay loop>
+                        It looks like your browser doesn't support HTML5.
+                      </video>                  
+                    </div>  
+                  </div>
+                  <label for='proj4-1' class='c-control '>&gt;</label>
+                </div>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj4-1"></label>
+                  <label for="proj4-2"></label>
+                  <label for="proj4-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj4-1"></label>
-                <label for="proj4-2"></label>
-                <label for="proj4-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
                 <p>This project is to design and implement a functional product list and shopping cart. This is another advanced layout exercise and incorporates more advanced JavaScript to bring the cart to life.</p>
                 <div class='project--info-links'>
@@ -362,56 +379,57 @@
               </div>
             </div>
 
-            <!--Project 5-->
-            <input id="pro5" class='tab--input' type="radio" name='project--radio'>
-            <label for="pro5">User Profile Page</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj5-1' class='carousel--input' type='radio' name='p5-radio' checked>
-              <div class='project--carousel-frame '>
-                <label for="proj5-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/md-profile-1.png" alt="Sample Modern Developer Encyclopedia profile page">  
+            <!--PROJECT 5-->
+            <input type="radio" name="projects" id="project-5">
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj5-1' class='carousel--input' type='radio' name='p5-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj5-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                        <!--Content Here-->
+                       <img src="img/md-profile-1.png" alt="Sample Modern Developer Encyclopedia profile page"> 
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj5-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj5-2' class='carousel--input' type='radio' name='p5-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj5-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/md-profile-2.png" alt="Sample Modern Developer Encyclopedia profile page">
-                  </div> 
+                  <label for='proj5-2' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj5-3' class='c-control '>&gt;</label>
-              </div>
-              <!--Carousel - Content 3-->
-              <input id='proj5-3' class='carousel--input' type='radio' name='p5-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj5-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <video width="600" height="" src="img/md-profile-3.webm" autoplay loop>
-                      It looks like your browser doesn't support HTML5.
-                    </video>
-                  </div>  
+                
+                <!--Carousel - Content 2-->
+                <input id='proj5-2' class='carousel--input' type='radio' name='p5-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj5-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <img src="img/md-profile-2.png" alt="Sample Modern Developer Encyclopedia profile page">
+                    </div> 
+                  </div>
+                  <label for='proj5-3' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj5-1' class='c-control '>&gt;</label>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj5-3' class='carousel--input' type='radio' name='p5-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj5-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <video width="100%" height="400" src="img/md-profile-3.webm" autoplay loop>
+                        It looks like your browser doesn't support HTML5.
+                      </video>
+                    </div>  
+                  </div>
+                  <label for='proj5-1' class='c-control '>&gt;</label>
+                </div>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj5-1"></label>
+                  <label for="proj5-2"></label>
+                  <label for="proj5-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj5-1"></label>
-                <label for="proj5-2"></label>
-                <label for="proj5-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
                 <p>An advanced UI layout project to create a real-world profile page. This group project required collaboration with another student.</p>
                 <div class='project--info-links'>
@@ -420,57 +438,58 @@
                 </div>
               </div>
             </div>
-          
-            <!--Project 6-->
-            <input id="pro6" class='tab--input' type="radio" name='project--radio'>
-            <label for="pro6">Image Gallery</label>
-            <div class='project--tab-content'>
-              <!--Carousel - Content 1-->
-              <input id='proj6-1' class='carousel--input' type='radio' name='p6-radio' checked>
-              <div class='project--carousel-frame '>
-                <label for="proj6-3" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/image-gallery-1.png" alt="Image gallery screenshot">
+
+             <!--PROJECT 6-->
+            <input type="radio" name="projects" id="project-6">
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj6-1' class='carousel--input' type='radio' name='p6-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj6-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!--Content Here-->
+                      <img src="img/image-gallery-1.png" alt="Image gallery screenshot">
+                    </div> 
                   </div> 
-                </div> 
-                <label for='proj6-2' class='c-control '>&gt;</label>
-              </div>
-              
-              <!--Carousel - Content 2-->
-              <input id='proj6-2' class='carousel--input' type='radio' name='p6-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj6-1" class='c-control'>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <img src="img/image-gallery-2.png" alt="Image gallery screenshot">
-                  </div> 
+                  <label for='proj6-2' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj6-3' class='c-control '>&gt;</label>
-              </div>
+                
+                <!--Carousel - Content 2-->
+                <input id='proj6-2' class='carousel--input' type='radio' name='p6-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj6-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <img src="img/image-gallery-2.png" alt="Image gallery screenshot">
+                    </div> 
+                  </div>
+                  <label for='proj6-3' class='c-control '>&gt;</label>
+                </div>
                 <!--Carousel - Content 3-->
-              <input id='proj6-3' class='carousel--input' type='radio' name='p6-radio'>
-              <div class='project--carousel-frame'>
-                <label for="proj6-2" class='c-control '>&lt;</label>
-                <div class='carousel--image'>
-                  <div class='project--carousel'>
-                    <!-- Content HERE -->
-                    <video width="600"  src="img/image-gallery-3.webm" autoplay loop>
-                      It looks like your browser doesn't support HTML5.
-                    </video>
-                  </div>  
+  
+                <input id='proj6-3' class='carousel--input' type='radio' name='p6-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj6-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <div class='proj-carousel'>
+                      <!-- Content HERE -->
+                      <video src="img/image-gallery-3.webm" autoplay loop>
+                        It looks like your browser doesn't support HTML5.
+                      </video>
+                    </div>  
+                  </div>
+                  <label for='proj6-1' class='c-control '>&gt;</label>
                 </div>
-                <label for='proj6-1' class='c-control '>&gt;</label>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj6-1"></label>
+                  <label for="proj6-2"></label>
+                  <label for="proj6-3"></label>
+                </section>
               </div>
-              <section class='carousel--radio-buttons'>
-                <label for="proj6-1"></label>
-                <label for="proj6-2"></label>
-                <label for="proj6-3"></label>
-              </section>
-              
-              <div class='project--info'>
+              <div class='proj-desc'>
                 <p><strong>Technologies:</strong> HTML, CSS</p>
                 <p>A simple image gallery using CSS transitions.</p>
                 <div class='project--info-links'>
@@ -479,10 +498,13 @@
                 </div>
               </div>
             </div>
+            <!--ADD NEW PROJECTS HERE - template in temp.html-->
+
           </div>
-        </div> 
+        </div>
       </section>
     </div>
+
     <!--SKILLS SECTION-->
     <div id='port--skills-sec'>
       <section class='sec-container'>
@@ -523,24 +545,30 @@
             <div class='bars'>
               <div data-skill-name="Frontend JavaScript"
                   data-graph-bar="proficient" 
-                  data-about="Proficient: I really know my way around here." 
-                  class='bar graph-bar bar-bg-blue'></div>
+                  class='bar graph-bar bar-bg-blue tooltip'>
+                    <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+              </div>
               <div data-skill-name="HTML/CSS"
                   data-graph-bar="expert" 
-                  data-about="Expert: I can do this in my sleep." 
-                  class='bar graph-bar bar-bg-yellow' ></div>
+                  class='bar graph-bar bar-bg-yellow tooltip' >
+                    <span class='tooltip-text'><strong>Expert: </strong>I can do this in my sleep.</span>
+              </div>
               <div data-skill-name="RWD"
                   data-graph-bar="competent" 
                   data-about="Competent: I can do a lot here, but I'm still learning."
-                  class='bar graph-bar bar-bg-purple'></div>
+                  class='bar graph-bar bar-bg-purple tooltip'>
+                    <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                  </div>
               <div data-skill-name="SASS"
                   data-graph-bar="learning" 
-                  data-about="Learning: I am actively increasing my skills in this area."
-                  class='bar graph-bar bar-bg-green2'></div>
+                  class='bar graph-bar bar-bg-green2 tooltip'>
+                    <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                  </div>
               <div data-skill-name="React"
                   data-graph-bar="learning" 
-                  data-about="Learning: I am actively increasing my skills in this area."
-                  class='bar graph-bar bar-bg-red'></div>
+                  class='bar graph-bar bar-bg-red tooltip'>
+                    <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                  </div>
             </div>
             <div class='x-axis'>
               <ul>
@@ -567,23 +595,33 @@
               <div data-skill-name="java"
                   data-graph-bar="proficient" 
                   data-about="Proficient: I really know my way around here." 
-                  class='bar graph-bar bar-bg-blue'></div>
+                  class='bar graph-bar bar-bg-blue tooltip'>
+                    <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                  </div>
               <div data-skill-name="database"
                   data-graph-bar="proficient" 
                   data-about="Proficient: I really know my way around here." 
-                  class='bar graph-bar bar-bg-yellow' ></div>
+                  class='bar graph-bar bar-bg-yellow tooltip'>
+                    <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                  </div>
               <div data-skill-name="RWD"
                   data-graph-bar="learning" 
                   data-about="Learning: I am actively increasing my skills in this area."
-                  class='bar graph-bar bar-bg-purple'></div>
+                  class='bar graph-bar bar-bg-purple tooltip'>
+                    <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                  </div>
               <div data-skill-name="SASS"
                   data-graph-bar="learning" 
                   data-about="Learning: I am actively increasing my skills in this area."
-                  class='bar graph-bar bar-bg-green2'></div>
+                  class='bar graph-bar bar-bg-green2 tooltip'>
+                     <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                  </div>
               <div data-skill-name="jQuery"
                   data-graph-bar="learning" 
                   data-about="Learning: I am actively increasing my skills in this area."
-                  class='bar graph-bar bar-bg-red'></div>
+                  class='bar graph-bar bar-bg-red tooltip'>
+                     <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                  </div>
             </div>
             <div class='x-axis'>
               <ul>
@@ -612,23 +650,33 @@
               <div data-skill-name="Written Communication"
                   data-graph-bar="proficient" 
                   data-about="Proficient: I really know my way around here." 
-                  class='bar graph-bar bar-bg-blue'></div>
+                  class='bar graph-bar bar-bg-blue tooltip'>
+                    <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                  </div>
               <div data-skill-name="Project Management"
                   data-graph-bar="competent" 
                   data-about="Competent: I can do a lot here, but I'm still learning." 
-                  class='bar graph-bar bar-bg-yellow' ></div>
+                  class='bar graph-bar bar-bg-yellow tooltip'>
+                    <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                  </div>
               <div data-skill-name="Research"
                   data-graph-bar="competent" 
                   data-about="Competent: I can do a lot here, but I'm still learning."
-                  class='bar graph-bar bar-bg-purple'></div>
+                  class='bar graph-bar bar-bg-purple tooltip'>
+                    <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                  </div>
               <div data-skill-name="Public Speaking"
                   data-graph-bar="proficient" 
                   data-about="Proficient: I really know my way around here."
-                  class='bar graph-bar bar-bg-green2'></div>
+                  class='bar graph-bar bar-bg-green2 tooltip'>
+                    <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                  </div>
               <div data-skill-name="Inter-personal Skills"
                   data-graph-bar="expert" 
                   data-about="Expert: I can do this in my sleep."
-                  class='bar graph-bar bar-bg-red'></div>
+                  class='bar graph-bar bar-bg-red tooltip'>
+                    <span class='tooltip-text'><strong>Expert: </strong>I can do this in my sleep.</span>
+                  </div>
             </div>
             <div class='x-axis'>
               <ul>

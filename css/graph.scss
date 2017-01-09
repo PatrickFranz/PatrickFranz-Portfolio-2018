@@ -1,15 +1,15 @@
-.graph {
+.graph{
   position: relative;
   display: flex;
 }
 
-.graph-flex-row {
+.graph-flex-row{
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-.graph-bar {
+.graph-bar{
   color: #212020;
   padding-left: 3rem;
   padding: 0.5rem 1rem;
@@ -17,67 +17,68 @@
 }
 
 .bars {
-  position: relative;
-  width: 200px;
-  transform: rotate(-90deg);
-  text-align: center;
-  left: 3rem;
+    position: relative;
+    width: 200px;
+    transform: rotate(-90deg);
+    text-align: center;
+    left: 3rem;
 }
 
-.bar {
+.bar{
   padding: 2rem 0;
   margin: 0.75rem 0;
 }
 
-.graph-bar[data-graph-bar="learning"] {
+.graph-bar[data-graph-bar="learning"]{
+  width: 25%;
+  
+  .tooltip-text{
+    left: -230%;
+  }
+}
+
+.graph-bar[data-graph-bar="competent"]{
+  width: 50%;
+
+  .tooltip-text{
+    left: -55%;
+  }
+}
+
+.graph-bar[data-graph-bar="proficient"]{
+  width: 75%;
+  .tooltip-text{
+    left: 10%;
+  }
+}
+
+.graph-bar[data-graph-bar="expert"]{
+  width: 100%;
+  .tooltip-text{
+    left: 55%;
+  }
+}
+
+.width-25{
   width: 25%;
 }
-.graph-bar[data-graph-bar="learning"] .tooltip-text {
-  left: -230%;
-}
 
-.graph-bar[data-graph-bar="competent"] {
-  width: 50%;
-}
-.graph-bar[data-graph-bar="competent"] .tooltip-text {
-  left: -55%;
-}
-
-.graph-bar[data-graph-bar="proficient"] {
-  width: 75%;
-}
-.graph-bar[data-graph-bar="proficient"] .tooltip-text {
-  left: 10%;
-}
-
-.graph-bar[data-graph-bar="expert"] {
-  width: 100%;
-}
-.graph-bar[data-graph-bar="expert"] .tooltip-text {
-  left: 55%;
-}
-
-.width-25 {
-  width: 25%;
-}
-
-.width-50 {
+.width-50{
   width: 50%;
 }
 
-.width-75 {
+.width-75{
   width: 75%;
 }
-
-.width-100 {
+.width-100{
   width: 100%;
 }
 
-* {
+*{
   font-size: 10px;
 }
 
-.graph {
+.graph{
   display: flex;
   font-size: 1.5rem;
   flex-wrap: nowrap;
@@ -85,87 +86,90 @@
 }
 
 .x-axis {
-  position: absolute;
-  transform: rotate(-90deg);
-  left: 16rem;
-  font-size: 1.2rem;
-  bottom: -17rem;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 16rem;
+    font-size: 1.2rem;
+    bottom: -17rem;
 }
 
-.graph li {
+.graph li{
   list-style: none;
   color: inherit;
 }
 
-.y-axis li {
+.y-axis li{
   padding: 1rem 0;
 }
 
-.x-axis li {
+.x-axis li{
   padding: 1.25rem 0;
   width: 15rem;
   transform: rotate(150deg);
 }
 
-.width-25 {
+.width-25{
   width: 25%;
 }
 
-.width-50 {
+.width-50{
   width: 50%;
 }
 
-.width-75 {
+.width-75{
   width: 75%;
 }
 
-.width-100 {
+.width-100{
   width: 100%;
 }
 
 /* bar colors */
-.font-green {
+
+.font-green{
   color: #1abc9c;
 }
 
-.font-purple {
+.font-purple{
   color: #9b59b6;
 }
 
-.font-blue {
-  color: #3498db;
+.font-blue{
+  color: #3498db
 }
 
-.bar-bg-green {
+.bar-bg-green{
   background: #1abc9c;
 }
 
-.bar-bg-purple {
+.bar-bg-purple{
   background: #9b59b6;
 }
 
-.bar-bg-blue {
+.bar-bg-blue{
   background: #3498db;
 }
 
-.bar-bg-yellow {
+.bar-bg-yellow{
   background: #f1c40f;
 }
 
-.bar-bg-red {
+.bar-bg-red{
   background: #e74c3c;
 }
 
-.bar-bg-green2 {
+.bar-bg-green2{
   background: #2ecc71;
 }
 
 /* TOOLTIP */
-.tooltip {
+
+.tooltip{
   position: relative;
+  
 }
 
-.tooltip .tooltip-text {
+.tooltip .tooltip-text{
   position: absolute;
   opacity: 0;
   text-align: left;
@@ -180,20 +184,20 @@
   z-index: 1;
 }
 
-.tooltip .tooltip-text:before {
+.tooltip .tooltip-text:before{
   content: attr(data-about);
 }
 
 .tooltip .tooltip-text::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border: 10px solid;
-  border-color: black transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border: 10px solid;
+    border-color: black transparent transparent transparent;
 }
 
-.tooltip:hover .tooltip-text {
+.tooltip:hover .tooltip-text{
   opacity: 1;
 }
