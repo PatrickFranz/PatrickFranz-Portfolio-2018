@@ -1,38 +1,4 @@
-/*HTML SELECTORS*/
-*{
-    box-sizing: border-box;    
-}
 
-body{
-    font-family: 'Raleway', sans-serif;  
-    font-size: 1.3em;
-}
-
-h1, h2, h3{
-    color: #494949;
-}
-input{
-    border-radius: 5px;
-    font-size: 1em;
-    
-}
-
-input.wide-text{
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-input.wide-80-text{
-    width: 80%;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-input[type="radio"]{
-    width: 30px;
-    margin-top: 15px;
-}
 
 input:hover{
     background-color: #fffbe2;

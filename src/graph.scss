@@ -27,6 +27,7 @@
 .bar{
   padding: 2rem 0;
   margin: 0.75rem 0;
+ 
 }
 
 .graph-bar[data-graph-bar="learning"]{
@@ -78,11 +79,16 @@
   font-size: 10px;
 }
 
+.bar-graphs{
+  display: flex;
+  justify-content: center;
+}
+
 .graph{
   display: flex;
   font-size: 1.5rem;
   flex-wrap: nowrap;
-  margin: 0 2rem;
+  margin: 0 5rem 10rem;
 }
 
 .x-axis {
@@ -181,7 +187,8 @@
   white-space: nowrap;
   transform: rotate(90deg);
   transition: opacity 0.1s;
-  z-index: 1;
+  pointer-events: none;
+  z-index: 100;
 }
 
 .tooltip .tooltip-text:before{

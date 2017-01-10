@@ -24,13 +24,20 @@ $primary-accent: #A976AD;
   -ms-transition: $prop $time; 
 }
 
+@mixin rotate-x($deg){
+  transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+}
+
 * {
   box-sizing: border-box;
 }
 
 html{
   font-size: 10px;
-  font-family: 'open sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a{
@@ -118,13 +125,16 @@ strong{
   .sec-container{
     position: relative;
     font-size: 2rem;
+    font-weight: 300;
     line-height: 2;
     min-height: 110vh;
-    margin: 0 15rem;
+    margin: 0 10rem;
+    top: 10rem;
 
     .section--title{
       text-align: center;
       font-size: 7rem;
+      font-weight: 100;
       color: #3E4651;
     }
 
@@ -132,12 +142,8 @@ strong{
       p{
         font-size: 2.5rem;
         text-align: center;
+        font-weight: 100;
       }
-    }
-    .sec-container:before{
-      display: block;
-      content: ' ';
-      height: 10rem;
     }
   }
 
@@ -153,6 +159,7 @@ strong{
       article{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         
         div{
           flex: 1;
@@ -400,6 +407,14 @@ footer{
 
 .graph-titles{
   margin: 4rem 0 0;
+}
+
+.graph-title{
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  
 }
 
 .modal{
