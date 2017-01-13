@@ -20,7 +20,7 @@
 </head>
 <body>
   <section id=topNavBar>
-    <span>PATRICK FRANZ</span>
+    <span id="logo"></span>
     <nav>
       <ul>
          <a href="#port--about-sec"><li>ABOUT</li></a
@@ -49,7 +49,24 @@
             <p>Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Santa Cruz, CA, a quick commute to Silicon Valley where I get my fill of the technology scene. </p>
           </div>
           <div id='port--about-pic'`>
-            <img src="img/selfie-1-400w.png" alt="A selfie I took">
+           <picture>
+            <img
+              sizes="(max-width: 400px) 100vw, 400px"
+              srcset="
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_200.png 400w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_232.png 232w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_261.png 261w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_288.png 288w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_314.png 314w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_337.png 337w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_361.png 361w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_382.png 382w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_395.png 395w,
+              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_400.png 400w"
+              src="selfie-1-400w_xrstt5_c_scale,w_400.png"
+              alt="">
+          </picture>
+            <!--<img src="img/selfie-1-400w.png" alt="A selfie I took">-->
           </div>
           <div>
             <p>Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often. </p>
@@ -501,7 +518,7 @@
         <div class='bar-graphs'>
           <!-- GRAPH 1 -->
           <div class='graph-container'>
-            <p class='graph-title font-purple'>Frontend Skills</p>
+            <p class='graph-title font-green'>Frontend Skills</p>
             <div class='graph'>
               <div class='y-axis'>
                 <ul>
@@ -515,28 +532,28 @@
                 <div data-skill-name="Frontend JavaScript"
                     data-graph-bar="proficient" 
                     class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                      <span class='tooltip-text'><strong>Proficient: </strong><i>I really know my way around here.</i></span>
                 </div>
                 <div data-skill-name="HTML/CSS"
                     data-graph-bar="expert" 
                     class='bar graph-bar bar-bg-yellow tooltip' >
-                      <span class='tooltip-text'><strong>Expert: </strong>I can do this in my sleep.</span>
+                      <span class='tooltip-text'><strong>Expert: </strong><i>I can do this in my sleep.</i></span>
                 </div>
                 <div data-skill-name="RWD"
                     data-graph-bar="competent" 
                     data-about="Competent: I can do a lot here, but I'm still learning."
                     class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                      <span class='tooltip-text'><strong>Competent: </strong><i>I can do a lot here, but I'm still learning.</i></span>
                     </div>
                 <div data-skill-name="SASS"
                     data-graph-bar="learning" 
                     class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                      <span class='tooltip-text'><strong>Learning: </strong><i>I am actively increasing my skills in this area.</i></span>
                     </div>
                 <div data-skill-name="React"
                     data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-red tooltip'>
-                      <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
+                      <span class='tooltip-text'><strong>Learning: </strong><i>I am actively increasing my skills in this area.</i></span>
                     </div>
               </div>
               <div class='x-axis'>
@@ -568,31 +585,31 @@
                     data-graph-bar="proficient" 
                     data-about="Proficient: I really know my way around here." 
                     class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                      <span class='tooltip-text'><strong>Proficient: </strong><i>I really know my way around here.</i></span>
                     </div>
                 <div data-skill-name="database"
                     data-graph-bar="proficient" 
                     data-about="Proficient: I really know my way around here." 
                     class='bar graph-bar bar-bg-yellow tooltip'>
-                      <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                      <span class='tooltip-text'><strong>Proficient: </strong><i>I really know my way around here.</i></span>
                     </div>
                 <div data-skill-name="RWD"
                     data-graph-bar="learning" 
                     data-about="Learning: I am actively increasing my skills in this area."
                     class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                      <span class='tooltip-text'><strong>Learning: </strong><i>I am actively increasing my skills in this area.</i></span>
                     </div>
                 <div data-skill-name="SASS"
                     data-graph-bar="learning" 
                     data-about="Learning: I am actively increasing my skills in this area."
                     class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                      <span class='tooltip-text'><strong>Learning: </strong><i>I am actively increasing my skills in this area.</i></span>
                     </div>
                 <div data-skill-name="jQuery"
                     data-graph-bar="learning" 
                     data-about="Learning: I am actively increasing my skills in this area."
-                    class='bar graph-bar bar-bg-red tooltip'>
-                      <span class='tooltip-text'><strong>Learning: </strong>I am actively increasing my skills in this area.</span>
+                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
+                      <span class='tooltip-text'><strong>Learning: </strong><i>I am actively increasing my skills in this area.</i></span>
                     </div>
               </div>
               <div class='x-axis'>
@@ -624,31 +641,31 @@
                     data-graph-bar="proficient" 
                     data-about="Proficient: I really know my way around here." 
                     class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                      <span class='tooltip-text'><strong>Proficient: </strong><i>I really know my way around here.</i></span>
                     </div>
                 <div data-skill-name="Project Management"
                     data-graph-bar="competent" 
                     data-about="Competent: I can do a lot here, but I'm still learning." 
                     class='bar graph-bar bar-bg-yellow tooltip'>
-                      <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                      <span class='tooltip-text'><strong>Competent: </strong><i>I can do a lot here, but I'm still learning.</i></span>
                     </div>
                 <div data-skill-name="Research"
                     data-graph-bar="competent" 
                     data-about="Competent: I can do a lot here, but I'm still learning."
                     class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><strong>Competent: </strong>I can do a lot here, but I'm still learning.</span>
+                      <span class='tooltip-text'><strong>Competent: </strong><i>I can do a lot here, but I'm still learning.</i></span>
                     </div>
                 <div data-skill-name="Public Speaking"
                     data-graph-bar="proficient" 
                     data-about="Proficient: I really know my way around here."
                     class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><strong>Proficient: </strong>I really know my way around here.</span>
+                      <span class='tooltip-text'><strong>Proficient: </strong><i>I really know my way around here.</i></span>
                     </div>
                 <div data-skill-name="Inter-personal Skills"
                     data-graph-bar="expert" 
                     data-about="Expert: I can do this in my sleep."
-                    class='bar graph-bar bar-bg-red tooltip'>
-                      <span class='tooltip-text'><strong>Expert: </strong>I can do this in my sleep.</span>
+                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
+                      <span class='tooltip-text'><strong>Expert: </strong><i>I can do this in my sleep.</i></span>
                     </div>
               </div>
               <div class='x-axis'>

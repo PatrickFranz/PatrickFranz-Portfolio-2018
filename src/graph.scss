@@ -114,22 +114,6 @@
   transform: rotate(150deg);
 }
 
-.width-25{
-  width: 25%;
-}
-
-.width-50{
-  width: 50%;
-}
-
-.width-75{
-  width: 75%;
-}
-
-.width-100{
-  width: 100%;
-}
-
 /* bar colors */
 
 .font-green{
@@ -172,39 +156,108 @@
 
 .tooltip{
   position: relative;
-  
-}
 
-.tooltip .tooltip-text{
-  position: absolute;
-  opacity: 0;
-  text-align: left;
-  background: black;
-  border: 1px solid black;
-  color: white;
-  padding: 0.5rem 2rem;
-  bottom: 0.5rem;
-  white-space: nowrap;
-  transform: rotate(90deg);
-  transition: opacity 0.1s;
-  pointer-events: none;
-  z-index: 100;
-}
-
-.tooltip .tooltip-text:before{
-  content: attr(data-about);
-}
-
-.tooltip .tooltip-text::after {
-    content: " ";
+ .tooltip-text{
     position: absolute;
-    top: 100%; 
-    left: 50%;
-    margin-left: -5px;
-    border: 10px solid;
-    border-color: black transparent transparent transparent;
+    opacity: 0;
+    text-align: left;
+    background: black;
+    border: 1px solid black;
+    color: white;
+    padding: 0.5rem 2rem;
+    bottom: 0.5rem;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transition: opacity 0.1s;
+    pointer-events: none;
+    z-index: 100;
+  
+
+    &:before{
+      content: attr(data-about);
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 100%; 
+        left: 50%;
+        margin-left: -5px;
+        border: 10px solid;
+        border-color: black transparent transparent transparent;
+    }
+ }
+
+    &:hover .tooltip-text{
+      opacity: 1;
+    }
+ 
 }
 
-.tooltip:hover .tooltip-text{
-  opacity: 1;
+@media(max-width: 960px){
+
+  .tooltip-text{
+    i{
+      display: none;
+    }
+  }
+  
+  .graph-bar[data-graph-bar="learning"]{
+  width: 25%;
+  
+    .tooltip-text{
+      left: 60%;
+    }
+  }
+
+  .graph-bar[data-graph-bar="competent"]{
+    width: 50%;
+
+    .tooltip-text{
+      left: 70%;
+    }
+  }
+
+  .graph-bar[data-graph-bar="proficient"]{
+    width: 75%;
+    .tooltip-text{
+      left: 85%;
+    }
+  }
+
+  .graph-bar[data-graph-bar="expert"]{
+    width: 100%;
+    .tooltip-text{
+      left: 95%;
+    }
+  }
+
+   .rightmost-tooltip{
+     .tooltip-text{
+       bottom: 5rem;
+       &::after {
+        content: " ";
+        position: absolute;
+        top: 100%; 
+        left: 85%;
+        margin-left: -5px;
+    }
+      }
+   }
+
+  .x-axis {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 13rem;
+    font-size: 1.2rem;
+    bottom: -18rem;
+    li{
+      padding: 1.25rem 0;
+      width: 15rem;
+      transform: rotate(180deg);
+    }
+
+}
+
+  
 }

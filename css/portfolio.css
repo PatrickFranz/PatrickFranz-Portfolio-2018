@@ -31,6 +31,8 @@ strong {
   color: #F0F0F0;
   z-index: 90;
   user-select: none; }
+  #topNavBar #logo:after {
+    content: "PATRICK FRANZ"; }
   #topNavBar span {
     margin: 3rem 2rem 0; }
   #topNavBar nav {
@@ -46,6 +48,7 @@ strong {
     cursor: pointer; }
   #topNavBar #search {
     position: relative;
+    width: 20%;
     float: right; }
     #topNavBar #search label {
       position: absolute;
@@ -64,7 +67,7 @@ strong {
       border-bottom: 1px solid #f0f0f0; }
     #topNavBar #search input[type='image'] {
       position: absolute;
-      right: 0;
+      right: -2rem;
       bottom: 3rem;
       width: 3rem;
       border: none; }
@@ -95,6 +98,7 @@ strong {
   /* Begin ABOUT section */
   background: url("../img/bg-mt-thor.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 10rem; }
   #port-sections #port--about-sec section {
     font-size: 2.5rem; }
@@ -107,12 +111,16 @@ strong {
       #port-sections #port--about-sec section article #port--about-pic {
         display: flex;
         align-items: center; }
+        #port-sections #port--about-sec section article #port--about-pic img {
+          border: 5px solid #6F2974;
+          border-radius: 10px; }
 #port-sections .font-md {
   font-size: 1.5rem; }
 #port-sections #port--project-sec {
   /*Begin PROJECT section*/
   background: url("../img/bg-ski-sweden.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 10rem; }
   #port-sections #port--project-sec #projects-container {
     display: flex;
@@ -223,10 +231,12 @@ strong {
 #port-sections #port--skills-sec {
   background: url("../img/bg-surf-oxnard.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 10rem; }
 #port-sections #port--contact-sec {
   background: url("../img/bg-goldengate.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 10rem; }
 
 .center-title {
@@ -260,6 +270,7 @@ footer {
 
 .bar-graphs {
   display: flex;
+  padding: 0 10rem;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 10rem; }
@@ -279,6 +290,7 @@ footer {
   background-color: rgba(62, 70, 81, 0.75);
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #FFF;
   font-size: 4rem;
   height: 100vh;
@@ -286,19 +298,18 @@ footer {
   user-select: none;
   transition: all 0.5s ease;
   z-index: 100; }
-
-.modal-header {
-  position: absolute;
-  font-size: 8rem;
-  border: 0.5rem solid #F0F0F0;
-  border-radius: 50%;
-  width: 9rem;
-  text-align: center;
-  top: 10rem;
-  right: 10rem;
-  cursor: pointer; }
-  .modal-header:hover {
-    opacity: 1; }
+  .modal .modal-header {
+    position: absolute;
+    font-size: 8rem;
+    border: 0.5rem solid #F0F0F0;
+    border-radius: 50%;
+    width: 9rem;
+    text-align: center;
+    top: 10rem;
+    right: 10rem;
+    cursor: pointer; }
+    .modal .modal-header:hover {
+      opacity: 1; }
 
 #search-na {
   display: none; }
@@ -316,11 +327,65 @@ footer {
       bottom: 1rem;
       font-size: 1.2rem; }
     #topNavBar #search input {
-      width: 100%;
       font-size: 2rem; }
     #topNavBar #search input[type='image'] {
-      position: absolute;
-      right: 0;
       bottom: 2rem;
-      width: 2rem;
-      border: none; } }
+      width: 2rem; }
+
+  #port-sections .sec-container {
+    margin: 0 5rem; } }
+@media (max-width: 960px) {
+  #topNavBar #logo:after {
+    content: "PF"; }
+  #topNavBar #search label {
+    bottom: 1rem;
+    font-size: 1.2rem; }
+  #topNavBar #search input {
+    font-size: 2rem; }
+  #topNavBar #search input[type='image'] {
+    bottom: 2rem;
+    width: 2rem; }
+
+  #port-sections .sec-container {
+    margin: 0 5rem; }
+  #port-sections #port--about-sec {
+    background-attachment: initial; }
+    #port-sections #port--about-sec section article {
+      display: block; }
+      #port-sections #port--about-sec section article #port--about-pic {
+        display: flex;
+        justify-content: center; }
+        #port-sections #port--about-sec section article #port--about-pic img {
+          border: 5px solid #6F2974;
+          border-radius: 10px; } }
+@media (max-width: 600px) {
+  #topNavBar #logo:after {
+    content: "PF"; }
+  #topNavBar #search label {
+    bottom: 1rem;
+    font-size: 1.2rem; }
+  #topNavBar #search input {
+    font-size: 2rem; }
+  #topNavBar #search input[type='image'] {
+    bottom: 2rem;
+    width: 2rem; }
+
+  #port-sections .sec-container {
+    margin: 0 1rem; }
+  #port-sections #port--about-sec {
+    background-attachment: initial; }
+    #port-sections #port--about-sec section article {
+      display: block; }
+      #port-sections #port--about-sec section article #port--about-pic {
+        display: flex;
+        justify-content: center; }
+        #port-sections #port--about-sec section article #port--about-pic img {
+          border: 5px solid #6F2974;
+          border-radius: 10px; }
+
+  .bar-graphs {
+    display: flex;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10rem; } }

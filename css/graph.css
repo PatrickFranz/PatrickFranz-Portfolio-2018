@@ -88,18 +88,6 @@
   width: 15rem;
   transform: rotate(150deg); }
 
-.width-25 {
-  width: 25%; }
-
-.width-50 {
-  width: 50%; }
-
-.width-75 {
-  width: 75%; }
-
-.width-100 {
-  width: 100%; }
-
 /* bar colors */
 .font-green {
   color: #1abc9c; }
@@ -131,33 +119,73 @@
 /* TOOLTIP */
 .tooltip {
   position: relative; }
+  .tooltip .tooltip-text {
+    position: absolute;
+    opacity: 0;
+    text-align: left;
+    background: black;
+    border: 1px solid black;
+    color: white;
+    padding: 0.5rem 2rem;
+    bottom: 0.5rem;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transition: opacity 0.1s;
+    pointer-events: none;
+    z-index: 100; }
+    .tooltip .tooltip-text:before {
+      content: attr(data-about); }
+    .tooltip .tooltip-text::after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border: 10px solid;
+      border-color: black transparent transparent transparent; }
+  .tooltip:hover .tooltip-text {
+    opacity: 1; }
 
-.tooltip .tooltip-text {
-  position: absolute;
-  opacity: 0;
-  text-align: left;
-  background: black;
-  border: 1px solid black;
-  color: white;
-  padding: 0.5rem 2rem;
-  bottom: 0.5rem;
-  white-space: nowrap;
-  transform: rotate(90deg);
-  transition: opacity 0.1s;
-  pointer-events: none;
-  z-index: 100; }
+@media (max-width: 960px) {
+  .tooltip-text i {
+    display: none; }
 
-.tooltip .tooltip-text:before {
-  content: attr(data-about); }
+  .graph-bar[data-graph-bar="learning"] {
+    width: 25%; }
+    .graph-bar[data-graph-bar="learning"] .tooltip-text {
+      left: 60%; }
 
-.tooltip .tooltip-text::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border: 10px solid;
-  border-color: black transparent transparent transparent; }
+  .graph-bar[data-graph-bar="competent"] {
+    width: 50%; }
+    .graph-bar[data-graph-bar="competent"] .tooltip-text {
+      left: 70%; }
 
-.tooltip:hover .tooltip-text {
-  opacity: 1; }
+  .graph-bar[data-graph-bar="proficient"] {
+    width: 75%; }
+    .graph-bar[data-graph-bar="proficient"] .tooltip-text {
+      left: 85%; }
+
+  .graph-bar[data-graph-bar="expert"] {
+    width: 100%; }
+    .graph-bar[data-graph-bar="expert"] .tooltip-text {
+      left: 95%; }
+
+  .rightmost-tooltip .tooltip-text {
+    bottom: 5rem; }
+    .rightmost-tooltip .tooltip-text::after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      left: 85%;
+      margin-left: -5px; }
+
+  .x-axis {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 13rem;
+    font-size: 1.2rem;
+    bottom: -18rem; }
+    .x-axis li {
+      padding: 1.25rem 0;
+      width: 15rem;
+      transform: rotate(180deg); } }

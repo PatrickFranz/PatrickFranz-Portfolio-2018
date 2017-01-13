@@ -63,6 +63,10 @@ strong{
   z-index: 90;
   user-select: none;
 
+  #logo:after{
+      content: "PATRICK FRANZ";
+  }
+
   span{
     margin: 3rem 2rem 0;;
   }
@@ -86,6 +90,7 @@ strong{
 
   #search{
     position: relative;
+    width: 20%;
     float: right;
 
     label{
@@ -109,7 +114,7 @@ strong{
 
     input[type='image']{
       position: absolute;
-      right: 0;
+      right: -2rem;;
       bottom: 3rem;
       width: 3rem;
       border: none;
@@ -151,6 +156,7 @@ strong{
     /* Begin ABOUT section */
     background: url('../img/bg-mt-thor.jpg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-bottom: 10rem;
 
     section{
@@ -168,6 +174,11 @@ strong{
         #port--about-pic{
           display: flex;
           align-items: center;
+
+          img{
+            border: 5px solid $primary;
+            border-radius: 10px;
+          }
         }
       }
     }
@@ -181,6 +192,7 @@ strong{
     /*Begin PROJECT section*/
     background: url('../img/bg-ski-sweden.jpg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-bottom: 10rem;
 
     #projects-container{
@@ -347,12 +359,14 @@ strong{
   #port--skills-sec{
     background: url('../img/bg-surf-oxnard.jpg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-bottom: 10rem;
   }
 
   #port--contact-sec{
     background: url('../img/bg-goldengate.jpg') no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding-bottom: 10rem;
   }
 }
@@ -400,6 +414,7 @@ footer{
 
 .bar-graphs{
   display: flex;
+  padding: 0 10rem;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 10rem;
@@ -414,7 +429,6 @@ footer{
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  
 }
 
 .modal{
@@ -423,6 +437,7 @@ footer{
   background-color: rgba(62, 70, 81, 0.75);
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #FFF;
   font-size: 4rem;
   height: 100vh;
@@ -430,21 +445,21 @@ footer{
   user-select: none;
   transition: all 0.5s ease;
   z-index: 100;
-}
 
-.modal-header{
-  position: absolute;
-  font-size: 8rem;
-  border: 0.5rem solid #F0F0F0;
-  border-radius: 50%;
-  width: 9rem;
-  text-align: center;
-  top: 10rem;
-  right: 10rem;
-  cursor: pointer; 
-  
-  &:hover{
-    opacity: 1;
+  .modal-header{
+    position: absolute;
+    font-size: 8rem;
+    border: 0.5rem solid #F0F0F0;
+    border-radius: 50%;
+    width: 9rem;
+    text-align: center;
+    top: 10rem;
+    right: 10rem;
+    cursor: pointer; 
+    
+    &:hover{
+      opacity: 1;
+    }
   }
 }
 
@@ -458,50 +473,151 @@ footer{
 
 @media(max-width: 1200px){
   #topNavBar{
-    font-size: 1.5rem;    
+    font-size: 1.5rem;   
 
     span{
       margin: 2rem 1rem 0;;
     }
 
     nav{
-      // margin: 0 auto;
-    }
 
-    nav li{
-      padding: 2rem 2rem;
+      li{
+        padding: 2rem 2rem;
+      }
     }
 
     #search{
-
       label{
         bottom: 1rem;
         font-size: 1.2rem;
       }
 
       input{
-        width: 100%;
         font-size: 2rem;
       } 
 
       input[type='image']{
-        position: absolute;
-        right: 0;
         bottom: 2rem;
         width: 2rem;
-        border: none;
       }
+    }
+  }
+
+  #port-sections{
+    .sec-container{
+      margin: 0 5rem;
     }
   }
 }
 
 @media(max-width:960px){
+   #topNavBar{
+    #logo:after{
+        content: "PF";
+      }
 
+      #search{
+        label{
+          bottom: 1rem;
+          font-size: 1.2rem;
+        }
+
+        input{
+          font-size: 2rem;
+        } 
+
+        input[type='image']{
+          bottom: 2rem;
+          width: 2rem;
+        }
+      }
+   }
+
+   #port-sections{
+    .sec-container{
+      margin: 0 5rem; 
+    }
+
+    #port--about-sec{
+      background-attachment: initial;
+
+      section{
+        article{
+          display: block;
+
+          #port--about-pic{
+          display: flex;
+          justify-content: center;
+
+          img{
+            border: 5px solid $primary;
+            border-radius: 10px;
+          }
+        }
+        }
+      }
+    } 
+  }
 }
 
 @media(max-width: 600px){
+  #topNavBar{
+    #logo:after{
+        content: "PF";
+      }
 
-}
+      #search{
+        label{
+          bottom: 1rem;
+          font-size: 1.2rem;
+        }
+
+        input{
+          font-size: 2rem;
+        } 
+
+        input[type='image']{
+          bottom: 2rem;
+          width: 2rem;
+        }
+      }
+    }
+
+    #port-sections{
+      .sec-container{
+        margin: 0 1rem; 
+      }
+
+      #port--about-sec{
+        background-attachment: initial;
+
+        section{
+          article{
+            display: block;
+
+            #port--about-pic{
+              display: flex;
+              justify-content: center;
+
+              img{
+                border: 5px solid $primary;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      } 
+    }
+
+    .bar-graphs{
+      display: flex;
+      padding: 0 2rem;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 10rem;
+    }
+  }
+
 
 @media(max-width: 360px){
 
