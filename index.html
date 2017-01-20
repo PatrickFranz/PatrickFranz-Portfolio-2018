@@ -85,19 +85,13 @@
           <p>Here you can find some of the projects I've been working on. </p>
         </div>
         <div id="projects-container">
-          <div id="tab-container">
-            <label for="project-1">Calculator</label>
-            <label for="project-2">CSS Buttons</label>
-            <label for="project-3">Web Forms</label>
-            <label for="project-4">Product Listing</label>
-            <label for="project-5">User Profile Page</label>
-            <label for="project-6">Image Gallery</label>
-          </div>
+    
           <!--PROJECT CONTENT-->
-          <div id="projects-right">
+          <div id="projects-right" class=''>
 
             <!--PROJECT 1 -CALCULATOR -->
             <input type="radio" name="projects" id="project-1" checked>
+            <label for="project-1">Calculator</label>
             <div class="c-proj">
               <div class="proj-carousel">                
                 <input id='proj1-1' class='carousel--input' type='radio' name='p1-radio' checked>
@@ -189,9 +183,9 @@
                   <label for='proj1-1' class='c-control '>&gt;</label>
                 </div>
                 <section class='carousel--radio-buttons'>
-                  <label for="proj1-1"></label>
-                  <label for="proj1-2"></label>
-                  <label for="proj1-3"></label>
+                  <label for="proj1-1"></label
+                  ><label for="proj1-2"></label
+                  ><label for="proj1-3"></label>
                 </section>
               </div>
               <div class='proj-desc'>
@@ -206,6 +200,7 @@
 
             <!--PROJECT 2 CSS BUTTONS -->
             <input type="radio" name="projects" id="project-2">
+            <label for="project-2">CSS Buttons</label>
             <div class="c-proj">
               <div class="proj-carousel">
                 
@@ -236,9 +231,11 @@
                   <label for="proj2-2" class='c-control '>&lt;</label>
                   <div class='carousel--image'>
                     <!-- Content HERE -->
-                    <i class="button button-sm">A Small Button</i>
-                    <i class="button button-md">A Medium Button</i>
-                    <i class="button button-lg">A Large Button</i>
+                    <div class='center'>
+                      <i class="button button-sm">A Small Button</i><br>
+                      <i class="button button-md">A Medium Button</i><br>
+                      <i class="button button-lg">A Large Button</i>
+                    </div>
                   </div>
                   <label for='proj2-1' class='c-control '>&gt;</label>
                 </div>
@@ -260,6 +257,7 @@
       
             <!--PROJECT 3 - WEB FORMS-->
             <input type="radio" name="projects" id="project-3">
+            <label for="project-3">Web Forms</label>
             <div class="c-proj">
               <div class="proj-carousel">
                 
@@ -290,14 +288,14 @@
                   <label for="proj3-2" class='c-control '>&lt;</label>
                   <div class='carousel--image'>
                       <!-- Content HERE -->
-                      <div id="login-container" class=''>
+                      <div id="login-container" class='center'>
                         <div id="login-title" class="center-block-content">WELCOME</div>
                         <div class="center-block-content">
                           <input class="wide-80-text width80" type="text" id="uname" placeholder="Username"><br>
                           <input class="wide-80-text" type="password" id="pword" placeholder="Password"><br>              
-                          <input id='login-checkbox' type="checkbox" name="remember"><label for="remember">Remember my username4</label>                  
+                          <input id='login-checkbox' type="checkbox" name="remember"><label for="remember">Remember my username</label>                  
                           <div class="center">
-                              <button class="button button-md">Login</button>
+                              <button class="button button-sm">Login</button>
                           </div>
                         </div>
                       </div>
@@ -321,9 +319,9 @@
               </div>
             </div>  
 
-
             <!--PROJECT 4 - PRODUCT LISTING -->
             <input type="radio" name="projects" id="project-4">
+            <label for="project-4">Product Listing</label>
             <div class="c-proj">
               <div class="proj-carousel">
                 
@@ -378,6 +376,7 @@
 
             <!--PROJECT 5-->
             <input type="radio" name="projects" id="project-5">
+            <label for="project-5">User Profile Page</label>
             <div class="c-proj">
               <div class="proj-carousel">
                 
@@ -431,6 +430,7 @@
 
              <!--PROJECT 6-->
             <input type="radio" name="projects" id="project-6">
+            <label for="project-6">Image Gallery</label>
             <div class="c-proj">
               <div class="proj-carousel">
                 
