@@ -47,7 +47,7 @@ input.shipping-text-input{
     width: 100%;    
     padding: 10px;
     margin: 10px; 
-    font-size: 1.2em;
+    font-size: 1.2rem;
     
 }
 
@@ -64,8 +64,6 @@ input.shipping-text-input{
     margin: 10px; 
     font-size: 1.2em;
 }
-
-#login-container 
 
 #login-title{
     background-color: #B3E5FC;
@@ -217,4 +215,23 @@ input.shipping-text-input{
 
 .small-text{
     font-size: 0.8em;
+}
+
+@media(max-width: 600px){
+
+}
+
+@media(max-width: 425px){
+    #login-container{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    #login-title{
+        background-color: #B3E5FC;
+        border-radius: 5px 5px 0 0;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
 }

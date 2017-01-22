@@ -763,6 +763,7 @@ footer {
 
   #port-sections .sec-container {
     top: 0rem;
+    margin: 0;
   }
   #port-sections .sec-container .section--title {
     text-align: center;
@@ -771,6 +772,7 @@ footer {
     color: #3E4651;
   }
   #port-sections .sec-container .section-text p {
+    padding: 1rem;
     font-size: 2rem;
     text-align: left;
     font-weight: 100;
