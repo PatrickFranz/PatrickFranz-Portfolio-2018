@@ -56,6 +56,7 @@ input.shipping-text-input{
     width: 60rem;
     border-radius: 5px;
     background: #03A9F4; 
+    margin: 0 auto;
 }
 
 #login-container input:not([type='checkbox']){
