@@ -132,7 +132,13 @@ strong{
   }
 }
 
+  #mobile-menu-bar, #cb-menu-show{
+    display: none;
+  }
+
 #port-sections{
+  transition: all 0.5s;
+  
   .sec-container{
     position: relative;
     font-size: 2rem;
@@ -285,7 +291,6 @@ strong{
             width: 100%;
             height: 100%;
           }
-
 
           i{
             flex: 0 0 auto;  
@@ -842,7 +847,6 @@ footer{
           .proj-carousel{
             padding: 3rem 0;
 
-
             i{
               flex: 0 0 auto;
             }
@@ -906,8 +910,7 @@ footer{
             .project--info-links{
               justify-content: flex-end;
               font-size: 1.5rem;            
-              text-decoration: underline; 
-              
+              text-decoration: underline;       
             }
 
             .project--info-links a{
@@ -1046,9 +1049,9 @@ footer{
         }
       }
     }  
-  }
+   }
 
-  #port--project-sec{
+   #port--project-sec{
     /*Begin PROJECT section*/
     background-attachment: scroll;
     padding-bottom: 10rem;
@@ -1216,5 +1219,97 @@ footer{
 
 @media (max-width:360px){
   //POP OUT NAV BAR
+
+  #topNavBar{
+    display: none;
+  }
+
+  #mobile-menu-bar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background: black;
+    z-index: 1;
+
+    nav{
+      box-sizing: border-box;
+      position: absolute;
+      overflow: hidden;
+      background: rgba(0,0,0,0.75);
+
+      color: white;
+      top: 5rem;
+      left: 0rem;
+      width: 0px;
+      height: 100vh;
+      transition: all 0.5s;
+
+      li{
+        font-size: 2rem;
+        line-height: 4rem;
+        padding: 2rem;
+      }
+    }
+    
+    #lbl-hamburger{
+      cursor: pointer;
+      transition: all .5s;
+      
+      span{
+        display: block;
+        margin-bottom: 4px;
+        width: 25px;
+        height: 4px;
+        background: white;
+        transition: all .5s;
+      }
+    }
+  }
+    
+  #cb-menu-show{
+  
+    &:checked{
+
+      & ~ #port-sections{
+        transform: translate(50vw);
+        margin-left: 1rem;
+        overflow: hidden;
+
+      }
+      
+      & ~ #mobile-menu-bar{
+        
+        nav{
+          width: 50vw;
+        }
+
+        #lbl-hamburger{
+          transform: translate(50vw);
+        
+          span{
+            &:nth-child(1){
+              transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            &:nth-child(2){
+              transform: rotate(-45deg);
+            }
+            
+            &:nth-child(3){
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #port-sections{
+    .sec-container {
+      top: 5rem;
+    }
+  }
 }
+
 

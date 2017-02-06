@@ -96,6 +96,13 @@ strong {
   -ms-transform: translate(0rem, -2rem) scale(0.8);
 }
 
+#mobile-menu-bar, #cb-menu-show {
+  display: none;
+}
+
+#port-sections {
+  transition: all 0.5s;
+}
 #port-sections .sec-container {
   position: relative;
   font-size: 2rem;
@@ -920,5 +927,73 @@ footer {
   #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a img {
     width: 25px;
     margin-right: 5px;
+  }
+}
+@media (max-width: 360px) {
+  #topNavBar {
+    display: none;
+  }
+
+  #mobile-menu-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background: black;
+    z-index: 1;
+  }
+  #mobile-menu-bar nav {
+    box-sizing: border-box;
+    position: absolute;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    top: 5rem;
+    left: 0rem;
+    width: 0px;
+    height: 100vh;
+    transition: all 0.5s;
+  }
+  #mobile-menu-bar nav li {
+    font-size: 2rem;
+    line-height: 4rem;
+    padding: 2rem;
+  }
+  #mobile-menu-bar #lbl-hamburger {
+    cursor: pointer;
+    transition: all .5s;
+  }
+  #mobile-menu-bar #lbl-hamburger span {
+    display: block;
+    margin-bottom: 4px;
+    width: 25px;
+    height: 4px;
+    background: white;
+    transition: all .5s;
+  }
+
+  #cb-menu-show:checked ~ #port-sections {
+    transform: translate(50vw);
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+  #cb-menu-show:checked ~ #mobile-menu-bar nav {
+    width: 50vw;
+  }
+  #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger {
+    transform: translate(50vw);
+  }
+  #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+  #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(3) {
+    opacity: 0;
+  }
+
+  #port-sections .sec-container {
+    top: 5rem;
   }
 }
