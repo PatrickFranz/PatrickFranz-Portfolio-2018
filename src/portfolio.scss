@@ -9,6 +9,15 @@ http://flatcolors.net/palette/889-three
 
 $primary: #6F2974;
 $primary-accent: #A976AD;
+$hover-bg-color: #A976AD;
+$text-color-white: #F0F0F0;
+$hover-text-color: #3E4651;
+//$active-: ;
+
+$primary-600: #7A9F35;
+$primary-accent-600: #D4EE9F;
+
+
 $make-it-pop: deeppink;
 
 
@@ -44,6 +53,7 @@ $make-it-pop: deeppink;
 html{
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
+  width: 100vw;
 }
 
 a{
@@ -65,8 +75,8 @@ strong{
   background: $primary;
   border-bottom: 0.5rem solid $primary-accent;
   font-size: 2rem;
-  color: #F0F0F0;
-  z-index: 90;
+  color: $text-color-white;
+  z-index: 1;
   user-select: none;
 
   #logo:after{
@@ -82,13 +92,12 @@ strong{
     
     li{
       display: inline-block;
-      color: #F0F0F0;
       padding: 3rem 4rem;
       transition: all ease 0.5s;
      
       &:hover{
-        color: #3E4651;
-        background: #A976AD;
+        color: $hover-text-color;
+        background: $hover-bg-color;
         cursor: pointer;
       }
     }
@@ -112,10 +121,10 @@ strong{
       background: transparent;
       border: none;
       font-size: 2rem;
-      color: inherit;
+      color: $primary-accent; 
       outline: none;
       border-radius: 0;
-      border-bottom: 1px solid #f0f0f0;
+      border-bottom: 1px solid $text-color-white;
     }
 
     input[type='image']{
@@ -152,7 +161,7 @@ strong{
       text-align: center;
       font-size: 7rem;
       font-weight: 100;
-      color: #3E4651;
+      color: $hover-text-color;
     }
 
     .section-text{
@@ -449,7 +458,7 @@ footer{
   padding: 2rem;
   background: $primary;
   border-top: 0.5rem solid $primary-accent;
-  color: #F0F0F0;
+  color: $text-color-white;
   text-align: center;
   font-size: 1.5rem;
 }
@@ -497,7 +506,7 @@ footer{
   .modal-header{
     position: absolute;
     font-size: 8rem;
-    border: 0.5rem solid #F0F0F0;
+    border: 0.5rem solid $text-color-white;
     border-radius: 50%;
     width: 9rem;
     text-align: center;
@@ -541,6 +550,7 @@ footer{
       }
 
       input{
+         
         font-size: 2rem;
       } 
 
@@ -559,6 +569,7 @@ footer{
 }
 
 @media(max-width:960px){
+
    #topNavBar{
     #logo:after{
         content: "PF";
@@ -760,7 +771,15 @@ footer{
 
 
 @media(max-width: 600px){
+
+  strong{
+    color: $primary-600;
+  }
+
   #topNavBar{
+    background: $primary-600;
+    border-bottom: 0.5rem solid $primary-accent-600;
+
     #logo{
       display: none;
     }
@@ -781,6 +800,7 @@ footer{
 
       input{
         font-size: 1.2rem;
+        color: $primary-accent-600;
       } 
 
       input[type='image']{
@@ -811,7 +831,7 @@ footer{
               justify-content: center;
 
               img{
-                border: 5px solid $primary;
+                border: 5px solid $primary-600;
                 border-radius: 10px;
               }
             }
@@ -828,12 +848,12 @@ footer{
               width: 20%;
               
               &:hover{
-                border-color: $primary-accent;
+                border-color: $primary-accent-600;
               }
             }
             
             &:checked + label{
-              border-color: $primary;
+              border-color: $primary-600;
               +.c-proj{
                 left: 30%;
                 width: 70%;
@@ -889,11 +909,11 @@ footer{
               .c-control{
                 padding: 0 3rem;
                 font-size: 3rem;
-                color: $primary;
+                color: $primary-600;
               }
 
               .c-control:hover{
-                color: $primary-accent;
+                color: $primary-accent-600;
               }
 
               img{
@@ -934,7 +954,17 @@ footer{
       justify-content: space-around;
       margin-bottom: 10rem;
     }
+
+    footer{
+      
+      background: $primary-600;
+      border-top: 0.5rem solid $primary-accent-600;
+      color: $text-color-white;
+      text-align: center;
+      font-size: 1.5rem;
+    }
   }
+
 
 
 @media(max-width: 425px){
@@ -962,7 +992,7 @@ footer{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        color: #F0F0F0;
+        color: $text-color-white;
         transition: all ease 0.5s;
         text-align: center;
         
@@ -986,7 +1016,6 @@ footer{
       input{
         width: 0;
         font-size: 1.5rem;
-        color: $primary-accent;
         transition: all 1s;
       }
 
@@ -1020,7 +1049,7 @@ footer{
         text-align: center;
         font-size: 5rem;
         font-weight: 100;
-        color: #3E4651;
+        color: $hover-text-color;
       }
 
       .section-text{
@@ -1234,7 +1263,7 @@ footer{
 
     nav{
       box-sizing: border-box;
-      position: absolute;
+      position: fixed;
       overflow: hidden;
       background: rgba(0,0,0,0.75);
 
@@ -1242,13 +1271,18 @@ footer{
       top: 5rem;
       left: 0rem;
       width: 0px;
-      height: 100vh;
+      height: 100%;
       transition: all 0.5s;
 
       li{
         font-size: 2rem;
         line-height: 4rem;
         padding: 2rem;
+        
+        &:active{
+          background: blue;
+        }
+        
       }
     }
     
@@ -1282,6 +1316,7 @@ footer{
         
         nav{
           width: 50vw;
+          position: fixed;
         }
 
         #lbl-hamburger{
