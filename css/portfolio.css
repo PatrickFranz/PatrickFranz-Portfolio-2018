@@ -351,6 +351,7 @@ footer {
   color: #F0F0F0;
   text-align: center;
   font-size: 1.5rem;
+  z-index: 1000;
 }
 
 #skill-graphs {
@@ -590,6 +591,10 @@ footer {
     font-size: 1rem;
     padding: 2rem 1rem;
   }
+  #topNavBar nav li:hover {
+    color: #3E4651;
+    background: #D4EE9F;
+  }
   #topNavBar #search label {
     bottom: 1rem;
     font-size: 1rem;
@@ -597,6 +602,7 @@ footer {
   #topNavBar #search input {
     font-size: 1.2rem;
     color: #D4EE9F;
+    border-bottom: 1px solid #F0F0F0;
   }
   #topNavBar #search input[type='image'] {
     bottom: 2.5rem;
@@ -714,8 +720,6 @@ footer {
     background: #7A9F35;
     border-top: 0.5rem solid #D4EE9F;
     color: #F0F0F0;
-    text-align: center;
-    font-size: 1.5rem;
   }
 }
 @media (max-width: 425px) {
@@ -955,15 +959,15 @@ footer {
     position: fixed;
     width: 100%;
     padding: 1rem;
-    background: black;
+    background: #0C2032;
+    border-bottom: 5px solid #42586E;
     z-index: 1;
   }
   #mobile-menu-bar nav {
-    box-sizing: border-box;
     position: fixed;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.75);
-    color: white;
+    background: #0C2032;
+    color: #F0F0F0;
     top: 5rem;
     left: 0rem;
     width: 0px;
@@ -973,10 +977,13 @@ footer {
   #mobile-menu-bar nav li {
     font-size: 2rem;
     line-height: 4rem;
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
-  #mobile-menu-bar nav li:active {
-    background: blue;
+  #mobile-menu-bar nav li:first-child {
+    margin-top: 1.7rem;
+  }
+  #mobile-menu-bar nav li:active, #mobile-menu-bar nav li:hover {
+    background: #42586E;
   }
   #mobile-menu-bar #lbl-hamburger {
     cursor: pointer;
@@ -1015,5 +1022,11 @@ footer {
 
   #port-sections .sec-container {
     top: 5rem;
+  }
+
+  footer {
+    background: #0C2032;
+    border-top: 0.5rem solid #42586E;
+    color: #F0F0F0;
   }
 }
