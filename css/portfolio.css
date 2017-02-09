@@ -720,8 +720,22 @@ footer {
   .tooltip .tooltip-text em {
     color: #F0F0F0;
   }
+
+  .modal {
+    color: #F0F0F0;
+    font-size: 3rem;
+  }
+  .modal .modal-header {
+    font-size: 4rem;
+    border: 0.5rem solid #F0F0F0;
+    width: 5rem;
+  }
 }
 @media (max-width: 425px) {
+  body {
+    overflow: hidden;
+  }
+
   #topNavBar {
     position: relative;
     flex-direction: column;
@@ -787,8 +801,21 @@ footer {
     -ms-transform: translate(3rem, 0rem) scale(1);
   }
 
+  #port-sections #port--about-sec {
+    background: rgba(52, 152, 219, 0.75);
+    padding: 0 1rem;
+  }
+  #port-sections #port--project-sec {
+    background: white;
+  }
+  #port-sections #port--skills-sec {
+    background: rgba(230, 126, 34, 0.75);
+  }
+  #port-sections #port--contact-sec {
+    background: rgba(26, 188, 156, 0.75);
+  }
   #port-sections .sec-container {
-    top: 0rem;
+    top: 6rem;
     margin: 0;
   }
   #port-sections .sec-container .section--title {
@@ -840,7 +867,8 @@ footer {
     padding: 2rem;
     border: none;
     font-size: 2rem;
-    background: lightgreen;
+    background: #7A9F35;
+    border-bottom: 4px solid #D4EE9F;
     opacity: 0.75;
     cursor: pointer;
     white-space: nowrap;
@@ -848,7 +876,7 @@ footer {
   }
   #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
     opacity: 1;
-    border-color: #A976AD;
+    border-color: #D4EE9F;
   }
   #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
     opacity: 1;
@@ -927,7 +955,7 @@ footer {
     overflow: hidden;
     background: #0C2032;
     color: #F0F0F0;
-    top: 5rem;
+    top: 0rem;
     left: 0rem;
     width: 0px;
     height: 100%;
@@ -935,11 +963,13 @@ footer {
   }
   #mobile-menu-bar nav li {
     font-size: 2rem;
-    line-height: 4rem;
-    padding: 3rem 2rem;
+    line-height: 2rem;
+    padding: 2rem 2rem;
+    white-space: nowrap;
   }
-  #mobile-menu-bar nav li:first-child {
-    margin-top: 1.7rem;
+  #mobile-menu-bar nav li.fine-print {
+    font-size: 1rem;
+    text-align: center;
   }
   #mobile-menu-bar nav li:active, #mobile-menu-bar nav li:hover {
     background: #42586E;
@@ -959,8 +989,7 @@ footer {
 
   #cb-menu-show:checked ~ #port-sections {
     transform: translate(50vw);
-    margin-left: 1rem;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   #cb-menu-show:checked ~ #mobile-menu-bar nav {
     width: 50vw;

@@ -65,7 +65,7 @@ html{
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
   width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 a{
@@ -983,11 +983,25 @@ footer{
           }
       } 
     }
+    .modal{
+      color: $text-color-white;
+      font-size: 3rem;
+
+      .modal-header{
+        font-size: 4rem;
+        border: 0.5rem solid $text-color-white;
+        width: 5rem;
+      }
+    }
   }
 
 
 
 @media(max-width: 425px){
+  body{
+    overflow: hidden;
+  }
+
   #topNavBar{
     position: relative;
     flex-direction: column;
@@ -1060,8 +1074,26 @@ footer{
   }
 
   #port-sections{
+    #port--about-sec{
+      background: rgba(52,152,219 ,0.75);
+      padding: 0 1rem;
+    }
+
+    #port--project-sec{
+      background: white;
+    }
+
+    #port--skills-sec{
+      background: rgba(230,126,34 ,0.75);
+    }
+
+     #port--contact-sec{
+       background: rgba(26,188,156 ,0.75);
+     }
+
+
     .sec-container{
-      top: 0rem;
+      top: 6rem;
       margin: 0;
       
 
@@ -1124,7 +1156,8 @@ footer{
             padding: 2rem;
             border: none;
             font-size: 2rem;
-            background: lightgreen;
+            background: $primary-600;
+            border-bottom: 4px solid $primary-accent-600;
             opacity: 0.75;
             cursor: pointer;
             white-space: nowrap;
@@ -1132,7 +1165,7 @@ footer{
             
             &:hover{
               opacity: 1;
-              border-color: $primary-accent;
+              border-color: $primary-accent-600;
             }
           }
           
@@ -1239,7 +1272,7 @@ footer{
       overflow: hidden;
       background: $primary-360;
       color: $text-color-white-360;
-      top: 5rem;
+      top: 0rem;
       left: 0rem;
       width: 0px;
       height: 100%;
@@ -1247,17 +1280,17 @@ footer{
 
       li{
         font-size: 2rem;
-        line-height: 4rem;
-        padding: 3rem 2rem;
-
-        &:first-child{
-          margin-top: 1.7rem;
-        }
+        line-height: 2rem;
+        padding: 2rem 2rem;
+        white-space: nowrap;
         
+        &.fine-print{
+          font-size: 1rem;
+          text-align: center;
+        }
         &:active, &:hover{
           background: $primary-accent-360;
         }
-        
       }
     }
     
@@ -1282,9 +1315,7 @@ footer{
 
       & ~ #port-sections{
         transform: translate(50vw);
-        margin-left: 1rem;
-        overflow: hidden;
-
+        overflow-x: hidden;
       }
       
       & ~ #mobile-menu-bar{
