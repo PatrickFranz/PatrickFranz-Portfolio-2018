@@ -16,6 +16,7 @@ html {
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -216,13 +217,13 @@ strong {
   display: none;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-  background: #212020;
+  background: #6F2974;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-  background: #212020;
+  background: #6F2974;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-  background: #212020;
+  background: #6F2974;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel video, #port-sections #port--project-sec #projects-container #projects-right .proj-carousel img {
   width: 100%;
@@ -245,11 +246,11 @@ strong {
   margin: 0 1rem;
   border-radius: 50%;
   background: transparent;
-  border: 2px solid #212020;
+  border: 3px solid #A976AD;
   transition: all ease 0.25s;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-  background: #212020;
+  background: #A976AD;
   cursor: pointer;
 }
 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image {
@@ -500,18 +501,6 @@ footer {
     align-content: center;
     padding: 3rem 0;
   }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
-    display: none;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-    background: #212020;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-    background: #212020;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-    background: #212020;
-  }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel video, #port-sections #port--project-sec #projects-container #projects-right .proj-carousel img {
     width: 100%;
     height: 100%;
@@ -525,20 +514,6 @@ footer {
     position: absolute;
     bottom: 10px;
     z-index: 10;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-    display: inline-flex;
-    height: 2rem;
-    width: 2rem;
-    margin: 0 1rem;
-    border-radius: 50%;
-    background: transparent;
-    border: 2px solid #212020;
-    transition: all ease 0.25s;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-    background: #212020;
-    cursor: pointer;
   }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image {
     flex: 1 2 auto;
@@ -649,6 +624,18 @@ footer {
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
     padding: 3rem 0;
   }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
+    display: none;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
+    background: #7A9F35;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
+    background: #7A9F35;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
+    background: #7A9F35;
+  }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
     flex: 0 0 auto;
   }
@@ -666,11 +653,11 @@ footer {
     margin: 0 1rem;
     border-radius: 50%;
     background: transparent;
-    border: 2px solid #212020;
+    border: 2px solid #D4EE9F;
     transition: all ease 0.25s;
   }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-    background: #212020;
+    background: #D4EE9F;
     cursor: pointer;
   }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image {
@@ -719,6 +706,18 @@ footer {
   footer {
     background: #7A9F35;
     border-top: 0.5rem solid #D4EE9F;
+    color: #F0F0F0;
+  }
+
+  .tooltip .tooltip-text {
+    background: #7A9F35;
+    border: 1px solid #7A9F35;
+    color: white;
+  }
+  .tooltip .tooltip-text::after {
+    border-color: #7A9F35 transparent transparent transparent;
+  }
+  .tooltip .tooltip-text em {
     color: #F0F0F0;
   }
 }
@@ -871,52 +870,8 @@ footer {
     align-content: center;
     padding: 0;
   }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    z-index: 10;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-    display: inline-flex;
-    height: 2rem;
-    width: 2rem;
-    margin: 0 1rem;
-    border-radius: 50%;
-    background: transparent;
-    border: 2px solid #212020;
-    transition: all ease 0.25s;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-    background: #212020;
-    cursor: pointer;
-  }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame {
     padding: 5rem 0;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image {
-    flex: 1 2 auto;
-    white-space: nowrap;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .center {
-    text-align: center;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #6F2974;
-    user-select: none;
-    cursor: pointer;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-    color: #A976AD;
-  }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame img {
-    padding-bottom: 2rem;
   }
   #port-sections #port--project-sec #projects-container #projects-right .carousel--input + div {
     display: none;
@@ -950,6 +905,10 @@ footer {
   }
 }
 @media (max-width: 360px) {
+  strong {
+    color: #0C2032;
+  }
+
   #topNavBar {
     display: none;
   }
@@ -1020,13 +979,53 @@ footer {
     opacity: 0;
   }
 
-  #port-sections .sec-container {
-    top: 5rem;
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
+    padding: 3rem 0;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
+    display: none;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
+    background: #0C2032;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
+    background: #0C2032;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
+    background: #0C2032;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
+    flex: 0 0 auto;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
+    border: 2px solid #42586E;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
+    background: #42586E;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
+    color: #0C2032;
+  }
+  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
+    color: #42586E;
   }
 
   footer {
     background: #0C2032;
     border-top: 0.5rem solid #42586E;
+    color: #F0F0F0;
+  }
+
+  /* TOOLTIP */
+  .tooltip .tooltip-text {
+    background: #0C2032;
+    border: 1px solid #0C2032;
+    color: white;
+  }
+  .tooltip .tooltip-text::after {
+    border-color: #0C2032 transparent transparent transparent;
+  }
+  .tooltip .tooltip-text em {
     color: #F0F0F0;
   }
 }

@@ -171,6 +171,10 @@
     transition: opacity 0.1s;
     pointer-events: none;
     z-index: 100;
+
+    em{
+      font-weight: bold;
+    }
   
     &:before{
       content: attr(data-about);

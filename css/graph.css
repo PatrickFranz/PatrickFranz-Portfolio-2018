@@ -1,245 +1,316 @@
 .graph {
   position: relative;
-  display: flex; }
+  display: flex;
+}
 
 .graph-flex-row {
   display: flex;
   flex-direction: row;
-  position: relative; }
+  position: relative;
+}
 
 .graph-bar {
   color: #212020;
   padding-left: 3rem;
   padding: 0.5rem 1rem;
-  margin: 0.75rem 0; }
+  margin: 0.75rem 0;
+}
 
 .bars {
   position: relative;
   width: 200px;
   transform: rotate(-90deg);
   text-align: center;
-  left: 3rem; }
+  left: 3rem;
+}
 
 .bar {
   padding: 2rem 0;
-  margin: 0.75rem 0; }
+  margin: 0.75rem 0;
+}
 
 .graph-bar[data-graph-bar="learning"] {
-  width: 25%; }
-  .graph-bar[data-graph-bar="learning"] .tooltip-text {
-    left: -230%; }
+  width: 25%;
+}
+.graph-bar[data-graph-bar="learning"] .tooltip-text {
+  left: -230%;
+}
 
 .graph-bar[data-graph-bar="competent"] {
-  width: 50%; }
-  .graph-bar[data-graph-bar="competent"] .tooltip-text {
-    left: -55%; }
+  width: 50%;
+}
+.graph-bar[data-graph-bar="competent"] .tooltip-text {
+  left: -55%;
+}
 
 .graph-bar[data-graph-bar="proficient"] {
-  width: 75%; }
-  .graph-bar[data-graph-bar="proficient"] .tooltip-text {
-    left: 10%; }
+  width: 75%;
+}
+.graph-bar[data-graph-bar="proficient"] .tooltip-text {
+  left: 10%;
+}
 
 .graph-bar[data-graph-bar="expert"] {
-  width: 100%; }
-  .graph-bar[data-graph-bar="expert"] .tooltip-text {
-    left: 55%; }
+  width: 100%;
+}
+.graph-bar[data-graph-bar="expert"] .tooltip-text {
+  left: 55%;
+}
 
 .width-25 {
-  width: 25%; }
+  width: 25%;
+}
 
 .width-50 {
-  width: 50%; }
+  width: 50%;
+}
 
 .width-75 {
-  width: 75%; }
+  width: 75%;
+}
 
 .width-100 {
-  width: 100%; }
+  width: 100%;
+}
 
 * {
-  font-size: 10px; }
+  font-size: 10px;
+}
 
 .bar-graphs {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .graph {
   display: flex;
   font-size: 1.5rem;
   flex-wrap: nowrap;
-  margin: 0 5rem 10rem; }
+  margin: 0 5rem 10rem;
+}
 
 .x-axis {
   position: absolute;
   transform: rotate(-90deg);
   left: 16rem;
   font-size: 1.2rem;
-  bottom: -17rem; }
-  .x-axis li {
-    padding: 1.25rem 0;
-    width: 15rem;
-    transform: rotate(150deg); }
+  bottom: -17rem;
+}
+.x-axis li {
+  padding: 1.25rem 0;
+  width: 15rem;
+  transform: rotate(150deg);
+}
 
 .graph li {
   list-style: none;
-  color: inherit; }
+  color: inherit;
+}
 
 .y-axis li {
-  padding: 1rem 0; }
+  padding: 1rem 0;
+}
 
 /* bar colors */
 .font-green {
-  color: #1abc9c; }
+  color: #1abc9c;
+}
 
 .font-purple {
-  color: #9b59b6; }
+  color: #9b59b6;
+}
 
 .font-blue {
-  color: #3498db; }
+  color: #3498db;
+}
 
 .bar-bg-green {
-  background: #1abc9c; }
+  background: #1abc9c;
+}
 
 .bar-bg-purple {
-  background: #9b59b6; }
+  background: #9b59b6;
+}
 
 .bar-bg-blue {
-  background: #3498db; }
+  background: #3498db;
+}
 
 .bar-bg-yellow {
-  background: #f1c40f; }
+  background: #f1c40f;
+}
 
 .bar-bg-red {
-  background: #e74c3c; }
+  background: #e74c3c;
+}
 
 .bar-bg-green2 {
-  background: #2ecc71; }
+  background: #2ecc71;
+}
 
 /* TOOLTIP */
 .tooltip {
-  position: relative; }
-  .tooltip .tooltip-text {
-    position: absolute;
-    opacity: 0;
-    text-align: left;
-    background: black;
-    border: 1px solid black;
-    color: white;
-    padding: 0.5rem 2rem;
-    bottom: 0.5rem;
-    white-space: nowrap;
-    transform: rotate(90deg);
-    transition: opacity 0.1s;
-    pointer-events: none;
-    z-index: 100; }
-    .tooltip .tooltip-text:before {
-      content: attr(data-about); }
-    .tooltip .tooltip-text::after {
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border: 10px solid;
-      border-color: black transparent transparent transparent; }
-  .tooltip:hover .tooltip-text {
-    opacity: 1; }
+  position: relative;
+}
+.tooltip .tooltip-text {
+  position: absolute;
+  opacity: 0;
+  text-align: left;
+  background: black;
+  border: 1px solid black;
+  color: white;
+  padding: 0.5rem 2rem;
+  bottom: 0.5rem;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  transition: opacity 0.1s;
+  pointer-events: none;
+  z-index: 100;
+}
+.tooltip .tooltip-text em {
+  font-weight: bold;
+}
+.tooltip .tooltip-text:before {
+  content: attr(data-about);
+}
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 10px solid;
+  border-color: black transparent transparent transparent;
+}
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+}
 
 @media (max-width: 960px) {
   .tooltip-text i {
-    display: none; }
+    display: none;
+  }
 
   .graph-bar[data-graph-bar="learning"] {
-    width: 25%; }
-    .graph-bar[data-graph-bar="learning"] .tooltip-text {
-      left: 60%; }
+    width: 25%;
+  }
+  .graph-bar[data-graph-bar="learning"] .tooltip-text {
+    left: 60%;
+  }
 
   .graph-bar[data-graph-bar="competent"] {
-    width: 50%; }
-    .graph-bar[data-graph-bar="competent"] .tooltip-text {
-      left: 70%; }
+    width: 50%;
+  }
+  .graph-bar[data-graph-bar="competent"] .tooltip-text {
+    left: 70%;
+  }
 
   .graph-bar[data-graph-bar="proficient"] {
-    width: 75%; }
-    .graph-bar[data-graph-bar="proficient"] .tooltip-text {
-      left: 85%; }
+    width: 75%;
+  }
+  .graph-bar[data-graph-bar="proficient"] .tooltip-text {
+    left: 85%;
+  }
 
   .graph-bar[data-graph-bar="expert"] {
-    width: 100%; }
-    .graph-bar[data-graph-bar="expert"] .tooltip-text {
-      left: 95%; }
+    width: 100%;
+  }
+  .graph-bar[data-graph-bar="expert"] .tooltip-text {
+    left: 95%;
+  }
 
   .rightmost-tooltip .tooltip-text {
-    bottom: 5rem; }
-    .rightmost-tooltip .tooltip-text::after {
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 85%;
-      margin-left: -5px; }
+    bottom: 5rem;
+  }
+  .rightmost-tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 85%;
+    margin-left: -5px;
+  }
 
   .x-axis {
     position: absolute;
     transform: rotate(-90deg);
     left: 13rem;
     font-size: 1.2rem;
-    bottom: -18rem; }
-    .x-axis li {
-      padding: 1.25rem 0;
-      width: 15rem;
-      transform: rotate(180deg); } }
+    bottom: -18rem;
+  }
+  .x-axis li {
+    padding: 1.25rem 0;
+    width: 15rem;
+    transform: rotate(180deg);
+  }
+}
 @media (max-width: 960px) and (max-width: 500px) {
   .bar {
     padding: 1.5rem 0;
-    margin: 0.75rem 0; }
+    margin: 0.75rem 0;
+  }
 
   .bars {
     position: relative;
     width: 200px;
     transform: rotate(-90deg);
     text-align: center;
-    left: 2rem; }
+    left: 2rem;
+  }
 
   .graph-bar[data-graph-bar="learning"] {
-    width: 25%; }
-    .graph-bar[data-graph-bar="learning"] .tooltip-text {
-      left: 80%; }
+    width: 25%;
+  }
+  .graph-bar[data-graph-bar="learning"] .tooltip-text {
+    left: 80%;
+  }
 
   .graph-bar[data-graph-bar="competent"] {
-    width: 50%; }
-    .graph-bar[data-graph-bar="competent"] .tooltip-text {
-      left: 90%; }
+    width: 50%;
+  }
+  .graph-bar[data-graph-bar="competent"] .tooltip-text {
+    left: 90%;
+  }
 
   .graph-bar[data-graph-bar="proficient"] {
-    width: 75%; }
-    .graph-bar[data-graph-bar="proficient"] .tooltip-text {
-      left: 95%; }
+    width: 75%;
+  }
+  .graph-bar[data-graph-bar="proficient"] .tooltip-text {
+    left: 95%;
+  }
 
   .graph-bar[data-graph-bar="expert"] {
-    width: 100%; }
-    .graph-bar[data-graph-bar="expert"] .tooltip-text {
-      left: 100%; }
+    width: 100%;
+  }
+  .graph-bar[data-graph-bar="expert"] .tooltip-text {
+    left: 100%;
+  }
 
   .rightmost-tooltip .tooltip-text {
-    bottom: 2rem; }
-    .rightmost-tooltip .tooltip-text::after {
-      content: " ";
-      position: absolute;
-      top: 100%;
-      left: 70%;
-      margin-left: -5px; }
+    bottom: 2rem;
+  }
+  .rightmost-tooltip .tooltip-text::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    margin-left: -5px;
+  }
 
   .x-axis {
     position: absolute;
     transform: rotate(-90deg);
     left: 11.5rem;
     font-size: 1.2rem;
-    bottom: -18rem; }
-    .x-axis li {
-      padding: 0.7rem 0;
-      width: 15rem;
-      transform: rotate(180deg); }
+    bottom: -18rem;
+  }
+  .x-axis li {
+    padding: 0.7rem 0;
+    width: 15rem;
+    transform: rotate(180deg);
+  }
 
   .tooltip .tooltip-text {
     font-size: 1rem;
-    padding: 0.5rem 1rem; } }
+    padding: 0.5rem 1rem;
+  }
+}

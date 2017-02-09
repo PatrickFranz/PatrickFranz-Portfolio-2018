@@ -10,6 +10,7 @@
     font-size: 1em;
     user-select: none;
     cursor: pointer;
+    max-width: 80%;
 }
 
 .button:hover{ background-color: #FFB96E; }

@@ -12,6 +12,8 @@ $primary-accent: #A976AD;
 $hover-bg-color: #A976AD;
 $text-color-white: #F0F0F0;
 $hover-text-color: #3E4651;
+$tooltip-bg: $primary;
+$tooltip-text: $primary-accent;
 
 $primary-600: #7A9F35;
 $primary-accent-600: #D4EE9F;
@@ -25,7 +27,6 @@ $primary-accent-360: #42586E;
 $hover-bg-color-360: #A976AD;
 $text-color-white-360: #F0F0F0;
 $hover-text-color-360: #3E4651;
-
 
 
 $make-it-pop: deeppink;
@@ -64,6 +65,7 @@ html{
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 a{
@@ -289,19 +291,19 @@ strong{
           
             &:nth-of-type(1):checked{
              ~.carousel--radio-buttons label:nth-of-type(1){
-               background: #212020;
+               background: $primary;
              }
             }
             &:nth-of-type(2):checked{
               
              ~.carousel--radio-buttons label:nth-of-type(2){
-               background: #212020;
+               background: $primary;
              }
             } 
             &:nth-of-type(3):checked{
               
              ~.carousel--radio-buttons label:nth-of-type(3){
-               background: #212020;
+               background: $primary;
              }
             }           
           }
@@ -329,11 +331,11 @@ strong{
               margin: 0 1rem;
               border-radius: 50%;
               background: transparent;
-              border: 2px solid #212020;
+              border: 3px solid $primary-accent;
               transition: all ease 0.25s;
               
               &:hover{
-                background: #212020;
+                background: $primary-accent;
                 cursor: pointer;
               }
             }
@@ -344,6 +346,7 @@ strong{
             .carousel--image{
               flex: 1 2 auto;
               white-space: nowrap;
+  
 
               .center{
                 text-align: center; 
@@ -670,27 +673,7 @@ footer{
             align-content: center;
             padding: 3rem 0;
 
-            .carousel--input{
-              display: none;
-            
-              &:nth-of-type(1):checked{
-              ~.carousel--radio-buttons label:nth-of-type(1){
-                background: #212020;
-              }
-              }
-              &:nth-of-type(2):checked{
-                
-              ~.carousel--radio-buttons label:nth-of-type(2){
-                background: #212020;
-              }
-              } 
-              &:nth-of-type(3):checked{
-                
-              ~.carousel--radio-buttons label:nth-of-type(3){
-                background: #212020;
-              }
-              }           
-            }
+           
 
             video, img{
               width: 100%;
@@ -709,21 +692,8 @@ footer{
               bottom: 10px;            
               z-index: 10;
 
-              label{
-                display: inline-flex;
-                height: 2rem;
-                width: 2rem;
-                margin: 0 1rem;
-                border-radius: 50%;
-                background: transparent;
-                border: 2px solid #212020;
-                transition: all ease 0.25s;
-                
-                &:hover{
-                  background: #212020;
-                  cursor: pointer;
-                }
-              }
+              
+              
             }
 
             .project--carousel-frame{
@@ -856,33 +826,53 @@ footer{
         }
       }
 
-          #port--project-sec{
-      #projects-container{
-        #projects-right{
-          input[name="projects"]{
-            +label{
-              font-size: 1.5rem;
-              width: 20%;
+      #port--project-sec{
+        #projects-container{
+          #projects-right{
+            input[name="projects"]{
+              +label{
+                font-size: 1.5rem;
+                width: 20%;
+                
+                &:hover{
+                  border-color: $primary-accent-600;
+                }
+              }
               
-              &:hover{
-                border-color: $primary-accent-600;
+              &:checked + label{
+                border-color: $primary-600;
+                +.c-proj{
+                  left: 30%;
+                  width: 70%;
+                }
               }
             }
+
+            .c-proj{
+            }
+
+            .proj-carousel{
+              padding: 3rem 0;
+
+              .carousel--input{
+              display: none;
             
-            &:checked + label{
-              border-color: $primary-600;
-              +.c-proj{
-                left: 30%;
-                width: 70%;
+              &:nth-of-type(1):checked{
+                ~.carousel--radio-buttons label:nth-of-type(1){
+                  background: $primary-600;
+                }
               }
+              &:nth-of-type(2):checked{    
+                ~.carousel--radio-buttons label:nth-of-type(2){
+                  background: $primary-600;
+                }
+              } 
+              &:nth-of-type(3):checked{             
+                ~.carousel--radio-buttons label:nth-of-type(3){
+                  background: $primary-600;
+                }
+              }           
             }
-          }
-
-          .c-proj{
-          }
-
-          .proj-carousel{
-            padding: 3rem 0;
 
             i{
               flex: 0 0 auto;
@@ -902,11 +892,11 @@ footer{
                 margin: 0 1rem;
                 border-radius: 50%;
                 background: transparent;
-                border: 2px solid #212020;
+                border: 2px solid $primary-accent-600;
                 transition: all ease 0.25s;
                 
                 &:hover{
-                  background: #212020;
+                  background: $primary-accent-600;
                   cursor: pointer;
                 }
               }
@@ -976,6 +966,22 @@ footer{
       background: $primary-600;
       border-top: 0.5rem solid $primary-accent-600;
       color: $text-color-white;
+    }
+
+    .tooltip{
+      .tooltip-text{
+          background: $primary-600;
+          border: 1px solid $primary-600;
+          color: white;
+
+          &::after {
+              border-color: $primary-600 transparent transparent transparent;
+          }
+
+          em{
+            color: $text-color-white;
+          }
+      } 
     }
   }
 
@@ -1156,64 +1162,12 @@ footer{
           align-content: center;
           padding: 0;
 
-         .carousel--radio-buttons{
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            bottom: 10px;            
-            z-index: 10;
-
-            label{
-              display: inline-flex;
-              height: 2rem;
-              width: 2rem;
-              margin: 0 1rem;
-              border-radius: 50%;
-              background: transparent;
-              border: 2px solid #212020;
-              transition: all ease 0.25s;
-              
-              &:hover{
-                background: #212020;
-                cursor: pointer;
-              }
-            }
-          }
 
           .project--carousel-frame{
             padding: 5rem 0; 
-            .carousel--image{
-              flex: 1 2 auto;
-              white-space: nowrap;
-
-              .center{
-                text-align: center; 
-              }
-            }
-
-            .c-control{
-              display: flex;
-              align-items: center;
-              padding: 0 2rem;
-              font-size: 3rem;
-              font-weight: bold;
-              color: $primary;
-              user-select: none;
-              cursor: pointer;
-            }
-
-            .c-control:hover{
-              color: $primary-accent;
-            }
-
-            img{
-              padding-bottom: 2rem;
-              
-            }
           }
         }
         
-
         .carousel--input{
           + div{
             display: none;
@@ -1257,10 +1211,14 @@ footer{
       }
     }
   }    
-}
+  }
 }
 
 @media (max-width:360px){
+
+  strong{
+    color: $primary-360;
+  }
   //POP OUT NAV BAR
 
   #topNavBar{
@@ -1291,7 +1249,7 @@ footer{
         font-size: 2rem;
         line-height: 4rem;
         padding: 3rem 2rem;
-        
+
         &:first-child{
           margin-top: 1.7rem;
         }
@@ -1357,17 +1315,84 @@ footer{
     }
   }
 
-  #port-sections{
-    .sec-container {
-      top: 5rem;
-    }
+  #port-sections #port--project-sec #projects-container #projects-right{
+            .proj-carousel{
+              padding: 3rem 0;
+
+              .carousel--input{
+              display: none;
+            
+              &:nth-of-type(1):checked{
+                ~.carousel--radio-buttons label:nth-of-type(1){
+                  background: $primary-360;
+                }
+              }
+              &:nth-of-type(2):checked{    
+                ~.carousel--radio-buttons label:nth-of-type(2){
+                  background: $primary-360;
+                }
+              } 
+              &:nth-of-type(3):checked{             
+                ~.carousel--radio-buttons label:nth-of-type(3){
+                  background: $primary-360;
+                }
+              }           
+            }
+
+            i{
+              flex: 0 0 auto;
+            }
+
+          .carousel--radio-buttons{
+
+              label{
+                border: 2px solid $primary-accent-360;
+                
+                &:hover{
+                  background: $primary-accent-360;
+                }
+              }
+            }
+
+            .project--carousel-frame{
+
+              .c-control{
+                color: $primary-360;
+              }
+
+              .c-control:hover{
+                color: $primary-accent-360;
+              }
+            }
+          }
   }
+
 
   footer{      
       background: $primary-360;
       border-top: 0.5rem solid $primary-accent-360;
       color: $text-color-white;
     }
+
+  /* TOOLTIP */
+
+  .tooltip{
+  .tooltip-text{
+      background: $primary-360;
+      border: 1px solid $primary-360;
+      color: white;
+
+      &::after {
+          border-color: $primary-360 transparent transparent transparent;
+      }
+
+      em{
+        color: $text-color-white;
+      }
+  }
+
+  
+  }
 }
 
 
