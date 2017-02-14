@@ -209,7 +209,7 @@ strong{
           align-items: center;
 
           img{
-            border: 5px solid $primary;
+            //border: 5px solid $primary;
             border-radius: 10px;
           }
         }
@@ -265,14 +265,13 @@ strong{
               display: flex;
               position: absolute;
               left: 20%;
+              top: 0;
               width: 80%;
               flex-direction: column;
               height: 100%;
             }
           }
-        }
-
-        
+        }  
 
         .c-proj{
           display: none;
@@ -308,11 +307,6 @@ strong{
             }           
           }
 
-          video, img{
-            width: 100%;
-            height: 100%;
-          }
-
           i{
             flex: 0 0 auto;  
           }
@@ -321,7 +315,8 @@ strong{
             display: flex;
             justify-content: center;
             position: absolute;
-            bottom: 10px;            
+            bottom: 5%;
+            right: 45%;            
             z-index: 10;
 
             label{
@@ -342,18 +337,177 @@ strong{
           }
 
           .project--carousel-frame{
+            max-height: 100%;
+            max-width: 100%;
 
             .carousel--image{
               flex: 1 2 auto;
               white-space: nowrap;
-  
+              text-align: center;
+              width: 100%;
+              height: 100%;
 
               .center{
                 text-align: center; 
               }
 
+              video{
+                width: 90%;
+              }
+
               img{
-                  object-fit: scale-down;
+                object-fit: scale-down;
+                max-width: 90%;
+              }
+
+              .accordion{
+                max-width: 90%;
+                max-height: 90%;
+                padding: 5rem 0;
+                
+                .heading1{
+                  margin: 0;
+                  padding: 10px;
+                  font-size: 1.5rem;
+                  font-weight: bold;
+                  background: $primary-accent;
+                  color: #621c26;
+                }
+
+                .heading2{
+                  font-size: 1.25rem;
+                  font-weight: 800;
+                  color: maroon;
+                  margin: 15px 0;
+                }
+
+                .heading3{
+                  margin: 10px 0;
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                }
+
+                ul {
+                  border: 1px solid black;
+                  margin: 0;
+                  padding: 10px;
+                  border-radius: 10px;
+                }
+
+                li {
+                  margin: 5px;
+                  list-style: none;
+                  border: 1px solid black;
+                }
+
+                label{
+                  display: block;
+                  transition: color 0.5s, background-color 0.5s;
+                }
+
+                input[type='radio']{
+                  display: none;
+                }
+
+                label:hover{
+                  background: $hover-bg-color;
+                  color: $text-color-white;
+                  cursor: pointer;
+                }
+
+                input[type='radio']:checked ~ label{
+                  background: $primary;
+                  color: #fff;
+                }
+
+                input[type='radio']:checked ~ .food__body{
+                  font-size: 1rem;
+                  display: block;
+                }
+
+                ol li, ol{
+                  border: none;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .food__body{
+                  padding: 0 10px;
+                  height: 300px;
+                  transition: height 2s;
+                }
+
+                .hide{
+                  display: none;
+                }
+
+                .show{
+                  display: block;
+                }
+
+                @media(max-width:1024px){ 
+                /*use a black and white color scheme,  */
+                  .heading1{
+                    background: #353535;
+                    color: #ffffff;
+                  }
+
+                  .heading2{
+                    color: #000000;
+                  }
+                   label:hover{
+                    background: #151;
+                    color: #fff;
+                  }
+
+                   input[type='radio']:checked ~ label{
+                    background: #000000;
+                    color: #fff;
+                  }
+                }
+
+                @media (max-width:600px){
+                /*use a green color scheme, */
+                  .heading1{
+                    background: #46951C;
+                    color: #ffffff;
+                  }
+
+                  .heading2{
+                    color: #1D5300;
+                  }
+                   label:hover{
+                    background: #84CD5D;
+                    color: #fff;
+                  }
+
+                   input[type='radio']:checked ~ label{
+                    background: #1D5300;
+                    color: #fff;
+                  }
+                }
+
+                @media (max-width:360px){
+                /*color scheme of the accordion to blue
+                  */
+                  .heading1{
+                    background: #214DB2;
+                    color: #ffffff;
+                  }
+
+                  .heading2{
+                    color: #4166BB;
+                  }
+                   label:hover{
+                    background: #6584CC;
+                    color: #fff;
+                  }
+
+                   input[type='radio']:checked ~ label{
+                    background: #0A2A74;
+                    color: #fff;
+                  }
+                }
               }
             }
 
@@ -408,7 +562,6 @@ strong{
             justify-content: flex-end;
             font-size: 1.5rem;            
             text-decoration: underline; 
-            
           }
 
           .project--info-links a{
@@ -666,45 +819,44 @@ footer{
           }
 
           .proj-carousel{
-            display: flex;
-            position: relative;
-            flex: 2 1 auto;
-            justify-content: center;
-            align-content: center;
-            padding: 3rem 0;
+            // display: flex;
+            // position: relative;
+            // flex: 2 1 auto;
+            // justify-content: center;
+            // align-content: center;
+            // padding: 3rem 0;
 
            
 
-            video, img{
-              width: 100%;
-              height: 100%;
-            }
+            // video, img{
+            //   width: 100%;
+            //   height: 100%;
+            // }
 
 
-            i{
-              flex: 0 0 auto;
-            }
+          //   i{
+          //     flex: 0 0 auto;
+          //   }
 
-          .carousel--radio-buttons{
-              display: flex;
-              justify-content: center;
-              position: absolute;
-              bottom: 10px;            
-              z-index: 10;
+          // .carousel--radio-buttons{
+          //     display: flex;
+          //     justify-content: center;
+          //     position: relative;
+          //     top: 100%;
+          //     right: 50%;            
+          //     z-index: 10;
 
-              
-              
-            }
+          //   }
 
             .project--carousel-frame{
 
               .carousel--image{
-                flex: 1 2 auto;
-                white-space: nowrap;
+                // flex: 1 2 auto;
+                // white-space: nowrap;
 
-                .center{
-                  text-align: center; 
-                }
+                // .center{
+                //   text-align: center; 
+                // }
               }
 
               .c-control{
@@ -879,11 +1031,7 @@ footer{
             }
 
           .carousel--radio-buttons{
-              display: flex;
-              justify-content: center;
-              position: absolute;
-              bottom: 10px;            
-              z-index: 10;
+             
 
               label{
                 display: inline-flex;
@@ -904,14 +1052,14 @@ footer{
 
             .project--carousel-frame{
 
-              .carousel--image{
-                flex: 1 2 auto;
-                white-space: nowrap;
+              // .carousel--image{
+              //   flex: 1 2 auto;
+              //   white-space: nowrap;
 
-                .center{
-                  text-align: center; 
-                }
-              }
+              //   .center{
+              //     text-align: center; 
+              //   }
+              // }
 
               .c-control{
                 padding: 0 3rem;
@@ -1120,6 +1268,7 @@ footer{
 
     section{
       font-size: 2rem;
+      padding-bottom: 7rem;
 
       article{
         #port--about-pic{

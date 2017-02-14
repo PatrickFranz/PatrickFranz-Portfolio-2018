@@ -72,24 +72,22 @@
             <p>Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Santa Cruz, CA, a quick commute to Silicon Valley where I get my fill of the technology scene. </p>
           </div>
           <div id='port--about-pic'`>
-           <picture>
-            <img
-              sizes="(max-width: 400px) 100vw, 400px"
-              srcset="
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_200.png 400w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_232.png 232w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_261.png 261w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_288.png 288w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_314.png 314w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_337.png 337w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_361.png 361w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_382.png 382w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_395.png 395w,
-              img/selfie-1-400w/selfie-1-400w_xrstt5_c_scale,w_400.png 400w"
-              src="selfie-1-400w_xrstt5_c_scale,w_400.png"
+            <img srcset="
+              img/profile1-2000w.png 2000w,
+              img/profile1-1000w.png 1000w,
+              img/profile1-750w.png 750w,
+              img/profile1-300w.png 400w"
+              src="img/profile1-300w.png"
               alt="">
-          </picture>
-            <!--<img src="img/selfie-1-400w.png" alt="A selfie I took">-->
+
+              <!--<img srcset="
+              img/profile1-2000w.png 2000w,
+              img/profile1-1000w.png 1000w,
+              img/profile1-750w.png 750w,
+              img/profile1-400w.png 400w,
+              img/profile1-300w.png 300w"
+              src="img/profile1-1000w.png"
+              alt="">-->
           </div>
           <div>
             <p>Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often. </p>
@@ -143,7 +141,7 @@
                 <div class='project--carousel-frame'>
                   <label for="proj1-2" class='c-control '>&lt;</label>
                   <div class='carousel--image'>
-                    <div class='project--caro'>
+                    <div class='carousel--image'>
                     <!-- Content HERE - CALCULATOR -->
                       <section id='calc-body'>        
                         <span id='disp-op'></span>
@@ -507,7 +505,139 @@
                 </div>
               </div>
             </div>
+
+
+            <!--PROJECT 7 -->
+        
+            <input type="radio" name="projects" id="project-7">
+            <label for="project-7">CSS Accordion</label>
+            <div class="c-proj">
+              <div class="proj-carousel">
+                
+                <input id='proj7-1' class='carousel--input' type='radio' name='p7-radio' checked>
+                <div class='project--carousel-frame '>
+                  <label for="proj7-3" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                    <!--Content Here-->
+                    <img src="img/accordion-img1.png" alt="Accordion screenshot">
+                  </div> 
+                  <label for='proj7-2' class='c-control '>&gt;</label>
+                </div>
+                
+                <!--Carousel - Content 2-->
+                <input id='proj7-2' class='carousel--input' type='radio' name='p7-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj7-1" class='c-control'>&lt;</label>
+                  <div class='carousel--image'>
+                    <!-- Content HERE -->
+                    <img src="img/accordion-img2.png" alt="Accordion screenshot">
+                  </div>
+                  <label for='proj7-3' class='c-control '>&gt;</label>
+                </div>
+                <!--Carousel - Content 3-->
+  
+                <input id='proj7-3' class='carousel--input' type='radio' name='p7-radio'>
+                <div class='project--carousel-frame'>
+                  <label for="proj7-2" class='c-control '>&lt;</label>
+                  <div class='carousel--image'>
+                      <!-- Content HERE -->
+
+                      <div class="accordion">
+                        <ul>
+                          <!-- Item 1 -->
+                          <li>
+                            <input id='appetizers' type='radio' name='menu__div'>
+                            <label for="appetizers" class=heading1>APPETIZERS</label>           
+                            <div class='food__body hide'>
+                              <p class='heading2'>Check out our tasty Apps!</p>
+                              <p class='heading3'>Happy hour menu - half off!!</p>
+                              <ol>
+                                <li>Chicken Wings (6) - $5.99</li>
+                                <li>Calamari - $7.99</li>
+                                <li>Garlic breaded pickles - $4.59</li>
+                              </ol>
+                            </div>
+                          </li>
+
+                          <!-- Item 2 -->
+                          <li>
+                            <input id='entrees' type='radio' name='menu__div'>
+                            <label for="entrees" class=heading1>ENTREES</label> 
+                            <div class='food__body hide'>
+                              <p class='heading2'>Choose from a wide range of pastas, combos and signature dishes</p>
+                              <p class='heading3'>Pastas</p>
+                              <ol>
+                                <li>Chicken Piccata - $14.99</li>
+                                <li>Chicken Pollo - $12.99</li>
+                                <li>Lasagna (Chicken/Beef) - $10.99</li>
+                              </ol>
+                              <p class='heading3'>Combos</p>
+                              <ol>
+                                <li>Italian Sausage & Beef Combo - $15.99</li>
+                                <li>Mac n Cheese with Chicken Tenders - $8.99</li>
+                              </ol>
+                            </div>
+                          </li>
+
+                          <!-- Item 3 -->
+                          <li>
+                            <input id='desserts' type='radio' name='menu__div'>
+                            <label for="desserts" class=heading1>DESSERTS</label> 
+                            <div class='food__body hide'>
+                              <p class='heading2'>New Summer Specials!!</p>
+                              <p class='heading3'>Shakes and Ice Cream</p>
+                              <ol>
+                                <li>Turtle Caramel Shake - $6.99</li>
+                                <li>Chocolate Brownie Bite - $4.99</li>  
+                              </ol>
+                            </div>
+                          </li>
+
+                          <!-- Placeholder for Item 4 -->
+                          <li>
+                            <input id='soups' type='radio' name='menu__div'>
+                            <label for="soups" class=heading1>SOUPS & SALADS</label> 
+                            <div class='food__body hide'>
+                              <p class='heading2'>Light and Tasty!!</p>
+                              <p class='heading3'>Soups</p>
+                              <ol>
+                                <li>Boston Clam Chowder - Cup- $3.99</li>
+                                <li>Boston Clam Chowder - Bowl- $5.99</li>
+                                <li>French Onion - $5.99</li>
+                                <li>Italian Wedding - $5.99</li>
+                              </ol>
+                              <p class='heading3'>Salads</p>
+                              <ol>
+                                <li>Cesaer Salad - $3.99</li>
+                                <li>Greek Salad - $4.99</li>
+                                <li>House Salad - $3.99</li>
+                              </ol>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!--END CONTENT-->
+                  </div>
+                  <label for='proj7-1' class='c-control '>&gt;</label>
+                </div>
+                <section class='carousel--radio-buttons'>
+                  <label for="proj7-1"></label>
+                  <label for="proj7-2"></label>
+                  <label for="proj7-3"></label>
+                </section>
+              </div>
+              <div class='proj-desc'>
+                <p><strong>Technologies:</strong> HTML, CSS, Responsive</p>
+                <p>A responsive HTML/CSS-only accordion.</p>
+                <!--<div class='project--info-links'>
+                  <a href="https://patrickfranz.github.io/md_image_gallery/" target="_blank">Project Site</a
+                  ><a href="https://github.com/PatrickFranz/md_image_gallery" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
+                </div>-->
+              </div>
+            </div>
+
             <!--ADD NEW PROJECTS HERE - template in temp.html-->
+
 
           </div>
         </div>
