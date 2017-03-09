@@ -1,0 +1,229 @@
+
+
+input:hover{
+  background-color: #fffbe2;
+}
+
+input:not([type="submit"]):invalid:focus{
+  background: url("../img/invalid-30.png")
+  no-repeat;
+  background-position: right;
+  background-color: lightpink;
+}
+
+input:not([type="submit"]):valid{
+  background: url("../img/valid-30.png")
+  no-repeat;
+  background-position: right;
+  background-color: lightgreen;
+}
+
+input[type="number"]{
+  width: 7rem;
+}
+
+label{
+  padding: 10px;
+}
+
+input.shipping-text-input{
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  vertical-align: -2px;
+}
+
+/*ID SELECTORS */
+
+#search-form-text-input{
+  width: 79%;
+}
+
+#search-form-category{
+  width: 20%;
+}
+
+#schedule-container input, #schedule-container select, #schedule-container textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+#login-container{
+  padding: 0 0 1rem;
+  width: 90%;
+  border-radius: 5px;
+  background: #03a9f4;
+  margin: 0 auto;
+}
+
+#login-container input:not([type="checkbox"]){
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+#login-title{
+  background-color: #b3e5fc;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#login-checkbox{
+  margin: 10px 0 20px;
+  padding: 0;
+  width: 20px;
+}
+
+#color-container{
+  display: inline-flex;
+  background: lightblue;
+}
+
+#color-display-div{
+  padding: 20px;
+}
+
+#color-textbox{
+  float: left;
+  width: 150px;
+  padding: 50px 0;
+}
+
+#shipping-container{
+  width: 800px;
+  padding: 20px;
+  margin: 5px;
+  background: lightblue;
+}
+
+#shipping-section{
+  width: 50%;
+  padding: 20px;
+  float: left;
+}
+
+#billing-section{
+  width: 50%;
+  padding: 20px;
+  float: left;
+}
+
+#schedule-container{
+  width: 600px;
+  padding: 20px;
+  margin: 5px;
+  background: lightblue;
+}
+
+#credit-card-radio > input[type="radio"]{
+  vertical-align: 15px;
+  margin-left: 40px;
+}
+
+#cc-container{
+  width: 600px;
+  margin: 10px;
+  border-radius: 5px;
+  background: #d1d5d8;
+}
+
+#cc-container input, #cc-container  select, #cc-container textarea{
+  padding: 10px;
+  margin: 10px 20px 10px 0;
+  font-size: 1.2em;
+}
+
+#cc-header{
+  background-color: #3498db;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+#cc-main-form{
+  margin: 0 20px;
+}
+
+#cc-expiration{
+  margin: 0 20px;
+}
+
+#cc-csv-info{
+  display: none;
+  border: 3px solid #3498db;
+  border-radius: 5px;
+}
+
+#cc-whats-this:hover + #cc-csv-info{
+  display: block;
+  position: absolute;
+  left: 32rem;
+}
+
+#alpha-num{
+  width: 7rem;
+}
+
+/*CLASS SELECTORS*/
+
+.width-half{
+  width: 50%;
+}
+
+.width80{
+  width: 80%;
+}
+.center-block-content{
+  text-align: center;
+  clear: both;
+}
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float: left;
+}
+
+.color-slide-label{
+  display: inline-block;
+  width: 100px;
+}
+
+.fixed-label{
+  display: inline-block;
+  width: 150px;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+.small-text{
+  font-size: 0.8em;
+}
+
+@media(max-width: 600px){
+}
+
+@media(max-width: 425px){
+  #login-container{
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  #login-title{
+    background-color: #b3e5fc;
+    border-radius: 5px 5px 0 0;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}

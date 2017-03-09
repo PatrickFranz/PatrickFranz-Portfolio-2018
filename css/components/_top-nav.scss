@@ -1,0 +1,74 @@
+.topNavBar{
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 0 2rem;
+  background: $primary;
+  border-bottom: 0.5rem solid $primary-accent;
+  font-size: 2rem;
+  color: $text-color-white;
+  z-index: 1;
+  user-select: none;
+
+  .logo:after{
+      content: "PATRICK FRANZ";
+  }
+
+  span{
+    margin: 3rem 2rem 0;
+  }
+
+  nav{
+    margin: 0 auto;
+    
+    li{
+      display: inline-block;
+      padding: 3rem 4rem;
+      transition: all ease 0.5s;
+     
+      &:hover{
+        color: $hover-text-color;
+        background: $hover-bg-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #search{
+    position: relative;
+    width: 20%;
+    float: right;
+
+    label{
+      position: absolute;
+      bottom: 2rem;
+      font-size: 1.5rem;
+      left: 0;
+      transition: all 1s;
+    }
+
+    input{
+      width: 100%;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      color: $primary-accent; 
+      outline: none;
+      border-radius: 0;
+      border-bottom: 1px solid $text-color-white;
+    }
+
+    input[type='image']{
+      position: absolute;
+      right: -2rem;
+      bottom: 3rem;
+      width: 3rem;
+      border: none;
+    }
+
+    input:focus + label{
+      @include searchAnim(0rem, -2rem, 0.8);
+    }
+  }
+}

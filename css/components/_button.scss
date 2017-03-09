@@ -1,0 +1,37 @@
+.button{
+  background-color: #ff8f15;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  margin: 1rem;
+  max-width: 80%;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button:hover{
+  background-color: #ffb96e;
+}
+.button:active{
+  background-color: #ffe391;
+}
+.button:focus{
+  outline: none;
+}
+
+.button-sm{
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.button-md{
+  font-size: 2rem;
+  padding: 1.25rem;
+}
+.button-lg{
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}

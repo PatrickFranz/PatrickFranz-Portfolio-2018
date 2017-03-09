@@ -1,0 +1,197 @@
+
+#bus-card-container{
+  display: block;
+  font-family: "Lato", "sans-serif";
+  height: 375px;
+  line-height: 1.2;
+  margin: 5rem auto;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 630px;
+}
+
+.card label{
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.card{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  @include perspective(1000px);
+  @include trans-style("perserve-3d");
+}
+
+#bus-card-container input[type="checkbox"]{
+  display: none;
+}
+
+#bus-card-container input:checked + .card #front{
+  @include rotateX(180deg);
+}
+
+#bus-card-container input:checked + .card #back{
+  transform: none;
+}
+
+#bus-card-container input:checked + .card #back:hover{
+  box-shadow: 0 5px 30px -5px #121212;
+  @include rotateX(-20deg);
+}
+
+#front, #back{
+  border-radius: 4px;
+  height: 100%;
+  padding: 0 0rem;
+  position: absolute;
+  width: 100%;
+  @include backface-visibility(hidden);
+   @include transition(all, 0.5s, ease-in);
+}
+
+.card #front{
+  background-image: url("../img/bg2.png");
+  color: #ffffff;
+  padding: 1rem 1rem;
+}
+.card #front:hover{
+  box-shadow: 0 5px 30px -5px #121212;
+  @include rotateX(20deg);
+}
+
+.card #back{
+  background-image: url("../img/redrocks.png");
+  color: #0a0a0a;
+  @include rotateX(180deg);
+}
+
+.name{
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.title{
+  color: #cfcfcf;
+  font-weight: 300;
+}
+
+#name-plate{
+  background: #ffa753;
+  border-radius: 3px;
+  bottom: 15px;
+  left: 10px;
+  padding: 3px 8px;
+  position: absolute;
+}
+
+#about-text{
+  color: #cecece;
+  font-size: 2rem;
+  margin: 4rem 0 1rem 0;
+}
+
+.purple{
+  color: #a263ef;
+  margin-right: 2rem;
+}
+
+.flex-column{
+  flex-direction: column;
+  float: left;
+}
+
+#footer{
+  display: flex;
+  position: relative;
+  top: 6rem;
+}
+
+#footer img{
+  float: left;
+  margin-right: 10px;
+}
+
+#social{
+  margin-left: auto;
+}
+
+@media(max-width: 700px){
+  #bus-card-container{
+    height: 225px;
+    font-size: 1rem;
+    width: 400px;
+  }
+
+  .card label{
+    top: 0;
+  }
+
+  .name{
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .title{
+    color: #cfcfcf;
+    font-weight: 300;
+  }
+
+  #about-text{
+    color: #cecece;
+    font-size: 1.1rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  #footer{
+    display: flex;
+    position: relative;
+    top: 3rem;
+  }
+
+  #ico-flip{
+    width: 20px;
+  }
+}
+
+@media(max-width: 500px){
+  #bus-card-container{
+    font-size: 1rem;
+    height: 200px;
+    width: 300px;
+  }
+
+  .card label{
+    top: 0;
+  }
+
+  .name{
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .title{
+    color: #cfcfcf;
+    font-weight: 300;
+  }
+
+  #about-text{
+    color: #cecece;
+    font-size: 1.1rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  #footer{
+    display: flex;
+    position: relative;
+    top: 1rem;
+  }
+
+  #footer img{
+    width: 20px;
+  }
+}

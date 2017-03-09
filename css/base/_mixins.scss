@@ -1,0 +1,62 @@
+@mixin perspective($amt){
+  -webkit-perspective: $amt;
+     -moz-perspective: $amt;
+      -ms-perspective: $amt;
+       -o-perspective: $amt;
+          perspective: $amt;
+}
+
+@mixin trans-style($style){
+  -webkit-transform-style: $style;
+     -moz-transform-style: $style;
+      -ms-transform-style: $style;
+       -o-transform-style: $style;
+          transform-style: $style;
+}
+
+@mixin transition($prop, $time, $ease...){
+  -webkit-transition: $prop $time $ease;
+     -moz-transition: $prop $time $ease;
+      -ms-transition: $prop $time $ease;
+       -o-transition: $prop $time $ease;
+          transition: $prop $time $ease;
+}
+
+@mixin backface-visibility($style){
+  -webkit-backface-visibility: $style;
+     -moz-backface-visibility: $style;
+       -o-backface-visibility: $style;
+      -ms-backface-visibility: $style;
+          backface-visibility: $style;
+}
+
+@mixin searchAnim($xAmt, $yAmt, $scale){
+  transform:          translate($xAmt, $yAmt) scale($scale);
+  -webkit-transform:  translate($xAmt, $yAmt) scale($scale);
+  -moz-transform:     translate($xAmt, $yAmt) scale($scale);
+  -ms-transform:      translate($xAmt, $yAmt) scale($scale);
+}
+
+@mixin transform($tranform){
+          transform: $tranform;
+       -o-transform: $tranform;
+      -ms-transform: $tranform;
+     -moz-transform: $tranform;
+  -webkit-transform: $tranform;
+}
+
+@mixin rotateX($deg){
+  @include transform(rotateX($deg));
+}
+
+@mixin rotate($deg){
+  @include transform(rotate($deg));
+}
+
+@mixin translateX($amtX){
+  @include transform(translate($amtX));
+}
+
+@mixin translateXY($amtX, $amtY){
+  @include transform(translate($amtX, amtY));
+}
