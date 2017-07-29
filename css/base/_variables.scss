@@ -1,10 +1,13 @@
 /*Colors*/
 
-$primary: #6F2974;
-$primary-accent: #A976AD;
-$hover-bg-color: #A976AD;
-$text-color-white: #F0F0F0;
+$primary: #ff1493;
+// $primary: #6F2974;
+$primary-accent: lighten($primary, 10%);
+$hover-bg-color: lighten($primary, 10%);
+$background-dark: #102222;
+$text-color-white: #ecf0f1;;
 $hover-text-color: #3E4651;
+$header-text-color: #ff1493;
 $tooltip-bg: $primary;
 $tooltip-text: $primary-accent;
 

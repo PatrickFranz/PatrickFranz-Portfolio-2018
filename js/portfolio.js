@@ -1,17 +1,23 @@
-(function scrollToFeature(){
+(function addEventListeners(){
   const menuItems = Array.from(document.getElementsByClassName('menu-item'));
-  
   const aboutHead    = document.getElementById('port--about-sec');
   const projectsHead = document.getElementById('port--project-sec');
   const skillsHead   = document.getElementById('port--skills-sec');
   const contactHead  = document.getElementById('port--contact-sec');
   const returnTopButton = document.getElementById('returnTop');
 
+  const socialSideBar = document.getElementById('social-sidebar');
+
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
-      returnTopButton.style.display = 'block';
+      returnTopButton.classList = 'fadeIn';   
+      socialSideBar.style.position = 'fixed';
+      socialSideBar.classList.add('transition-bottom');
     } else {
-      returnTopButton.style.display = 'none';
+      returnTopButton.classList = 'fadeOut';
+      socialSideBar.style.position = 'absolute';
+      socialSideBar.classList.remove('transition-bottom');
+      
     }
   });
 

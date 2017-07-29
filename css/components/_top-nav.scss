@@ -1,5 +1,4 @@
 #returnTop{
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -21,7 +20,7 @@
   top: 0;
   width: 100vw;
   padding: 0 2rem;
-  background: $primary;
+  background: $make-it-pop;
   border-bottom: 0.5rem solid $primary-accent;
   font-size: 2rem;
   color: $text-color-white;
@@ -86,6 +85,71 @@
 
     input:focus + label{
       @include searchAnim(0rem, -2rem, 0.8);
+    }
+  }
+}
+
+
+@media(max-width:1200px){
+  .topNavBar{
+    font-size: 1.5rem;
+
+    span{
+      margin: 2rem 1rem 0;
+    }
+
+    nav{
+      li{
+        padding: 2rem 2rem;
+      }
+    }
+
+    #search{
+      label{
+        bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      input{
+        font-size: 2rem;
+      }
+
+      input[type="image"]{
+        bottom: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}
+
+@media(max-width:960px){
+  .topNavBar{
+    #logo:after{
+      content: "PF";
+    }
+
+    nav{
+      ul{
+        li{
+          padding: 2rem 1.5rem;
+        }
+      }
+    }
+
+    #search{
+      label{
+        bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      input{
+        font-size: 2rem;
+      }
+
+      input[type="image"]{
+        bottom: 2rem;
+        width: 2rem;
+      }
     }
   }
 }

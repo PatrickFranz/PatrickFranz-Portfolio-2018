@@ -2,14 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!--<link rel="stylesheet" href="css/reset.css">
-  
-  <link rel="stylesheet" href="css/grid.css">
-  <link rel="stylesheet" href="css/calculator.css">
-  <link rel="stylesheet" href="css/forms.css">
-  <link rel="stylesheet" href="css/bus-card-style.css">
-  <link rel="stylesheet" href="css/graph.css">
-  <link rel="stylesheet" href="css/button.css">-->
   <link rel="stylesheet" href="css/portfolio.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +11,7 @@
   <title>Showing off Patrick Franz</title>
 </head>
 <body>
-  <div id='returnTop' >
+  <div id='returnTop' class='fadeOut'>
     <a data-target="port--about-sec" class='menu-item'>
       <img src="img/top-button.png" alt="Return to top">
     </a>
@@ -42,7 +34,6 @@
 			</form>
     </span>
   </section>
-
   <!--For screens < 360px-->
   <input type="checkbox" id="cb-menu-show" />
   <div id="mobile-menu-bar">
@@ -64,6 +55,25 @@
     
   </div>
 
+  <div id='social-sidebar'> 
+    <ul>
+      <li>
+        <a href="https://www.facebook.com">
+          <img src="img/facebook.png" alt="Facebook Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/mrfranz/">
+          <img src="img/linkedin.png" alt="LinkedIn Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ThePatrickFranz">
+          <img src="img/twitter.png" alt="Twitter Logo">
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <section id='port-sections'>
     <!--ABOUT SECTION-->
@@ -73,25 +83,22 @@
           <p>[About]</p>
         </div>
         <article>
-          <div>
-            <p>Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Santa Cruz, CA, a quick commute to Silicon Valley where I get my fill of the technology scene. </p>
-          </div>
           <div id='port--about-pic'`>
-            <img srcset="
-              img/profile1-2000w.png 2000w,
-              img/profile1-1000w.png 1000w,
-              img/profile1-750w.png 750w,
-              img/profile1-300w.png 400w"
-              src="img/profile1-300w.png"
-              alt="">
+            <img src="img/profile2.png"
+              alt="Profile image">
           </div>
           <div>
-            <p>Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often. </p>
+          <p>Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Santa Cruz, CA, a quick commute to Silicon Valley where I get my fill of the technology scene. </p>
+          <br>
+          <p>Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often. </p>
           </div>
         </article>
       </section>
     </div>
 
+    <div class="divider">
+        <img src="img/graffiti-headphones.png" alt="">
+    </div>
     <!--PROJECTS SECTION-->
     <div id='port--project-sec'>
       <section class='sec-container'>
@@ -640,6 +647,10 @@
       </section>
     </div>
 
+    <div class="divider">
+        <img src="img/divide_spaceinvader.png" alt="">
+    </div>
+
     <!--SKILLS SECTION-->
     <div id='port--skills-sec'>
       <section class='sec-container'>
@@ -826,6 +837,10 @@
           </div>
         </div>
       </section>
+    </div>
+
+    <div class="divider">
+        <img src="img/graffiti-love.png" alt="">
     </div>
 
     <!--CONTACT SECTION-->

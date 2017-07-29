@@ -61,7 +61,15 @@ a {
 
 strong {
   font-weight: bold;
-  color: #6F2974; }
+  color: #ff1493; }
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 800ms; }
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 800ms; }
 
 .grid, .grid--fluid {
   box-sizing: border-box;
@@ -263,7 +271,6 @@ strong {
   text-align: center; }
 
 #returnTop {
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -286,10 +293,10 @@ strong {
   top: 0;
   width: 100vw;
   padding: 0 2rem;
-  background: #6F2974;
-  border-bottom: 0.5rem solid #A976AD;
+  background: deeppink;
+  border-bottom: 0.5rem solid #ff47aa;
   font-size: 2rem;
-  color: #F0F0F0;
+  color: #ecf0f1;
   z-index: 1;
   user-select: none; }
   .topNavBar .logo:after {
@@ -304,7 +311,7 @@ strong {
       transition: all ease 0.5s; }
       .topNavBar nav li:hover {
         color: #3E4651;
-        background: #A976AD;
+        background: #ff47aa;
         cursor: pointer; }
   .topNavBar #search {
     position: relative;
@@ -321,10 +328,10 @@ strong {
       background: transparent;
       border: none;
       font-size: 2rem;
-      color: #A976AD;
+      color: #ff47aa;
       outline: none;
       border-radius: 0;
-      border-bottom: 1px solid #F0F0F0; }
+      border-bottom: 1px solid #ecf0f1; }
     .topNavBar #search input[type='image'] {
       position: absolute;
       right: -2rem;
@@ -337,6 +344,34 @@ strong {
       -moz-transform: translate(0rem, -2rem) scale(0.8);
       -ms-transform: translate(0rem, -2rem) scale(0.8); }
 
+@media (max-width: 1200px) {
+  .topNavBar {
+    font-size: 1.5rem; }
+    .topNavBar span {
+      margin: 2rem 1rem 0; }
+    .topNavBar nav li {
+      padding: 2rem 2rem; }
+    .topNavBar #search label {
+      bottom: 1rem;
+      font-size: 1.2rem; }
+    .topNavBar #search input {
+      font-size: 2rem; }
+    .topNavBar #search input[type="image"] {
+      bottom: 2rem;
+      width: 2rem; } }
+@media (max-width: 960px) {
+  .topNavBar #logo:after {
+    content: "PF"; }
+  .topNavBar nav ul li {
+    padding: 2rem 1.5rem; }
+  .topNavBar #search label {
+    bottom: 1rem;
+    font-size: 1.2rem; }
+  .topNavBar #search input {
+    font-size: 2rem; }
+  .topNavBar #search input[type="image"] {
+    bottom: 2rem;
+    width: 2rem; } }
 #bus-card-container {
   display: block;
   font-family: "Lato", "sans-serif";
@@ -1139,6 +1174,38 @@ input.shipping-text-input {
   .tooltip .tooltip-text {
     font-size: 1rem;
     padding: 0.5rem 1rem; } }
+#social-sidebar {
+  display: flex;
+  background: deeppink;
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+  position: absolute;
+  left: 10px;
+  top: 40vh;
+  transition: transform 500ms;
+  text-align: center; }
+  #social-sidebar li {
+    margin: 8px 0;
+    transition: transform 250ms; }
+    #social-sidebar li:hover {
+      transform: scale(1.05);
+      -o-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -webkit-transform: scale(1.05); }
+
+@media (max-width: 960px) {
+  #social-sidebar {
+    padding: 0.5rem 0.7rem; }
+    #social-sidebar img {
+      width: 75%; } }
+.transition-bottom {
+  transform: translate(0, 25vh);
+  -o-transform: translate(0, 25vh);
+  -ms-transform: translate(0, 25vh);
+  -moz-transform: translate(0, 25vh);
+  -webkit-transform: translate(0, 25vh); }
+
 .b {
   border: 2px solid deeppink; }
 
@@ -1146,7 +1213,15 @@ input.shipping-text-input {
   display: none; }
 
 #port-sections {
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  background-color: #102222;
+  color: #ecf0f1; }
+  #port-sections .divider {
+    display: flex;
+    justify-content: center; }
+    #port-sections .divider img {
+      max-width: 100px;
+      max-height: 100px; }
   #port-sections .sec-container {
     font-size: 2rem;
     font-weight: 300;
@@ -1156,7 +1231,7 @@ input.shipping-text-input {
     position: relative;
     top: 10rem; }
     #port-sections .sec-container .section--title {
-      color: #3E4651;
+      color: #ff1493;
       font-size: 7rem;
       font-weight: 100;
       text-align: center; }
@@ -1166,18 +1241,12 @@ input.shipping-text-input {
       text-align: center; }
   #port-sections #port--about-sec {
     /* Begin ABOUT section */
-    background: url("../img/bg-mt-thor.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-bottom: 10rem; }
+    padding-bottom: 4rem; }
     #port-sections #port--about-sec section {
       font-size: 2.5rem; }
       #port-sections #port--about-sec section article {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; }
-        #port-sections #port--about-sec section article div {
-          flex: 1; }
+        flex-direction: row; }
         #port-sections #port--about-sec section article #port--about-pic {
           align-items: center;
           display: flex; }
@@ -1187,13 +1256,9 @@ input.shipping-text-input {
     font-size: 1.5rem; }
   #port-sections #port--project-sec {
     /*Begin PROJECT section*/
-    background: url("../img/bg-ski-sweden.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     padding-bottom: 10rem; }
     #port-sections #port--project-sec #projects-container {
-      display: flex;
-      background: rgba(255, 255, 255, 0.75); }
+      display: flex; }
       #port-sections #port--project-sec #projects-container #projects-right {
         display: flex;
         flex: 1 1 auto;
@@ -1215,10 +1280,10 @@ input.shipping-text-input {
             white-space: nowrap;
             width: 20%; }
             #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
-              border-color: #A976AD;
+              border-color: #ff47aa;
               opacity: 1; }
           #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
-            border-color: #6F2974;
+            border-color: #ff1493;
             opacity: 1; }
             #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label + .c-proj {
               display: flex;
@@ -1240,11 +1305,11 @@ input.shipping-text-input {
           #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
             display: none; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-              background: #6F2974; }
+              background: #ff1493; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-              background: #6F2974; }
+              background: #ff1493; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-              background: #6F2974; }
+              background: #ff1493; }
           #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
             flex: 0 0 auto; }
           #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons {
@@ -1256,7 +1321,7 @@ input.shipping-text-input {
             z-index: 10; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
               background: transparent;
-              border: 3px solid #A976AD;
+              border: 3px solid #ff47aa;
               border-radius: 50%;
               display: inline-flex;
               height: 2rem;
@@ -1268,7 +1333,7 @@ input.shipping-text-input {
               -o-transition: all ease 0.25s;
               transition: all ease 0.25s; }
               #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-                background: #A976AD;
+                background: #ff47aa;
                 cursor: pointer; }
           #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame {
             max-height: 100%;
@@ -1291,7 +1356,7 @@ input.shipping-text-input {
                 max-width: 90%;
                 padding: 5rem 0; }
                 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading1 {
-                  background: #A976AD;
+                  background: #ff47aa;
                   color: #621c26;
                   font-size: 1.5rem;
                   font-weight: bold;
@@ -1325,11 +1390,11 @@ input.shipping-text-input {
                 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"] {
                   display: none; }
                 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label:hover {
-                  background: #A976AD;
-                  color: #F0F0F0;
+                  background: #ff47aa;
+                  color: #ecf0f1;
                   cursor: pointer; }
                 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ label {
-                  background: #6F2974;
+                  background: #ff1493;
                   color: #ffffff; }
                 #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ .food__body {
                   display: block;
@@ -1395,7 +1460,7 @@ input.shipping-text-input {
                       color: #ffffff; } }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
               align-items: center;
-              color: #6F2974;
+              color: #ff1493;
               cursor: pointer;
               display: flex;
               padding: 0 2rem;
@@ -1403,7 +1468,7 @@ input.shipping-text-input {
               font-weight: bold;
               user-select: none; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-              color: #A976AD; }
+              color: #ff47aa; }
             #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame img {
               padding-bottom: 3rem; }
         #port-sections #port--project-sec #projects-container #projects-right .carousel--input + div {
@@ -1431,14 +1496,8 @@ input.shipping-text-input {
               margin-right: 5px;
               width: 25px; }
   #port-sections #port--skills-sec {
-    background: url("../img/bg-surf-oxnard.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     padding-bottom: 10rem; }
   #port-sections #port--contact-sec {
-    background: url("../img/bg-goldengate.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
     padding-bottom: 10rem; }
 
 .center-title {
@@ -1460,9 +1519,9 @@ input.shipping-text-input {
   flex-direction: row; }
 
 footer {
-  background: #6F2974;
-  border-top: 0.5rem solid #A976AD;
-  color: #F0F0F0;
+  background: #ff1493;
+  border-top: 0.5rem solid #ff47aa;
+  color: #ecf0f1;
   font-size: 1.5rem;
   padding: 2rem;
   text-align: center;
@@ -1508,7 +1567,7 @@ footer {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   .modal .modal-header {
-    border: 0.5rem solid #F0F0F0;
+    border: 0.5rem solid #ecf0f1;
     border-radius: 50%;
     cursor: pointer;
     font-size: 8rem;
@@ -1525,38 +1584,7 @@ footer {
   #search-na:target {
     display: flex; }
 
-@media (max-width: 1200px) {
-  #topNavBar {
-    font-size: 1.5rem; }
-    #topNavBar span {
-      margin: 2rem 1rem 0; }
-    #topNavBar nav li {
-      padding: 2rem 2rem; }
-    #topNavBar #search label {
-      bottom: 1rem;
-      font-size: 1.2rem; }
-    #topNavBar #search input {
-      font-size: 2rem; }
-    #topNavBar #search input[type="image"] {
-      bottom: 2rem;
-      width: 2rem; }
-
-  #port-sections .sec-container {
-    margin: 0 5rem; } }
 @media (max-width: 960px) {
-  #topNavBar #logo:after {
-    content: "PF"; }
-  #topNavBar nav ul li {
-    padding: 2rem 1.5rem; }
-  #topNavBar #search label {
-    bottom: 1rem;
-    font-size: 1.2rem; }
-  #topNavBar #search input {
-    font-size: 2rem; }
-  #topNavBar #search input[type="image"] {
-    bottom: 2rem;
-    width: 2rem; }
-
   #port-sections .sec-container {
     margin: 0 5rem; }
   #port-sections #port--about-sec {
@@ -1567,24 +1595,24 @@ footer {
         display: flex;
         justify-content: center; }
         #port-sections #port--about-sec section article #port--about-pic img {
-          border: 5px solid #6F2974;
+          border: 5px solid #ff1493;
           border-radius: 10px; }
   #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label {
     font-size: 1.5rem;
     width: 20%; }
     #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
-      border-color: #A976AD; }
+      border-color: #ff47aa; }
   #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
-    border-color: #6F2974; }
+    border-color: #ff1493; }
     #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label + .c-proj {
       left: 25%;
       width: 75%; }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-    color: #6F2974;
+    color: #ff1493;
     font-size: 4rem;
     padding: 0 1rem; }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-    color: #A976AD; }
+    color: #ff47aa; }
   #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame img {
     padding-bottom: 3rem; }
   #port-sections #port--project-sec #projects-container #projects-right .proj-desc {
@@ -1618,7 +1646,7 @@ footer {
       bottom: 1rem;
       font-size: 1rem; }
     #topNavBar #search input {
-      border-bottom: 1px solid #F0F0F0;
+      border-bottom: 1px solid #ecf0f1;
       color: #D4EE9F;
       font-size: 1.2rem; }
     #topNavBar #search input[type="image"] {
@@ -1711,7 +1739,7 @@ footer {
   footer {
     background: #7A9F35;
     border-top: 0.5rem solid #D4EE9F;
-    color: #F0F0F0; }
+    color: #ecf0f1; }
 
   .tooltip .tooltip-text {
     background: #7A9F35;
@@ -1720,13 +1748,13 @@ footer {
     .tooltip .tooltip-text::after {
       border-color: #7A9F35 transparent transparent transparent; }
     .tooltip .tooltip-text em {
-      color: #F0F0F0; }
+      color: #ecf0f1; }
 
   .modal {
-    color: #F0F0F0;
+    color: #ecf0f1;
     font-size: 3rem; }
     .modal .modal-header {
-      border: 0.5rem solid #F0F0F0;
+      border: 0.5rem solid #ecf0f1;
       font-size: 4rem;
       width: 5rem; } }
 @media (max-width: 425px) {
@@ -1748,7 +1776,7 @@ footer {
     #topNavBar nav {
       margin: 0; }
       #topNavBar nav ul {
-        color: #F0F0F0;
+        color: #ecf0f1;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -1821,7 +1849,7 @@ footer {
       font-size: 2rem;
       padding-bottom: 7rem; }
       #port-sections #port--about-sec section article #port--about-pic img {
-        border: 0 solid #6F2974;
+        border: 0 solid #ff1493;
         border-radius: 10px; }
   #port-sections #port--project-sec {
     /*Begin PROJECT section*/
@@ -2008,7 +2036,7 @@ footer {
   footer {
     background: #0C2032;
     border-top: 0.5rem solid #42586E;
-    color: #F0F0F0; }
+    color: #ecf0f1; }
 
   /* TOOLTIP */
   .tooltip .tooltip-text {
@@ -2018,4 +2046,4 @@ footer {
     .tooltip .tooltip-text::after {
       border-color: #0C2032 transparent transparent transparent; }
     .tooltip .tooltip-text em {
-      color: #F0F0F0; } }
+      color: #ecf0f1; } }

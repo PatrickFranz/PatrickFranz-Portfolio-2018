@@ -18,3 +18,13 @@ strong{
   font-weight: bold;
   color: $primary;
 }
+
+.fadeIn{
+  opacity: 1;
+  transition: opacity 800ms;
+}
+
+.fadeOut{
+  opacity: 0;
+  transition: opacity 800ms;
+}

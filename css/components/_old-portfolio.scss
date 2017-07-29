@@ -9,7 +9,19 @@
 
 #port-sections{
   transition: all 0.5s;
+  background-color: $background-dark;
+  color: $text-color-white;
 
+  .divider{
+    display: flex;
+    justify-content: center;
+
+    img{
+      max-width: 100px;
+      max-height: 100px;
+      // border-radius: 50%;
+    }
+  }
   .sec-container{
     font-size: 2rem;
     font-weight: 300;
@@ -18,9 +30,10 @@
     min-height: 110vh;
     position: relative;
     top: 10rem;
+    
 
     .section--title{
-      color: $hover-text-color;
+      color: $header-text-color;
       font-size: 7rem;
       font-weight: 100;
       text-align: center;
@@ -37,26 +50,23 @@
 
   #port--about-sec{
     /* Begin ABOUT section */
-    background: url("../img/bg-mt-thor.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-bottom: 10rem;
+    // background: url("../img/bg-mt-thor.jpg") no-repeat;
+    
+    padding-bottom: 4rem;
 
     section{
       font-size: 2.5rem;
 
       article{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        div{
-          flex: 1;
-        }
+         display: flex;
+         flex-direction: row;
+        // flex-wrap: wrap;
 
         #port--about-pic{
           align-items: center;
           display: flex;
+
+        
 
           img{
             //border: 5px solid $primary;
@@ -73,14 +83,16 @@
 
   #port--project-sec{
     /*Begin PROJECT section*/
-    background: url("../img/bg-ski-sweden.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    // background: url("../img/bg-ski-sweden.jpg") no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
     padding-bottom: 10rem;
 
     #projects-container{
       display: flex;
-      background: rgba(255,255,255,0.75);
+      // border-top: 1px solid $text-color-white;;
+      // border-bottom: 1px solid $text-color-white; ;
+      // background: rgba(255,255,255,0.75);
 
       #projects-right{
         display: flex;
@@ -425,16 +437,16 @@
   }
 
   #port--skills-sec{
-    background: url("../img/bg-surf-oxnard.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    // background: url("../img/bg-surf-oxnard.jpg") no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
     padding-bottom: 10rem;
   }
 
   #port--contact-sec{
-    background: url("../img/bg-goldengate.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    // background: url("../img/bg-goldengate.jpg") no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
     padding-bottom: 10rem;
   }
 }
@@ -542,74 +554,9 @@ footer{
   }
 }
 
-@media(max-width: 1200px){
-  #topNavBar{
-    font-size: 1.5rem;
 
-    span{
-      margin: 2rem 1rem 0;;
-    }
-
-    nav{
-      li{
-        padding: 2rem 2rem;
-      }
-    }
-
-    #search{
-      label{
-        bottom: 1rem;
-        font-size: 1.2rem;
-      }
-
-      input{
-        font-size: 2rem;
-      }
-
-      input[type="image"]{
-        bottom: 2rem;
-        width: 2rem;
-      }
-    }
-  }
-
-  #port-sections{
-    .sec-container{
-      margin: 0 5rem;
-    }
-  }
-}
 
 @media(max-width:960px){
-  #topNavBar{
-    #logo:after{
-      content: "PF";
-    }
-
-    nav{
-      ul{
-        li{
-          padding: 2rem 1.5rem;
-        }
-      }
-    }
-
-    #search{
-      label{
-        bottom: 1rem;
-        font-size: 1.2rem;
-      }
-
-      input{
-        font-size: 2rem;
-      }
-
-      input[type="image"]{
-        bottom: 2rem;
-        width: 2rem;
-      }
-    }
-  }
 
   #port-sections{
     .sec-container{
