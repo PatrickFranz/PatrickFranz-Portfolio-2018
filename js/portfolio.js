@@ -1,26 +1,54 @@
-(function addEventListeners(){
-  const menuItems = Array.from(document.getElementsByClassName('menu-item'));
+(function (){
+  const menuItems    = Array.from(document.getElementsByClassName('menu-item'));
   const aboutHead    = document.getElementById('port--about-sec');
   const projectsHead = document.getElementById('port--project-sec');
   const skillsHead   = document.getElementById('port--skills-sec');
   const contactHead  = document.getElementById('port--contact-sec');
   const returnTopButton = document.getElementById('returnTop');
+  const topNavBar       = document.getElementById('topNavbar');
 
-  const socialSideBar = document.getElementById('social-sidebar');
+  let socialSideBar = document.getElementById('social-sidebar');
+  let resizeTimeout;
 
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
       returnTopButton.classList = 'fadeIn';   
       socialSideBar.style.position = 'fixed';
-      socialSideBar.classList.add('transition-bottom');
+      // socialSideBar.classList.add('transition-bottom');
     } else {
       returnTopButton.classList = 'fadeOut';
       socialSideBar.style.position = 'absolute';
       socialSideBar.classList.remove('transition-bottom');
-      
     }
   });
 
+  window.addEventListener("resize", resizeThrottler, false);
+
+  socialSideBar.addEventListener('click', function(e){
+    if(socialSideBar.classList.contains('minimize')){
+      socialSideBar.classList = "restore";
+    } else {
+      socialSideBar.classList = "minimize";
+    }
+  });
+
+  function resizeThrottler(){
+    if (!resizeTimeout){
+      resizeTimeout = setTimeout(function(){
+        resizeTimeout = null;
+        sizeSidebar();
+      }, 75);
+    }
+  }
+
+  function sizeSidebar(){
+    let isMedia960 = window.matchMedia("(max-width:960px)");
+    if (isMedia960.matches){
+      socialSideBar.classList = 'minimize';
+    } else {
+      socialSideBar.classList = "restore";
+    }
+  }
   menuItems.forEach(function(item){
     item.addEventListener('click', function(e){
       switch(item.dataset.target){
@@ -45,6 +73,15 @@
     })
   });
 })();
+
+function isCookieSet(idString){
+  if(document.cookie.length > 0){
+    let cookieArray = document.cookie.split(";");
+    return !!cookieArray.find( (element) => {
+      return element === idString; 
+    });
+  }
+}
 
 function scrollWindowTo(y){
   const SCROLL_SPEED = 50;

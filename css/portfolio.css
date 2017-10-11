@@ -287,7 +287,7 @@ strong {
     #returnTop img:hover {
       opacity: 1; }
 
-.topNavBar {
+#topNavBar {
   display: flex;
   position: fixed;
   top: 0;
@@ -299,31 +299,31 @@ strong {
   color: #ecf0f1;
   z-index: 1;
   user-select: none; }
-  .topNavBar .logo:after {
+  #topNavBar .logo:after {
     content: "PATRICK FRANZ"; }
-  .topNavBar span {
-    margin: 3rem 2rem 0; }
-  .topNavBar nav {
+  #topNavBar span {
+    margin: 3rem 5rem 0; }
+  #topNavBar nav {
     margin: 0 auto; }
-    .topNavBar nav li {
+    #topNavBar nav li {
       display: inline-block;
       padding: 3rem 4rem;
       transition: all ease 0.5s; }
-      .topNavBar nav li:hover {
+      #topNavBar nav li:hover {
         color: #3E4651;
         background: #ff47aa;
         cursor: pointer; }
-  .topNavBar #search {
+  #topNavBar #search {
     position: relative;
     width: 20%;
     float: right; }
-    .topNavBar #search label {
+    #topNavBar #search label {
       position: absolute;
       bottom: 2rem;
       font-size: 1.5rem;
       left: 0;
       transition: all 1s; }
-    .topNavBar #search input {
+    #topNavBar #search input {
       width: 100%;
       background: transparent;
       border: none;
@@ -332,44 +332,46 @@ strong {
       outline: none;
       border-radius: 0;
       border-bottom: 1px solid #ecf0f1; }
-    .topNavBar #search input[type='image'] {
+    #topNavBar #search input[type='image'] {
       position: absolute;
       right: -2rem;
       bottom: 3rem;
       width: 3rem;
       border: none; }
-    .topNavBar #search input:focus + label {
+    #topNavBar #search input:focus + label {
       transform: translate(0rem, -2rem) scale(0.8);
       -webkit-transform: translate(0rem, -2rem) scale(0.8);
       -moz-transform: translate(0rem, -2rem) scale(0.8);
       -ms-transform: translate(0rem, -2rem) scale(0.8); }
 
 @media (max-width: 1200px) {
-  .topNavBar {
+  #topNavBar {
     font-size: 1.5rem; }
-    .topNavBar span {
-      margin: 2rem 1rem 0; }
-    .topNavBar nav li {
+    #topNavBar span {
+      margin: 2rem 5rem 0; }
+    #topNavBar nav li {
       padding: 2rem 2rem; }
-    .topNavBar #search label {
+    #topNavBar #search label {
       bottom: 1rem;
       font-size: 1.2rem; }
-    .topNavBar #search input {
+    #topNavBar #search input {
       font-size: 2rem; }
-    .topNavBar #search input[type="image"] {
+    #topNavBar #search input[type="image"] {
       bottom: 2rem;
       width: 2rem; } }
 @media (max-width: 960px) {
-  .topNavBar #logo:after {
+  #topNavBar .logo:after {
     content: "PF"; }
-  .topNavBar nav ul li {
-    padding: 2rem 1.5rem; }
-  .topNavBar #search label {
+  #topNavBar .logo {
+    margin: 2rem 0; }
+  #topNavBar nav ul li {
+    padding: 2rem 1rem; }
+  #topNavBar #search label {
     bottom: 1rem;
     font-size: 1.2rem; }
-  .topNavBar #search input {
+  #topNavBar #search input {
     font-size: 2rem; }
-  .topNavBar #search input[type="image"] {
+  #topNavBar #search input[type="image"] {
     bottom: 2rem;
     width: 2rem; } }
 #bus-card-container {
@@ -1181,30 +1183,43 @@ input.shipping-text-input {
   border-radius: 5px;
   position: absolute;
   left: 10px;
-  top: 40vh;
-  transition: transform 500ms;
-  text-align: center; }
-  #social-sidebar li {
-    margin: 8px 0;
-    transition: transform 250ms; }
-    #social-sidebar li:hover {
+  top: 20vh;
+  transition: all 500ms;
+  text-align: center;
+  overflow: hidden;
+  z-index: 100; }
+  #social-sidebar ul li {
+    margin: 2px 0;
+    transition: transform 250ms;
+    cursor: pointer; }
+    #social-sidebar ul li:hover {
       transform: scale(1.05);
       -o-transform: scale(1.05);
       -ms-transform: scale(1.05);
       -moz-transform: scale(1.05);
       -webkit-transform: scale(1.05); }
+    #social-sidebar ul li img {
+      max-width: 50px;
+      margin: 0 0 6px; }
 
 @media (max-width: 960px) {
-  #social-sidebar {
-    padding: 0.5rem 0.7rem; }
-    #social-sidebar img {
-      width: 75%; } }
+  #social-sidebar img {
+    max-width: 75%; } }
 .transition-bottom {
-  transform: translate(0, 25vh);
-  -o-transform: translate(0, 25vh);
-  -ms-transform: translate(0, 25vh);
-  -moz-transform: translate(0, 25vh);
-  -webkit-transform: translate(0, 25vh); }
+  bottom: calc((100vh) - 200px) !important; }
+
+.minimize {
+  max-height: 73px; }
+
+.restore {
+  max-height: 100%; }
+
+#cookie-alert {
+  position: fixed;
+  padding: 20px;
+  background-color: #95A5A6;
+  top: calc(100% - 50px);
+  width: 100vw; }
 
 .b {
   border: 2px solid deeppink; }

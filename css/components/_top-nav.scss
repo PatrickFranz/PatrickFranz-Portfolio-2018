@@ -14,7 +14,7 @@
   }
 }
 
-.topNavBar{
+#topNavBar{
   display: flex;
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@
   }
 
   span{
-    margin: 3rem 2rem 0;
+    margin: 3rem 5rem 0;
   }
 
   nav{
@@ -89,13 +89,12 @@
   }
 }
 
-
 @media(max-width:1200px){
-  .topNavBar{
+  #topNavBar{
     font-size: 1.5rem;
 
     span{
-      margin: 2rem 1rem 0;
+      margin: 2rem 5rem 0;
     }
 
     nav{
@@ -123,15 +122,18 @@
 }
 
 @media(max-width:960px){
-  .topNavBar{
-    #logo:after{
+  #topNavBar{
+    .logo:after{
       content: "PF";
+    }
+    .logo{
+      margin: 2rem 0;
     }
 
     nav{
       ul{
         li{
-          padding: 2rem 1.5rem;
+          padding: 2rem 1rem;
         }
       }
     }

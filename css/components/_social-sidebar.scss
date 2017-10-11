@@ -5,30 +5,49 @@
   border-radius: 5px;
   position: absolute;
   left: 10px;
-  top: 40vh;
-  transition: transform 500ms; 
+  top: 20vh;
+  transition: all 500ms; 
   text-align: center;
+  overflow: hidden;
+  z-index: 100;
+  ul{
+    li{
+      margin: 2px 0;
+      transition: transform 250ms;
+      cursor: pointer;
 
-  li{
-    margin: 8px 0;
-    transition: transform 250ms;
+      &:hover{
+        @include scaleBy(1.05);
+      }
 
-    &:hover{
-      @include scaleBy(1.05);
+      img{
+        max-width: 50px;
+        margin: 0 0 6px;
+      }
     }
   }
+
+
 }
 
-@media(max-width:960px){
-
+@media(max-width: 960px){
   #social-sidebar{
-    padding: 0.5rem 0.7rem;
+    // padding: 0.4rem 0.7rem;
+    
     img{
-      width: 75%;
+      max-width: 75%;
     }
   }
 }
 
 .transition-bottom{
-  @include translateXY(0, 25vh);
+  bottom: calc((100vh) - 200px) !important;
+}
+
+.minimize{
+  max-height: 73px;
+}
+
+.restore{
+  max-height: 100%;
 }
