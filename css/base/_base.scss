@@ -1,3 +1,10 @@
+/* lol (lots of love) */
+// *:hover {
+//   color:pink;
+//   background-color: pink;
+//   transition: all 1s ease-in;
+// }
+
 * {
   box-sizing: border-box;
 }
@@ -27,4 +34,10 @@ strong{
 .fadeOut{
   opacity: 0;
   transition: opacity 800ms;
+}
+
+.x-closer{
+  border: 2px solid $background-dark;
+  border-radius: 10px;
+  padding: 10px 15px;
 }

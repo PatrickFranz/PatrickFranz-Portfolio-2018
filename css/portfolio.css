@@ -46,6 +46,7 @@ table {
   border-spacing: 0; }
 
 /*Colors*/
+/* lol (lots of love) */
 * {
   box-sizing: border-box; }
 
@@ -70,6 +71,11 @@ strong {
 .fadeOut {
   opacity: 0;
   transition: opacity 800ms; }
+
+.x-closer {
+  border: 2px solid #102222;
+  border-radius: 10px;
+  padding: 10px 15px; }
 
 .grid, .grid--fluid {
   box-sizing: border-box;
@@ -1215,11 +1221,42 @@ input.shipping-text-input {
   max-height: 100%; }
 
 #cookie-alert {
+  display: flex;
   position: fixed;
-  padding: 20px;
-  background-color: #95A5A6;
-  top: calc(100% - 50px);
-  width: 100vw; }
+  bottom: -200px;
+  padding: 30px 20px;
+  background-color: #1ab4bc;
+  width: 100vw;
+  font-size: 2rem;
+  z-index: 200;
+  align-content: center;
+  transition: all 1000ms; }
+  #cookie-alert .ico {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 0 20px 0 0; }
+  #cookie-alert > span {
+    margin: 10px 90px 0 0; }
+  #cookie-alert .x-closer {
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    cursor: pointer;
+    transition: all 500ms; }
+    #cookie-alert .x-closer:hover {
+      transform: translate(0, -5px);
+      -o-transform: translate(0, -5px);
+      -ms-transform: translate(0, -5px);
+      -moz-transform: translate(0, -5px);
+      -webkit-transform: translate(0, -5px); }
+
+.hide-below {
+  transform: translate(0, 100px);
+  -o-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  -moz-transform: translate(0, 100px);
+  -webkit-transform: translate(0, 100px); }
 
 .b {
   border: 2px solid deeppink; }
