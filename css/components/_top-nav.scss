@@ -19,7 +19,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  padding: 0 2rem;
+  padding: 0 3rem;
   background: $make-it-pop;
   border-bottom: 0.5rem solid $primary-accent;
   font-size: 2rem;
@@ -89,7 +89,7 @@
   }
 }
 
-@media(max-width:1200px){
+@media(max-width:1275px){
   #topNavBar{
     font-size: 1.5rem;
 

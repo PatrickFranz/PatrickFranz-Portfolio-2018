@@ -1,5 +1,5 @@
 (function (){
-  const COOKIE__NOTIFY_STRING = "cookieNotify=true";
+  const COOKIE__NOTIFY_STRING = `cookieNotify=true;`;
 
   const menuItems    = Array.from(document.getElementsByClassName('menu-item'));
   const aboutHead    = document.getElementById('port--about-sec');
@@ -13,16 +13,14 @@
   const cookieAlert = document.getElementById('cookie-alert');
   let resizeTimeout;
 
-  console.log(isCookieAware);
   checkCookieNotified();
+
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
       returnTopButton.classList = 'fadeIn';   
-      socialSideBar.style.position = 'fixed';
-      // socialSideBar.classList.add('transition-bottom');
+      socialSideBar.classList.add('transition-bottom');
     } else {
       returnTopButton.classList = 'fadeOut';
-      socialSideBar.style.position = 'absolute';
       socialSideBar.classList.remove('transition-bottom');
     }
   });
@@ -38,9 +36,11 @@
 
   socialSideBar.addEventListener('click', function(e){
     if(socialSideBar.classList.contains('minimize')){
-      socialSideBar.classList = "restore";
+      socialSideBar.classList.add("restore");
+      socialSideBar.classList.remove('minimize');
     } else {
-      socialSideBar.classList = "minimize";
+      socialSideBar.classList.add("minimize");
+      socialSideBar.classList.remove('restore');
     }
   });
 
@@ -69,12 +69,7 @@
   }
 
   function sizeSidebar(){
-    let isMedia960 = window.matchMedia("(max-width:960px)");
-    if (isMedia960.matches){
       socialSideBar.classList = 'minimize';
-    } else {
-      socialSideBar.classList = "restore";
-    }
   }
 
   menuItems.forEach(function(item){
@@ -106,17 +101,18 @@
     if(document.cookie.length > 0){
       let cookieArray = document.cookie.split(";");
       return !!cookieArray.find( (element) => {
-        return element.trim() === idString.trim(); 
+        return element.trim() === idString.split(';')[0].trim(); 
       });
     }
   }
 
   function setCookie(cookie){
-    document.cookie = cookie;
+    let today = new Date(),
+        expires = today.setMonth(today.getMonth() + 6);
+    document.cookie = cookie + `expires=${new Date(expires)};`;
   }
 
   function slideUp(element, slideTo){
-    console.log("sliding");
     element.style.bottom = slideTo;
   }
 

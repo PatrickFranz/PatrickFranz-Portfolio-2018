@@ -46,7 +46,6 @@ table {
   border-spacing: 0; }
 
 /*Colors*/
-/* lol (lots of love) */
 * {
   box-sizing: border-box; }
 
@@ -298,7 +297,7 @@ strong {
   position: fixed;
   top: 0;
   width: 100vw;
-  padding: 0 2rem;
+  padding: 0 3rem;
   background: deeppink;
   border-bottom: 0.5rem solid #ff47aa;
   font-size: 2rem;
@@ -350,7 +349,7 @@ strong {
       -moz-transform: translate(0rem, -2rem) scale(0.8);
       -ms-transform: translate(0rem, -2rem) scale(0.8); }
 
-@media (max-width: 1200px) {
+@media (max-width: 1275px) {
   #topNavBar {
     font-size: 1.5rem; }
     #topNavBar span {
@@ -1187,9 +1186,9 @@ input.shipping-text-input {
   background: deeppink;
   padding: 1rem 1.2rem;
   border-radius: 5px;
-  position: absolute;
-  left: 10px;
-  top: 20vh;
+  position: fixed;
+  left: 5px;
+  top: 5px;
   transition: all 500ms;
   text-align: center;
   overflow: hidden;
@@ -1208,11 +1207,8 @@ input.shipping-text-input {
       max-width: 50px;
       margin: 0 0 6px; }
 
-@media (max-width: 960px) {
-  #social-sidebar img {
-    max-width: 75%; } }
 .transition-bottom {
-  bottom: calc((100vh) - 200px) !important; }
+  top: 50% !important; }
 
 .minimize {
   max-height: 73px; }
@@ -1220,6 +1216,12 @@ input.shipping-text-input {
 .restore {
   max-height: 100%; }
 
+@media (max-width: 1275px) {
+  #social-sidebar ul li img {
+    max-width: 30px; }
+
+  .minimize {
+    max-height: 50px; } }
 #cookie-alert {
   display: flex;
   position: fixed;
