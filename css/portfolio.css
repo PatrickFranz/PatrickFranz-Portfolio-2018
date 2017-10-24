@@ -365,10 +365,10 @@ strong {
       bottom: 2rem;
       width: 2rem; } }
 @media (max-width: 960px) {
-  #topNavBar .logo:after {
-    content: "PF"; }
   #topNavBar .logo {
-    margin: 2rem 0; }
+    margin: 2rem 0px 0px 30px; }
+    #topNavBar .logo:after {
+      content: "PF"; }
   #topNavBar nav ul li {
     padding: 2rem 1rem; }
   #topNavBar #search label {
@@ -1260,6 +1260,29 @@ input.shipping-text-input {
   -moz-transform: translate(0, 100px);
   -webkit-transform: translate(0, 100px); }
 
+.numbers-api-bar {
+  position: relative;
+  padding: 20px 20px;
+  font-size: 3rem;
+  color: #AB7110;
+  text-align: center;
+  background: #2a60ac;
+  background: -moz-linear-gradient(top, #2a60ac 0%, #2a60ac 4%, #102222 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #2a60ac), color-stop(4%, #2a60ac), color-stop(100%, #102222));
+  background: -webkit-linear-gradient(top, #2a60ac 0%, #2a60ac 4%, #102222 100%);
+  background: -o-linear-gradient(top, #2a60ac 0%, #2a60ac 4%, #102222 100%);
+  background: -ms-linear-gradient(top, #2a60ac 0%, #2a60ac 4%, #102222 100%);
+  background: linear-gradient(to bottom, #2a60ac 0%, #2a60ac 4%, #102222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a60ac', endColorstr='#102222', GradientType=0 ); }
+  .numbers-api-bar .tab {
+    position: absolute;
+    top: -40px;
+    font-size: 2rem;
+    left: 0;
+    background: #2a61ac;
+    padding: 10px;
+    border-top-right-radius: 10px; }
+
 .b {
   border: 2px solid deeppink; }
 
@@ -1281,7 +1304,7 @@ input.shipping-text-input {
     font-weight: 300;
     line-height: 2;
     margin: 0 10rem;
-    min-height: 110vh;
+    min-height: 90vh;
     position: relative;
     top: 10rem; }
     #port-sections .sec-container .section--title {

@@ -123,11 +123,12 @@
 
 @media(max-width:960px){
   #topNavBar{
-    .logo:after{
-      content: "PF";
-    }
     .logo{
-      margin: 2rem 0;
+      margin: 2rem 0px 0px 30px;
+    
+      &:after{
+        content: "PF";
+      }
     }
 
     nav{

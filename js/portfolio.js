@@ -14,6 +14,7 @@
   let resizeTimeout;
 
   checkCookieNotified();
+  populateNumbersApi();
 
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
@@ -127,5 +128,20 @@
         scrollWindowTo(y);
       }, 10);
     }
+  }
+
+  function populateNumbersApi(){
+    const numberBars = Array.prototype.slice.call(document.getElementsByClassName('numbers-api-result'));
+    console.log(numberBars);
+    numberBars.forEach( bar => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://numbersapi.com/random');
+      xhr.send();
+      xhr.onload = evt => {
+        if(evt.target.status === 200){
+          bar.innerHTML = evt.target.response;
+        }
+      };
+    });   
   }
 })();
