@@ -131,15 +131,17 @@
   }
 
   function populateNumbersApi(){
-    const numberBars = Array.prototype.slice.call(document.getElementsByClassName('numbers-api-result'));
-    console.log(numberBars);
-    numberBars.forEach( bar => {
+    const quoteBars = Array.prototype.slice.call(document.getElementsByClassName('quote-api-quote'));
+    quoteBars.forEach( bar => {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://numbersapi.com/random');
+      xhr.open('GET', 'https://talaikis.com/api/quotes/random/');
       xhr.send();
       xhr.onload = evt => {
         if(evt.target.status === 200){
-          bar.innerHTML = evt.target.response;
+          const result = JSON.parse(evt.target.response);
+          let quote = result.quote,
+              author = result.author;
+          bar.innerHTML = `${quote} -- ${author}`;
         }
       };
     });   

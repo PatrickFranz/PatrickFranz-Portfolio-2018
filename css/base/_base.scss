@@ -25,6 +25,7 @@ strong{
 }
 
 .fadeOut{
+  background: inherit;
   opacity: 0;
   transition: opacity 800ms;
 }
