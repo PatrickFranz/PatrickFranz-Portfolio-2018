@@ -131,7 +131,7 @@
   }
 
   function populateNumbersApi(){
-    const quoteBars = Array.prototype.slice.call(document.getElementsByClassName('quote-api-quote'));
+    const quoteBars = Array.from(document.getElementsByClassName('quote-api-quote'));
     quoteBars.forEach( bar => {
       const xhr = new XMLHttpRequest();
       xhr.open('GET', 'https://talaikis.com/api/quotes/random/');
