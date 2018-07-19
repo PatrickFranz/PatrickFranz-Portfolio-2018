@@ -1,5 +1,5 @@
 #project-carousel{
-  border: 1px solid white;
+  border: 1px solid rgb(80, 65, 65);
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
@@ -11,6 +11,11 @@
     align-content: center;
     padding: 10px;
     font-size: 5rem;
+    transition: all 250ms;
+
+    &:hover{
+      transform: scale(1.2);
+    }
   }
 
   .projects-main{
@@ -25,9 +30,21 @@
       grid-template-columns: repeat(auto-fill, 400px);
       grid-template-rows: auto auto;
 
+      .hide{
+        display: none;
+      }
+
+      .slide-left{
+        transform: translateX(99999px);
+      }
+      
+      .slide-right{
+        transform: translateX(-99999px);
+      }
+
       .project-item{
-        
         text-align: center;
+        transition: all 250ms;
       }
     }
   }
