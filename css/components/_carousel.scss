@@ -1,8 +1,42 @@
+@keyframes slide-left{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100%)}
+}
+@keyframes slide-right{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%)}
+}
+
 #project-carousel{
-  border: 1px solid rgb(80, 65, 65);
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
+  margin: 50px 0;
+
+  .page-dots{
+    display: flex;
+    grid-template-columns: fit-content(40%);
+    justify-content: center;
+    grid-column: 1/4;
+    
+    .dot{
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      background: $make-it-pop;
+      width: 20px;
+      height: 20px;
+      transition: 250ms all;
+
+      &:hover{
+        border: 1px solid white;
+      }
+    }
+
+    .dot-selected{
+      border: 1px solid white;
+    }
+  }
   
 
   .scroll{
@@ -11,6 +45,7 @@
     align-content: center;
     padding: 10px;
     font-size: 5rem;
+    cursor: pointer;
     transition: all 250ms;
 
     &:hover{
@@ -35,16 +70,17 @@
       }
 
       .slide-left{
-        transform: translateX(99999px);
+        animation: slide-left forwards ease-in 500ms;
       }
       
       .slide-right{
-        transform: translateX(-99999px);
+        animation: slide-right forwards ease-in 500ms;
       }
 
       .project-item{
         text-align: center;
         transition: all 250ms;
+        cursor: pointer;
       }
     }
   }

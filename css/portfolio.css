@@ -1284,17 +1284,45 @@ input.shipping-text-input {
     padding: 10px;
     border-top-right-radius: 10px; }
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(100%); } }
+@keyframes slide-right {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
 #project-carousel {
-  border: 1px solid #504141;
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  margin: 50px 0; }
+  #project-carousel .page-dots {
+    display: flex;
+    grid-template-columns: fit-content(40%);
+    justify-content: center;
+    grid-column: 1/4; }
+    #project-carousel .page-dots .dot {
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      background: deeppink;
+      width: 20px;
+      height: 20px;
+      transition: 250ms all; }
+      #project-carousel .page-dots .dot:hover {
+        border: 1px solid white; }
+    #project-carousel .page-dots .dot-selected {
+      border: 1px solid white; }
   #project-carousel .scroll {
     display: grid;
     justify-content: center;
     align-content: center;
     padding: 10px;
     font-size: 5rem;
+    cursor: pointer;
     transition: all 250ms; }
     #project-carousel .scroll:hover {
       transform: scale(1.2); }
@@ -1311,12 +1339,13 @@ input.shipping-text-input {
       #project-carousel .projects-main .project-list .hide {
         display: none; }
       #project-carousel .projects-main .project-list .slide-left {
-        transform: translateX(99999px); }
+        animation: slide-left forwards ease-in 500ms; }
       #project-carousel .projects-main .project-list .slide-right {
-        transform: translateX(-99999px); }
+        animation: slide-right forwards ease-in 500ms; }
       #project-carousel .projects-main .project-list .project-item {
         text-align: center;
-        transition: all 250ms; }
+        transition: all 250ms;
+        cursor: pointer; }
 
 .b {
   border: 2px solid deeppink; }
