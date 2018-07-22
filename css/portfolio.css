@@ -1313,9 +1313,9 @@ input.shipping-text-input {
       height: 20px;
       transition: 250ms all; }
       #project-carousel .page-dots .dot:hover {
-        border: 1px solid white; }
+        border: 3px solid rgba(255, 255, 255, 0.75); }
     #project-carousel .page-dots .dot-selected {
-      border: 1px solid white; }
+      border: 3px solid rgba(255, 255, 255, 0.75); }
   #project-carousel .scroll {
     display: grid;
     justify-content: center;
@@ -1367,7 +1367,7 @@ input.shipping-text-input {
     font-size: 2rem;
     font-weight: 300;
     line-height: 2;
-    margin: 0 10rem;
+    margin: 0 10rem 10rem;
     min-height: 90vh;
     position: relative;
     top: 10rem; }
@@ -1382,12 +1382,14 @@ input.shipping-text-input {
       text-align: center; }
   #port-sections #port--about-sec {
     /* Begin ABOUT section */
-    padding-bottom: 4rem; }
+    grid-template-columns: auto 1fr;
+    align-items: center; }
     #port-sections #port--about-sec section {
       font-size: 2.5rem; }
       #port-sections #port--about-sec section article {
-        display: flex;
-        flex-direction: row; }
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center; }
         #port-sections #port--about-sec section article #port--about-pic {
           align-items: center;
           display: flex; }

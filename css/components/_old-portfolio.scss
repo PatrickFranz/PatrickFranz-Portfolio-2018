@@ -26,7 +26,7 @@
     font-size: 2rem;
     font-weight: 300;
     line-height: 2;
-    margin: 0 10rem;
+    margin: 0 10rem 10rem;
     min-height: 90vh;
     position: relative;
     top: 10rem;
@@ -50,23 +50,20 @@
 
   #port--about-sec{
     /* Begin ABOUT section */
-    // background: url("../img/bg-mt-thor.jpg") no-repeat;
-    
-    padding-bottom: 4rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 
     section{
       font-size: 2.5rem;
 
       article{
-         display: flex;
-         flex-direction: row;
-        // flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
 
         #port--about-pic{
           align-items: center;
-          display: flex;
-
-        
+          display: flex;        
 
           img{
             //border: 5px solid $primary;

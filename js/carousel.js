@@ -4,8 +4,8 @@ const SHOW_ELEMENTS = 6;
 let pageNumber = 1;
 scrollButtons.forEach(btn => btn.addEventListener('click', handleScroll));
 
-showProjects();
 addPageDots();
+showProjects();
 
 function showProjects(){
   projectList.forEach((project, index)=> {
@@ -16,6 +16,14 @@ function showProjects(){
           project.classList.add('hide');
     }
   });
+  handleDotState();
+}
+
+function handleDotState(){
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  dots.forEach((dot, index )=> {
+    index === pageNumber -1 ? dot.classList.add('dot-selected') : dot.classList.remove('dot-selected');
+  })
 }
 
 function addPageDots(){
@@ -33,6 +41,7 @@ function addPageDots(){
         showProjects();
       })
   });
+
 }
 
 function handleScroll(e){
@@ -40,6 +49,7 @@ function handleScroll(e){
   if(this.dataset.dir === 'right'){
     if(pageNumber < pagesRequired){
       pageNumber++;
+
     }
   } else {
     if(pageNumber > 1){
