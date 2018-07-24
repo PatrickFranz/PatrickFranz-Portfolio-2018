@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css4family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/portfolio.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
   <title>Showing off Patrick Franz</title>
 </head>
 <body>
@@ -112,544 +122,48 @@
           <p>[Projects]</p>
         </div>
         <div class='section-text'>
-          <p>Here you can find some of the projects I've been working on. </p>
+          <p>Here you can find some of the projects I've worked on. More recent projects are at the beginning.</p>
         </div>
-        <div id="projects-container">
-    
-          <!--PROJECT CONTENT-->
-          <div id="projects-right" class=''>
-
-            <!--PROJECT 1 -CALCULATOR -->
-            <input type="radio" name="projects" id="project-1" checked>
-            <label for="project-1">Calculator</label>
-            <div class="c-proj">
-              <div class="proj-carousel">                
-                <input id='proj1-1' class='carousel--input' type='radio' name='p1-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj1-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!--Content Here-->
-                    <img src="img/ss-calc-01.png" alt="Calculator screenshot"> 
-                  </div> 
-                  <label for='proj1-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj1-2' class='carousel--input' type='radio' name='p1-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj1-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/ss-calc-02.png" alt="Calculator screenshot">
-                  </div>
-                  <label for='proj1-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj1-3' class='carousel--input' type='radio' name='p1-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj1-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <div class='carousel--image'>
-                    <!-- Content HERE - CALCULATOR -->
-                      <section id='calc-body'>        
-                        <span id='disp-op'></span>
-                        <div id='screen'></div>
-                        <div id='calc-buttons'>
-                        <section id='btn-numbers'>
-                          <ul>
-                            <li class='calc--button btn-num'>1</li>
-                            <li class='calc--button btn-num'>2</li>
-                            <li class='calc--button btn-num'>3</li>  
-                          </ul>
-                          <br>
-                          <ul>       
-                            <li class='calc--button btn-num'>4</li>
-                            <li class='calc--button btn-num'>5</li>
-                            <li class='calc--button btn-num'>6</li>
-                          </ul>
-                          <br>
-                          <ul>         
-                            <li class='calc--button btn-num'>7</li>
-                            <li class='calc--button btn-num'>8</li>
-                            <li class='calc--button btn-num'>9</li>
-                          </ul>
-                          <br>
-                          <ul>
-                            <li class='calc--button btn-num'>.</li>
-                            <li class='calc--button btn-num'>0</li>
-                            <li class='calc--button btn-op'>=</li>
-                          </ul>  
-                        </section>
-                        <section id='btn-operations'>
-                          <ul>
-                            <li class='calc--button btn-op'>+</li>
-                            <li class='calc--button btn-fn md-text'>DEL</li>
-                          </ul>
-                          <br>
-                          <ul>
-                            <li class='calc--button btn-op'>-</li>
-                            <li class='calc--button btn-fn md-text'>CLS</li>
-                          </ul>
-                          <br>
-                          <ul>
-                            <li class='calc--button btn-op'>x</li>
-                            <li class='calc--button btn-fn md-text'>CLR</li>
-                          </ul>
-                          <br>
-                          <ul>
-                            <li class='calc--button btn-op'>&divide;</li>
-                            <li class='calc--button btn-fn'></li>
-                          </ul>
-                        </section>
-                        </div>
-                        <section id='bottom'>
-                            &nbsp;
-                        </section>                
-                      </section>
-                      <script src="js/calc.js"></script>
-
-                    <!--CALCULATOR END-->
-                    </div>  
-                  </div>
-                  <label for='proj1-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj1-1"></label
-                  ><label for="proj1-2"></label
-                  ><label for="proj1-3"></label>
-                </section>
+        <div id="project-carousel">
+            <div class="scroll"><i class="fas fa-angle-left"></i></div>
+            <div class="projects-main">
+              <div class="project-list">
+                <!-- Projects are stored in carouselData.json file
+                Parsed and populated by carousel.js -->
               </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <p>A fully functional calcuator to hone my skills with more complex CSS layouts. JavaScript's event listeners handle the buttons.</p>
-                <div class='project--info-links'>
-                  <a href="http://patrickfranz.github.io/calculator/" target="_blank"><img src="img/ico-www-1.png" alt="WWW">Project Site</a           
-                  ><a href="https://github.com/PatrickFranz/calculator" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo">Project on Github</a>
+            </div>
+            <div class="scroll" data-dir='right'>
+              <a>
+                <i class="fas fa-angle-right"></i>
+              </a>
+            </div>
+            
+            <div class="page-dots"></div>
+            <div class="modal hide">
+              <div class="modal-close">
+                  <i class="far fa-times-circle"></i>
+              </div>
+              <div>
+                <img class="image" src="" alt="">
+              </div>
+              <div class="content">
+                <p class="title"></p>
+                <p class="desc"></p>
+                <p class="date"></p>
+                <p class="tech"></p>
+                <div class="links">
+                  <span>
+                    <i class="fas fa-globe"></i>
+                    <span class="demo"></span>
+                  </span> 
+                  <span>
+                    <i class="fab fa-github"></i>
+                    <span class="repo"></span>
+                  </span>
                 </div>
               </div>
             </div>
-
-            <!--PROJECT 2 CSS BUTTONS -->
-            <input type="radio" name="projects" id="project-2">
-            <label for="project-2">CSS Buttons</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj2-1' class='carousel--input' type='radio' name='p2-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj2-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!--Content Here-->
-                    <img src="img/web-button-1.png" alt="Web button example">
-                  </div> 
-                  <label for='proj2-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj2-2' class='carousel--input' type='radio' name='p2-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj2-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/web-button-2.png" alt="Web button example">
-                  </div>
-                  <label for='proj2-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj2-3' class='carousel--input' type='radio' name='p2-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj2-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <div class='center'>
-                      <i class="button button-sm">A Small Button</i><br><br>
-                      <i class="button button-md">A Medium Button</i><br><br>
-                      <i class="button button-lg">A Large Button</i>
-                    </div>
-                  </div>
-                  <label for='proj2-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj2-1"></label>
-                  <label for="proj2-2"></label>
-                  <label for="proj2-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML and CSS</p>
-                <p>A simple button web component.</p>
-                <div class='project--info-links'>
-                  <a href="http://patrickfranz.github.io/web-button/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/web-button" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>
-              </div>
-            </div>
-      
-            <!--PROJECT 3 - WEB FORMS-->
-            <input type="radio" name="projects" id="project-3">
-            <label for="project-3">Web Forms</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj3-1' class='carousel--input' type='radio' name='p3-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj3-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!--Content Here-->
-                    <img src="img/web-form-1.png" alt="Login form example">
-                  </div> 
-                  <label for='proj3-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj3-2' class='carousel--input' type='radio' name='p3-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj3-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/web-form-2.png" alt="CC form example"> 
-                  </div>
-                  <label for='proj3-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj3-3' class='carousel--input' type='radio' name='p3-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj3-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                      <!-- Content HERE -->
-                      <div id="login-container" class='center'>
-                        <div id="login-title" class="center-block-content">WELCOME</div>
-                        <div class="center-block-content">
-                          <input class="wide-80-text width80" type="text" id="uname" placeholder="Username"><br>
-                          <input class="wide-80-text" type="password" id="pword" placeholder="Password"><br>              
-                          <input id='login-checkbox' type="checkbox" name="remember"><label for="remember">Remember my username</label>                  
-                          <div class="center">
-                              <button class="button button-sm">Login</button>
-                          </div>
-                        </div>
-                      </div>
-                    <!--END Content-->
-                  </div>
-                  <label for='proj3-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj3-1"></label>
-                  <label for="proj3-2"></label>
-                  <label for="proj3-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <p>A numbers of forms covering various scenarios commonly found in websites. The forms use JavaScript and Form Validation API to validate input.</p>
-                <div class='project--info-links'>
-                  <a href="http://patrickfranz.github.io/web-forms/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/web-forms" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>
-              </div>
-            </div>  
-
-            <!--PROJECT 4 - PRODUCT LISTING -->
-            <input type="radio" name="projects" id="project-4">
-            <label for="project-4">Product Listing</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj4-1' class='carousel--input' type='radio' name='p4-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj4-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                      <!--Content Here-->
-                      <img src="img/cart-1.png" alt="Product listing example">
-                  </div> 
-                  <label for='proj4-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj4-2' class='carousel--input' type='radio' name='p4-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj4-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/cart-2.png" alt="Cart example">              
-                  </div>
-                  <label for='proj4-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj4-3' class='carousel--input' type='radio' name='p4-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj4-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <video height="350"  width="600" src="img/product.webm" autoplay loop>
-                      It looks like your browser doesn't support HTML5.
-                    </video>                  
-                  </div>
-                  <label for='proj4-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj4-1"></label>
-                  <label for="proj4-2"></label>
-                  <label for="proj4-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <p>This project is to design and implement a functional product list and shopping cart. This is another advanced layout exercise and incorporates more advanced JavaScript to bring the cart to life.</p>
-                <div class='project--info-links'>
-                  <a href="http://patrickfranz.github.io/ProductListing/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/ProductListing" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>
-              </div>
-            </div>
-
-            <!--PROJECT 5-->
-            <input type="radio" name="projects" id="project-5">
-            <label for="project-5">User Profile Page</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj5-1' class='carousel--input' type='radio' name='p5-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj5-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>                        <!--Content Here-->
-                    <img src="img/md-profile-1.png" alt="Sample Modern }}}Developer Encyclopedia profile page"> 
-                  </div> 
-                  <label for='proj5-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj5-2' class='carousel--input' type='radio' name='p5-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj5-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/md-profile-2.png" alt="Sample Modern Developer Encyclopedia profile page">
-                  </div>
-                  <label for='proj5-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj5-3' class='carousel--input' type='radio' name='p5-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj5-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <video width="100%" height="400" src="img/md-profile-3.webm" autoplay loop>
-                      It looks like your browser doesn't support HTML5.
-                    </video>
-                  </div>
-                  <label for='proj5-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj5-1"></label>
-                  <label for="proj5-2"></label>
-                  <label for="proj5-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-                <p>An advanced UI layout project to create a real-world profile page. This group project required collaboration with another student.</p>
-                <div class='project--info-links'>
-                  <a href="https://patrickfranz.github.io/md-encyclopedia-profiles/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/md-encyclopedia-profiles" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>
-              </div>
-            </div>
-
-             <!--PROJECT 6-->
-            <input type="radio" name="projects" id="project-6">
-            <label for="project-6">Image Gallery</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj6-1' class='carousel--input' type='radio' name='p6-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj6-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!--Content Here-->
-                    <img src="img/image-gallery-1.png" alt="Image gallery screenshot">
-                  </div> 
-                  <label for='proj6-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj6-2' class='carousel--input' type='radio' name='p6-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj6-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/image-gallery-2.png" alt="Image gallery screenshot">
-                  </div>
-                  <label for='proj6-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj6-3' class='carousel--input' type='radio' name='p6-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj6-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                      <!-- Content HERE -->
-                      <video src="img/image-gallery-3.webm" autoplay loop>
-                        It looks like your browser doesn't support HTML5.
-                      </video>
-                  </div>
-                  <label for='proj6-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj6-1"></label>
-                  <label for="proj6-2"></label>
-                  <label for="proj6-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS</p>
-                <p>A simple image gallery using CSS transitions.</p>
-                <div class='project--info-links'>
-                  <a href="https://patrickfranz.github.io/md_image_gallery/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/md_image_gallery" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>
-              </div>
-            </div>
-
-
-            <!--PROJECT 7 -->
-        
-            <input type="radio" name="projects" id="project-7">
-            <label for="project-7">CSS Accordion</label>
-            <div class="c-proj">
-              <div class="proj-carousel">
-                
-                <input id='proj7-1' class='carousel--input' type='radio' name='p7-radio' checked>
-                <div class='project--carousel-frame '>
-                  <label for="proj7-3" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                    <!--Content Here-->
-                    <img src="img/accordion-img1.png" alt="Accordion screenshot">
-                  </div> 
-                  <label for='proj7-2' class='c-control '>&gt;</label>
-                </div>
-                
-                <!--Carousel - Content 2-->
-                <input id='proj7-2' class='carousel--input' type='radio' name='p7-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj7-1" class='c-control'>&lt;</label>
-                  <div class='carousel--image'>
-                    <!-- Content HERE -->
-                    <img src="img/accordion-img2.png" alt="Accordion screenshot">
-                  </div>
-                  <label for='proj7-3' class='c-control '>&gt;</label>
-                </div>
-                <!--Carousel - Content 3-->
-  
-                <input id='proj7-3' class='carousel--input' type='radio' name='p7-radio'>
-                <div class='project--carousel-frame'>
-                  <label for="proj7-2" class='c-control '>&lt;</label>
-                  <div class='carousel--image'>
-                      <!-- Content HERE -->
-
-                      <div class="accordion">
-                        <ul>
-                          <!-- Item 1 -->
-                          <li>
-                            <input id='appetizers' type='radio' name='menu__div'>
-                            <label for="appetizers" class=heading1>APPETIZERS</label>           
-                            <div class='food__body hide'>
-                              <p class='heading2'>Check out our tasty Apps!</p>
-                              <p class='heading3'>Happy hour menu - half off!!</p>
-                              <ol>
-                                <li>Chicken Wings (6) - $5.99</li>
-                                <li>Calamari - $7.99</li>
-                                <li>Garlic breaded pickles - $4.59</li>
-                              </ol>
-                            </div>
-                          </li>
-
-                          <!-- Item 2 -->
-                          <li>
-                            <input id='entrees' type='radio' name='menu__div'>
-                            <label for="entrees" class=heading1>ENTREES</label> 
-                            <div class='food__body hide'>
-                              <p class='heading2'>Choose from a wide range of pastas, combos and signature dishes</p>
-                              <p class='heading3'>Pastas</p>
-                              <ol>
-                                <li>Chicken Piccata - $14.99</li>
-                                <li>Chicken Pollo - $12.99</li>
-                                <li>Lasagna (Chicken/Beef) - $10.99</li>
-                              </ol>
-                              <p class='heading3'>Combos</p>
-                              <ol>
-                                <li>Italian Sausage & Beef Combo - $15.99</li>
-                                <li>Mac n Cheese with Chicken Tenders - $8.99</li>
-                              </ol>
-                            </div>
-                          </li>
-
-                          <!-- Item 3 -->
-                          <li>
-                            <input id='desserts' type='radio' name='menu__div'>
-                            <label for="desserts" class=heading1>DESSERTS</label> 
-                            <div class='food__body hide'>
-                              <p class='heading2'>New Summer Specials!!</p>
-                              <p class='heading3'>Shakes and Ice Cream</p>
-                              <ol>
-                                <li>Turtle Caramel Shake - $6.99</li>
-                                <li>Chocolate Brownie Bite - $4.99</li>  
-                              </ol>
-                            </div>
-                          </li>
-
-                          <!-- Placeholder for Item 4 -->
-                          <li>
-                            <input id='soups' type='radio' name='menu__div'>
-                            <label for="soups" class=heading1>SOUPS & SALADS</label> 
-                            <div class='food__body hide'>
-                              <p class='heading2'>Light and Tasty!!</p>
-                              <p class='heading3'>Soups</p>
-                              <ol>
-                                <li>Boston Clam Chowder - Cup- $3.99</li>
-                                <li>Boston Clam Chowder - Bowl- $5.99</li>
-                                <li>French Onion - $5.99</li>
-                                <li>Italian Wedding - $5.99</li>
-                              </ol>
-                              <p class='heading3'>Salads</p>
-                              <ol>
-                                <li>Cesaer Salad - $3.99</li>
-                                <li>Greek Salad - $4.99</li>
-                                <li>House Salad - $3.99</li>
-                              </ol>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                      <!--END CONTENT-->
-                  </div>
-                  <label for='proj7-1' class='c-control '>&gt;</label>
-                </div>
-                <section class='carousel--radio-buttons'>
-                  <label for="proj7-1"></label>
-                  <label for="proj7-2"></label>
-                  <label for="proj7-3"></label>
-                </section>
-              </div>
-              <div class='proj-desc'>
-                <p><strong>Technologies:</strong> HTML, CSS, Responsive</p>
-                <p>A responsive HTML/CSS-only accordion.</p>
-                <!--<div class='project--info-links'>
-                  <a href="https://patrickfranz.github.io/md_image_gallery/" target="_blank">Project Site</a
-                  ><a href="https://github.com/PatrickFranz/md_image_gallery" target="_blank"><img src="img/GitHub-Mark-64px.png" alt="github logo" width="25px">Project on Github</a>
-                </div>-->
-              </div>
-            </div>
-
-            <!--ADD NEW PROJECTS HERE - template in temp.html-->
-
-
           </div>
-        </div>
       </section>
     </div>
 
@@ -924,5 +438,6 @@
     
   </div>
   <script src='js/portfolio.js'></script>
+  <script src='js/carousel.js'></script>
 </body>
 </html>
