@@ -1372,6 +1372,7 @@ input.shipping-text-input {
     padding: 10px;
     font-size: 5rem;
     cursor: pointer;
+    color: deeppink;
     transition: all 250ms; }
     #project-carousel .scroll:hover {
       transform: scale(1.2); }

@@ -116,7 +116,8 @@
     padding: 10px;
     font-size: 5rem;
     cursor: pointer;
-    transition: all 250ms;
+    color: $make-it-pop;
+    transition: all 250ms; 
 
     &:hover{
       transform: scale(1.2);
