@@ -9,9 +9,78 @@
 
 #project-carousel{
   display: grid;
+  position: relative;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
   margin: 50px 0;
+
+  
+  .modal{
+    display: grid;
+    position: absolute;
+    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    width: 90vw;
+    height: 80vh;
+    top: 0;
+    background-color: rgba(0,0,0,0.85);
+
+    .image{
+      max-width: 90%;
+    }
+
+    .content{
+      align-self: flex-start;
+      margin: 10px 40px 0 0;
+      font-size: 2.0rem;
+      text-align: left;
+
+      p{
+        margin: 20px 0;
+      }
+      .title{
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      .links{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      a{
+        text-decoration: underline;
+        color: #556CF2;
+        transition: 250ms all;
+        margin: 0 10px;
+
+        &:hover{
+          color: darken(#556CF2, 20%);
+        }
+      }
+    }
+
+    .modal-close{
+      position: absolute;
+      top: 0px;
+      right: 20px;
+      cursor: pointer;
+      transition: 250ms all;
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  
+  .hide{
+    display: none;
+  }
 
   .page-dots{
     display: flex;
@@ -26,6 +95,7 @@
       background: $make-it-pop;
       width: 20px;
       height: 20px;
+      opacity: 0.5;
       transition: 250ms all;
 
       &:hover{
@@ -35,10 +105,10 @@
 
     .dot-selected{
       border: 3px solid rgba(255, 255, 255, 0.75);
+      opacity: 1;
     }
   }
   
-
   .scroll{
     display: grid;
     justify-content: center;
@@ -59,14 +129,22 @@
     .project-list{
       display: grid;
       justify-content: center;
-      align-content: center;
+      justify-items: center;
+
       grid-auto-flow: row;
       grid-gap: 20px;
       grid-template-columns: repeat(auto-fill, 400px);
       grid-template-rows: auto auto;
 
-      .hide{
-        display: none;
+      .project-item{
+        max-width: 300px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        img{
+          max-width: 300px;
+          max-height: 200px;
+        }
       }
 
       .slide-left{

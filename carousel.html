@@ -18,50 +18,15 @@
           <p>[Projects]</p>
         </div>
         <div class='section-text'>
-          <p>Here you can find some of the projects I've been working on. </p>
+          <p>Here you can find some of the projects I've worked on. More recent projects are at the beginning.</p>
         </div>
 
         <div id="project-carousel">
           <div class="scroll"><i class="fas fa-angle-left"></i></div>
           <div class="projects-main">
             <div class="project-list">
-              <div class="project-item">
-                <a>1
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a href="!#">2
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a>3
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a>4
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a>5
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a>6
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              <div class="project-item">
-                <a>7
-                  <img src="https://placekitten.com/300/200">
-                </a>
-              </div>
-              
-
+              <!-- Projects are stored in carouselData.json file
+              Parsed and populated by carousel.js -->
             </div>
           </div>
           <div class="scroll" data-dir='right'>
@@ -69,14 +34,36 @@
               <i class="fas fa-angle-right"></i>
             </a>
           </div>
+          
           <div class="page-dots"></div>
+          <div class="modal hide">
+            <div class="modal-close">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <div>
+              <img class="image" src="" alt="">
+            </div>
+            <div class="content">
+              <p class="title"></p>
+              <p class="desc"></p>
+              <p class="date"></p>
+              <p class="tech"></p>
+              <div class="links">
+                <span>
+                  <i class="fas fa-globe"></i>
+                  <span class="demo"></span>
+                </span> 
+                <span>
+                  <i class="fab fa-github"></i>
+                  <span class="repo"></span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
-
-
   </section>
-
 
   <script src='js/carousel.js'></script>
 </body>

@@ -1296,9 +1296,56 @@ input.shipping-text-input {
     transform: translateX(-100%); } }
 #project-carousel {
   display: grid;
+  position: relative;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
   margin: 50px 0; }
+  #project-carousel .modal {
+    display: grid;
+    position: absolute;
+    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    width: 90vw;
+    height: 80vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.85); }
+    #project-carousel .modal .image {
+      max-width: 90%; }
+    #project-carousel .modal .content {
+      align-self: flex-start;
+      margin: 10px 40px 0 0;
+      font-size: 2.0rem;
+      text-align: left; }
+      #project-carousel .modal .content p {
+        margin: 20px 0; }
+      #project-carousel .modal .content .title {
+        text-align: center;
+        font-size: 3rem; }
+      #project-carousel .modal .content .links {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+      #project-carousel .modal .content a {
+        text-decoration: underline;
+        color: #556CF2;
+        transition: 250ms all;
+        margin: 0 10px; }
+        #project-carousel .modal .content a:hover {
+          color: #102cd1; }
+    #project-carousel .modal .modal-close {
+      position: absolute;
+      top: 0px;
+      right: 20px;
+      cursor: pointer;
+      transition: 250ms all;
+      opacity: 0.5; }
+      #project-carousel .modal .modal-close:hover {
+        opacity: 1; }
+  #project-carousel .hide {
+    display: none; }
   #project-carousel .page-dots {
     display: flex;
     grid-template-columns: fit-content(40%);
@@ -1311,11 +1358,13 @@ input.shipping-text-input {
       background: deeppink;
       width: 20px;
       height: 20px;
+      opacity: 0.5;
       transition: 250ms all; }
       #project-carousel .page-dots .dot:hover {
         border: 3px solid rgba(255, 255, 255, 0.75); }
     #project-carousel .page-dots .dot-selected {
-      border: 3px solid rgba(255, 255, 255, 0.75); }
+      border: 3px solid rgba(255, 255, 255, 0.75);
+      opacity: 1; }
   #project-carousel .scroll {
     display: grid;
     justify-content: center;
@@ -1331,13 +1380,18 @@ input.shipping-text-input {
     #project-carousel .projects-main .project-list {
       display: grid;
       justify-content: center;
-      align-content: center;
+      justify-items: center;
       grid-auto-flow: row;
       grid-gap: 20px;
       grid-template-columns: repeat(auto-fill, 400px);
       grid-template-rows: auto auto; }
-      #project-carousel .projects-main .project-list .hide {
-        display: none; }
+      #project-carousel .projects-main .project-list .project-item {
+        max-width: 300px;
+        line-height: 1.5;
+        margin-bottom: 20px; }
+        #project-carousel .projects-main .project-list .project-item img {
+          max-width: 300px;
+          max-height: 200px; }
       #project-carousel .projects-main .project-list .slide-left {
         animation: slide-left forwards ease-in 500ms; }
       #project-carousel .projects-main .project-list .slide-right {

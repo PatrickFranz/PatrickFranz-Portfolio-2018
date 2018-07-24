@@ -1,16 +1,70 @@
-const projectList = Array.from(document.querySelectorAll('.project-item'));
+let projectList = [];
 const scrollButtons = document.querySelectorAll('.scroll');
 const SHOW_ELEMENTS = 6;
 let pageNumber = 1;
 scrollButtons.forEach(btn => btn.addEventListener('click', handleScroll));
 
-addPageDots();
-showProjects();
+getProjectData();
+
+function getProjectData(){
+  if(sessionStorage.getItem('carouselData')){
+    populateProjectList(JSON.parse(sessionStorage.getItem('carouselData')))
+  } else {
+  fetch(`${window.location.origin}/js/carouselData.json`)
+    .then(result => result.json())
+    .then(data => {
+      sessionStorage.setItem('carouselData', JSON.stringify(data.projects));
+      populateProjectList(JSON.parse(sessionStorage.getItem('carouselData')))
+    })
+    .catch(err => console.log(err));
+  }
+}
+
+function showModal(e){
+  const carouselData = JSON.parse(sessionStorage.carouselData);
+  const projectData = carouselData.find(project => project.id == this.dataset.id);
+  const modal = document.querySelector('.modal');
+  console.log(projectData.techUsed);
+  modal.querySelector('.modal-close').addEventListener('click', e => modal.classList.add('hide'));
+  modal.classList.remove('hide');
+  modal.querySelector('.image').src = projectData.img_large;
+  modal.querySelector('.image').alt = `${projectData.title} screenshot`;
+  modal.querySelector('.title').innerHTML = `<h1>${projectData.title}</h1>`;
+  modal.querySelector('.desc').innerHTML = projectData.desc;
+  modal.querySelector('.date').innerHTML = `Date: ${projectData.date}`;
+  modal.querySelector('.tech').innerHTML = `Technology: ` + projectData.techUsed.join(', ');
+  modal.querySelector('.demo').innerHTML = `<a href="${projectData.demoUrl}" target="_blank">Live Demo</a>`;
+  modal.querySelector('.repo').innerHTML = `<a href="${projectData.repoUrl}" target="_blank">Github Repo</a>`;
+ 
+}
+
+function populateProjectList(projects){
+  projects
+  .sort( (a, b) => new Date(a.date) < new Date(b.date) )
+  .map(project => {
+    const template = document.createElement('template');
+    const html =
+      `<div class="project-item" data-id='${project.id}'>
+        <div class='project-item--wrapper'>
+          <a>
+            <img src="${project.img_thumb}">
+          </a>
+          <span class='title'>${project.title}</span>
+        </div>
+      </div>`;
+    template.innerHTML = html.trim();
+    document.querySelector('.project-list').appendChild(template.content.firstChild)
+  })
+  projectList = Array.from(document.querySelectorAll('.project-item'));
+  projectList.forEach(project => project.addEventListener('click', showModal));
+  addPageDots();
+  showProjects();
+}
 
 function showProjects(){
   projectList.forEach((project, index)=> {
     if(index < (SHOW_ELEMENTS * pageNumber) 
-        && index > (SHOW_ELEMENTS * pageNumber) - SHOW_ELEMENTS -1){
+        && index > (SHOW_ELEMENTS * pageNumber) - SHOW_ELEMENTS - 1){
           project.classList.remove('hide')
     } else {
           project.classList.add('hide');
@@ -41,20 +95,14 @@ function addPageDots(){
         showProjects();
       })
   });
-
 }
 
 function handleScroll(e){
   const pagesRequired = Math.ceil(projectList.length / SHOW_ELEMENTS);
   if(this.dataset.dir === 'right'){
-    if(pageNumber < pagesRequired){
-      pageNumber++;
-
-    }
-  } else {
-    if(pageNumber > 1){
-      pageNumber--;
-    }
+    pageNumber < pagesRequired ? pageNumber++ : pageNumber = 1;
+  } else { //Handle Left scroll
+    pageNumber > 1 ? pageNumber-- : pageNumber = pagesRequired;
   }
   showProjects();
 }
