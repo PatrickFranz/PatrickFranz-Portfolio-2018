@@ -1,7 +1,5 @@
-
-
 #social-sidebar{
-  display: flex;
+  display: inline-block;
   background: $make-it-pop;
   padding: 1rem 1.2rem;
   border-radius: 5px;
@@ -12,6 +10,11 @@
   text-align: center;
   overflow: hidden;
   z-index: 100;
+
+  @media(max-width:600px){
+    width: 55px;
+    right: 5px;
+  }
 
   ul{
     li{
@@ -32,7 +35,14 @@
 }
 
 .transition-bottom{
-  top: 50% !important;
+  top: calc(100% - 75px) !important;
+}
+
+@media(max-width: 600px){
+  .transition-bottom{
+    top: calc(100% - 75px) !important;
+  }
+  
 }
 
 .minimize{

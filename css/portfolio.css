@@ -319,36 +319,6 @@ strong {
         color: #3E4651;
         background: #ff47aa;
         cursor: pointer; }
-  #topNavBar #search {
-    position: relative;
-    width: 20%;
-    float: right; }
-    #topNavBar #search label {
-      position: absolute;
-      bottom: 2rem;
-      font-size: 1.5rem;
-      left: 0;
-      transition: all 1s; }
-    #topNavBar #search input {
-      width: 100%;
-      background: transparent;
-      border: none;
-      font-size: 2rem;
-      color: #ff47aa;
-      outline: none;
-      border-radius: 0;
-      border-bottom: 1px solid #ecf0f1; }
-    #topNavBar #search input[type='image'] {
-      position: absolute;
-      right: -2rem;
-      bottom: 3rem;
-      width: 3rem;
-      border: none; }
-    #topNavBar #search input:focus + label {
-      transform: translate(0rem, -2rem) scale(0.8);
-      -webkit-transform: translate(0rem, -2rem) scale(0.8);
-      -moz-transform: translate(0rem, -2rem) scale(0.8);
-      -ms-transform: translate(0rem, -2rem) scale(0.8); }
 
 @media (max-width: 1275px) {
   #topNavBar {
@@ -356,30 +326,14 @@ strong {
     #topNavBar span {
       margin: 2rem 5rem 0; }
     #topNavBar nav li {
-      padding: 2rem 2rem; }
-    #topNavBar #search label {
-      bottom: 1rem;
-      font-size: 1.2rem; }
-    #topNavBar #search input {
-      font-size: 2rem; }
-    #topNavBar #search input[type="image"] {
-      bottom: 2rem;
-      width: 2rem; } }
+      padding: 2rem 2rem; } }
 @media (max-width: 960px) {
   #topNavBar .logo {
     margin: 2rem 0px 0px 30px; }
     #topNavBar .logo:after {
       content: "PF"; }
   #topNavBar nav ul li {
-    padding: 2rem 1rem; }
-  #topNavBar #search label {
-    bottom: 1rem;
-    font-size: 1.2rem; }
-  #topNavBar #search input {
-    font-size: 2rem; }
-  #topNavBar #search input[type="image"] {
-    bottom: 2rem;
-    width: 2rem; } }
+    padding: 2rem 1rem; } }
 #bus-card-container {
   display: block;
   font-family: "Lato", "sans-serif";
@@ -607,299 +561,6 @@ strong {
   font-size: 2.5rem;
   padding: 1.5rem; }
 
-:root {
-  --padding-reg: 0.5rem; }
-
-#calc-body ul {
-  display: inline-flex; }
-
-#calc-body {
-  background-image: url("../img/lightblue.png");
-  font-family: "Cousine", Courier New, monospace;
-  font-size: 1rem;
-  line-height: 1;
-  margin: 0 auto;
-  max-width: 35rem;
-  padding: 1rem;
-  position: relative;
-  user-select: none; }
-
-#screen {
-  background: black;
-  border-radius: 10px;
-  color: white;
-  font-size: 2em;
-  margin: 10px;
-  min-height: 4rem;
-  padding: 5px 10px;
-  text-align: right;
-  width: 90%; }
-
-#calc-buttons {
-  display: flex; }
-
-#disp-op {
-  color: white;
-  left: 2rem;
-  position: absolute;
-  top: 3rem; }
-
-#btn-numbers {
-  float: left; }
-
-#btn-operations {
-  border-left: 2px solid #323a45;
-  float: left;
-  padding: 0 10px; }
-
-#bottom {
-  clear: both; }
-
-.calc--button {
-  border-radius: 10%;
-  cursor: pointer;
-  font-size: 2em;
-  margin: 3px 5px;
-  padding: 10px 15px; }
-
-.btn-num {
-  background-color: #00afd1; }
-
-.btn-op {
-  background-color: #f27935; }
-
-.btn-fn {
-  background-color: #d64541;
-  max-width: 6rem;
-  min-width: 6rem; }
-
-.btn-num:hover {
-  background: #05d6ff; }
-
-.btn-op:hover {
-  background: #f59965; }
-
-.btn-fn:hover {
-  background: #df6e6b; }
-
-.button:active {
-  background: purple; }
-
-.sm-text {
-  font-size: 1.2em; }
-
-.md-text {
-  font-size: 1.5em; }
-
-@media (max-width: 600px) {
-  #calc-body {
-    font-family: "Cousine", Courier New, monospace;
-    font-size: 1rem;
-    line-height: 1;
-    margin: 0 auto;
-    padding: 1rem;
-    user-select: none;
-    width: 100%; }
-
-  #screen {
-    background: black;
-    color: white;
-    font-size: 2em;
-    text-align: right;
-    margin: 10px;
-    min-height: 4rem;
-    padding: 5px 10px;
-    width: 90%; }
-
-  .calc--button {
-    font-size: 1.25em;
-    margin: 2px 3px;
-    padding: 5px 7px; }
-
-  .btn-fn {
-    background-color: #d64541;
-    max-width: none;
-    min-width: 0; } }
-input:hover {
-  background-color: #fffbe2; }
-
-input:not([type="submit"]):invalid:focus {
-  background: url("../img/invalid-30.png") no-repeat;
-  background-position: right;
-  background-color: lightpink; }
-
-input:not([type="submit"]):valid {
-  background: url("../img/valid-30.png") no-repeat;
-  background-position: right;
-  background-color: lightgreen; }
-
-input[type="number"] {
-  width: 7rem; }
-
-label {
-  padding: 10px; }
-
-input.shipping-text-input {
-  font-size: 1.2em;
-  padding: 10px;
-  margin: 10px;
-  vertical-align: -2px; }
-
-/*ID SELECTORS */
-#search-form-text-input {
-  width: 79%; }
-
-#search-form-category {
-  width: 20%; }
-
-#schedule-container input, #schedule-container select, #schedule-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.2rem; }
-
-#login-container {
-  padding: 0 0 1rem;
-  width: 90%;
-  border-radius: 5px;
-  background: #03a9f4;
-  margin: 0 auto; }
-
-#login-container input:not([type="checkbox"]) {
-  width: 80%;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.2em; }
-
-#login-title {
-  background-color: #b3e5fc;
-  border-radius: 5px 5px 0 0;
-  padding: 10px 0;
-  margin-bottom: 20px;
-  width: 100%; }
-
-#login-checkbox {
-  margin: 10px 0 20px;
-  padding: 0;
-  width: 20px; }
-
-#color-container {
-  display: inline-flex;
-  background: lightblue; }
-
-#color-display-div {
-  padding: 20px; }
-
-#color-textbox {
-  float: left;
-  width: 150px;
-  padding: 50px 0; }
-
-#shipping-container {
-  width: 800px;
-  padding: 20px;
-  margin: 5px;
-  background: lightblue; }
-
-#shipping-section {
-  width: 50%;
-  padding: 20px;
-  float: left; }
-
-#billing-section {
-  width: 50%;
-  padding: 20px;
-  float: left; }
-
-#schedule-container {
-  width: 600px;
-  padding: 20px;
-  margin: 5px;
-  background: lightblue; }
-
-#credit-card-radio > input[type="radio"] {
-  vertical-align: 15px;
-  margin-left: 40px; }
-
-#cc-container {
-  width: 600px;
-  margin: 10px;
-  border-radius: 5px;
-  background: #d1d5d8; }
-
-#cc-container input, #cc-container select, #cc-container textarea {
-  padding: 10px;
-  margin: 10px 20px 10px 0;
-  font-size: 1.2em; }
-
-#cc-header {
-  background-color: #3498db;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  margin-bottom: 15px;
-  padding: 20px; }
-
-#cc-main-form {
-  margin: 0 20px; }
-
-#cc-expiration {
-  margin: 0 20px; }
-
-#cc-csv-info {
-  display: none;
-  border: 3px solid #3498db;
-  border-radius: 5px; }
-
-#cc-whats-this:hover + #cc-csv-info {
-  display: block;
-  position: absolute;
-  left: 32rem; }
-
-#alpha-num {
-  width: 7rem; }
-
-/*CLASS SELECTORS*/
-.width-half {
-  width: 50%; }
-
-.width80 {
-  width: 80%; }
-
-.center-block-content {
-  text-align: center;
-  clear: both; }
-
-.float-right {
-  float: right; }
-
-.float-left {
-  float: left; }
-
-.color-slide-label {
-  display: inline-block;
-  width: 100px; }
-
-.fixed-label {
-  display: inline-block;
-  width: 150px; }
-
-.invisible {
-  visibility: hidden; }
-
-.small-text {
-  font-size: 0.8em; }
-
-@media (max-width: 425px) {
-  #login-container {
-    font-size: 1.5rem;
-    width: 100%; }
-
-  #login-title {
-    background-color: #b3e5fc;
-    border-radius: 5px 5px 0 0;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-    width: 100%; } }
 .graph {
   display: flex;
   position: relative; }
@@ -1183,7 +844,7 @@ input.shipping-text-input {
     font-size: 1rem;
     padding: 0.5rem 1rem; } }
 #social-sidebar {
-  display: flex;
+  display: inline-block;
   background: deeppink;
   padding: 1rem 1.2rem;
   border-radius: 5px;
@@ -1194,6 +855,10 @@ input.shipping-text-input {
   text-align: center;
   overflow: hidden;
   z-index: 100; }
+  @media (max-width: 600px) {
+    #social-sidebar {
+      width: 55px;
+      right: 5px; } }
   #social-sidebar ul li {
     margin: 2px 0;
     transition: transform 250ms;
@@ -1209,8 +874,11 @@ input.shipping-text-input {
       margin: 0 0 6px; }
 
 .transition-bottom {
-  top: 50% !important; }
+  top: calc(100% - 75px) !important; }
 
+@media (max-width: 600px) {
+  .transition-bottom {
+    top: calc(100% - 75px) !important; } }
 .minimize {
   max-height: 73px; }
 
@@ -1296,6 +964,7 @@ input.shipping-text-input {
     transform: translateX(-100%); } }
 #project-carousel {
   display: grid;
+  justify-content: center;
   position: relative;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
@@ -1303,7 +972,7 @@ input.shipping-text-input {
   #project-carousel .modal {
     display: grid;
     position: absolute;
-    padding: 20px;
+    justify-self: center;
     grid-template-columns: 2fr 1fr;
     grid-gap: 10px;
     overflow-y: auto;
@@ -1376,6 +1045,9 @@ input.shipping-text-input {
     transition: all 250ms; }
     #project-carousel .scroll:hover {
       transform: scale(1.2); }
+  @media (max-width: 600px) {
+    #project-carousel .scroll {
+      display: none; } }
   #project-carousel .projects-main {
     padding: 10px 0; }
     #project-carousel .projects-main .project-list {
@@ -1402,6 +1074,18 @@ input.shipping-text-input {
         transition: all 250ms;
         cursor: pointer; }
 
+@media (max-width: 1200px) {
+  #project-carousel {
+    margin: 10px 0; }
+    #project-carousel .modal {
+      grid-template-columns: 1fr;
+      padding: 10px;
+      grid-gap: 2px;
+      width: 85vw; } }
+@media (max-width: 600px) {
+  #project-carousel {
+    grid-template-columns: 1fr;
+    margin: 50px 0; } }
 .b {
   border: 2px solid deeppink; }
 
@@ -1414,15 +1098,19 @@ input.shipping-text-input {
   color: #ecf0f1; }
   #port-sections .divider {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-top: 10rem; }
     #port-sections .divider img {
       max-width: 100px;
       max-height: 100px; }
+  @media (max-width: 425px) {
+    #port-sections .divider {
+      background: #ffffff; } }
   #port-sections .sec-container {
     font-size: 2rem;
     font-weight: 300;
     line-height: 2;
-    margin: 0 10rem 10rem;
+    margin: 0 10rem;
     min-height: 90vh;
     position: relative;
     top: 10rem; }
@@ -1435,6 +1123,9 @@ input.shipping-text-input {
       font-size: 2.5rem;
       font-weight: 100;
       text-align: center; }
+  @media (max-width: 1024px) {
+    #port-sections .sec-container {
+      margin: 0 2rem; } }
   #port-sections #port--about-sec {
     /* Begin ABOUT section */
     grid-template-columns: auto 1fr;
@@ -1443,261 +1134,29 @@ input.shipping-text-input {
       font-size: 2.5rem; }
       #port-sections #port--about-sec section article {
         display: grid;
+        position: relative;
         grid-template-columns: auto 1fr;
-        align-items: center; }
+        align-items: top; }
         #port-sections #port--about-sec section article #port--about-pic {
           align-items: center;
           display: flex; }
           #port-sections #port--about-sec section article #port--about-pic img {
             border-radius: 10px; }
+    @media (max-width: 1024px) {
+      #port-sections #port--about-sec section {
+        font-size: 2rem; } }
   #port-sections .font-md {
     font-size: 1.5rem; }
-  #port-sections #port--project-sec {
-    /*Begin PROJECT section*/
-    padding-bottom: 10rem; }
-    #port-sections #port--project-sec #projects-container {
-      display: flex; }
-      #port-sections #port--project-sec #projects-container #projects-right {
-        display: flex;
-        flex: 1 1 auto;
-        flex-direction: column;
-        padding-bottom: 15rem;
-        position: relative; }
-        #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] {
-          display: none; }
-          #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label {
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            border-left: 3px solid transparent;
-            cursor: pointer;
-            opacity: 0.75;
-            padding: 2rem;
-            white-space: nowrap;
-            width: 20%; }
-            #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
-              border-color: #ff47aa;
-              opacity: 1; }
-          #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
-            border-color: #ff1493;
-            opacity: 1; }
-            #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label + .c-proj {
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              left: 20%;
-              position: absolute;
-              top: 0;
-              width: 80%; }
-        #port-sections #port--project-sec #projects-container #projects-right .c-proj {
-          display: none; }
-        #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
-          align-content: center;
-          display: flex;
-          flex: 2 1 auto;
-          justify-content: center;
-          padding: 3rem 0;
-          position: relative; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
-            display: none; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-              background: #ff1493; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-              background: #ff1493; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-              background: #ff1493; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
-            flex: 0 0 auto; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons {
-            bottom: 5%;
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            right: 45%;
-            z-index: 10; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-              background: transparent;
-              border: 3px solid #ff47aa;
-              border-radius: 50%;
-              display: inline-flex;
-              height: 2rem;
-              margin: 0 1rem;
-              width: 2rem;
-              -webkit-transition: all ease 0.25s;
-              -moz-transition: all ease 0.25s;
-              -ms-transition: all ease 0.25s;
-              -o-transition: all ease 0.25s;
-              transition: all ease 0.25s; }
-              #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-                background: #ff47aa;
-                cursor: pointer; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame {
-            max-height: 100%;
-            max-width: 100%; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image {
-              flex: 1 2 auto;
-              height: 100%;
-              text-align: center;
-              white-space: nowrap;
-              width: 100%; }
-              #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .center {
-                text-align: center; }
-              #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image video {
-                width: 90%; }
-              #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image img {
-                max-width: 90%;
-                object-fit: scale-down; }
-              #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion {
-                max-height: 90%;
-                max-width: 90%;
-                padding: 5rem 0; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading1 {
-                  background: #ff47aa;
-                  color: #621c26;
-                  font-size: 1.5rem;
-                  font-weight: bold;
-                  margin: 0;
-                  padding: 10px; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading2 {
-                  color: maroon;
-                  font-size: 1.25rem;
-                  font-weight: 800;
-                  margin: 15px 0; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading3 {
-                  margin: 10px 0;
-                  font-size: 1.1rem;
-                  font-weight: 600; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion ul {
-                  border: 1px solid black;
-                  border-radius: 10px;
-                  margin: 0;
-                  padding: 10px; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion li {
-                  border: 1px solid black;
-                  list-style: none;
-                  margin: 5px; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label {
-                  display: block;
-                  -webkit-transition: color 0.5s;
-                  -moz-transition: color 0.5s;
-                  -ms-transition: color 0.5s;
-                  -o-transition: color 0.5s;
-                  transition: color 0.5s; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"] {
-                  display: none; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label:hover {
-                  background: #ff47aa;
-                  color: #ecf0f1;
-                  cursor: pointer; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ label {
-                  background: #ff1493;
-                  color: #ffffff; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ .food__body {
-                  display: block;
-                  font-size: 1rem; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion ol li, #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion ol {
-                  border: none;
-                  margin: 0;
-                  padding: 0; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .food__body {
-                  padding: 0 10px;
-                  height: 300px;
-                  -webkit-transition: height 2s;
-                  -moz-transition: height 2s;
-                  -ms-transition: height 2s;
-                  -o-transition: height 2s;
-                  transition: height 2s; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .hide {
-                  display: none; }
-                #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .show {
-                  display: block; }
-                @media (max-width: 1024px) {
-                  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion {
-                    /*use a black and white color scheme,  */ }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading1 {
-                      background: #353535;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading2 {
-                      color: #000000; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label:hover {
-                      background: #115511;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ label {
-                      background: #000000;
-                      color: #ffffff; } }
-                @media (max-width: 600px) {
-                  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion {
-                    /*use a green color scheme, */ }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading1 {
-                      background: #46951c;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading2 {
-                      color: #1d5300; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label:hover {
-                      background: #84cd5d;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ label {
-                      background: #1d5300;
-                      color: #ffffff; } }
-                @media (max-width: 360px) {
-                  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion {
-                    /*color scheme of the accordion to blue
-                    */ }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading1 {
-                      background: #214db2;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion .heading2 {
-                      color: #4166bb; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion label:hover {
-                      background: #6584cc;
-                      color: #ffffff; }
-                    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .carousel--image .accordion input[type="radio"]:checked ~ label {
-                      background: #0a2a74;
-                      color: #ffffff; } }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-              align-items: center;
-              color: #ff1493;
-              cursor: pointer;
-              display: flex;
-              padding: 0 2rem;
-              font-size: 6rem;
-              font-weight: bold;
-              user-select: none; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-              color: #ff47aa; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame img {
-              padding-bottom: 3rem; }
-        #port-sections #port--project-sec #projects-container #projects-right .carousel--input + div {
-          display: none; }
-        #port-sections #port--project-sec #projects-container #projects-right .carousel--input:checked + div {
-          display: flex;
-          width: 100%; }
-        #port-sections #port--project-sec #projects-container #projects-right .proj-desc {
-          border-top: 1px solid darkslategray;
-          display: flex;
-          flex: 2 0 auto;
-          flex-direction: column;
-          font-size: 1.5rem;
-          justify-content: center;
-          position: relative;
-          width: 100%; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links {
-            display: flex;
-            font-size: 1.5rem;
-            justify-content: flex-end;
-            text-decoration: underline; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a {
-            margin: 1rem 3rem; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a img {
-              margin-right: 5px;
-              width: 25px; }
   #port-sections #port--skills-sec {
     padding-bottom: 10rem; }
   #port-sections #port--contact-sec {
     padding-bottom: 10rem; }
 
+@media (max-width: 425px) {
+  #port-sections {
+    transition: all 0.5s;
+    background-color: white;
+    color: #102222; } }
 .center-title {
   text-align: center; }
 
@@ -1721,7 +1180,7 @@ footer {
   border-top: 0.5rem solid #ff47aa;
   color: #ecf0f1;
   font-size: 1.5rem;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   z-index: 1000; }
 
@@ -1792,9 +1251,6 @@ footer {
       #port-sections #port--about-sec section article #port--about-pic {
         display: flex;
         justify-content: center; }
-        #port-sections #port--about-sec section article #port--about-pic img {
-          border: 5px solid #ff1493;
-          border-radius: 10px; }
   #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label {
     font-size: 1.5rem;
     width: 20%; }
@@ -1826,106 +1282,12 @@ footer {
         margin-right: 5px;
         width: 25px; } }
 @media (max-width: 600px) {
-  strong {
-    color: #7A9F35; }
-
-  #topNavBar {
-    background: #7A9F35;
-    border-bottom: 0.5rem solid #D4EE9F; }
-    #topNavBar #logo {
-      display: none; }
-    #topNavBar nav li {
-      font-size: 1rem;
-      padding: 2rem 1rem; }
-      #topNavBar nav li:hover {
-        background: #D4EE9F;
-        color: #3E4651; }
-    #topNavBar #search label {
-      bottom: 1rem;
-      font-size: 1rem; }
-    #topNavBar #search input {
-      border-bottom: 1px solid #ecf0f1;
-      color: #D4EE9F;
-      font-size: 1.2rem; }
-    #topNavBar #search input[type="image"] {
-      bottom: 2.5rem;
-      width: 1.5rem; }
-    #topNavBar #search input:focus + label {
-      transform: translate(0rem, -1.25rem) scale(0.8);
-      -webkit-transform: translate(0rem, -1.25rem) scale(0.8);
-      -moz-transform: translate(0rem, -1.25rem) scale(0.8);
-      -ms-transform: translate(0rem, -1.25rem) scale(0.8); }
+  nav li {
+    font-size: 1rem;
+    padding: 2rem 1rem; }
 
   #port-sections .sec-container {
     margin: 0 1rem; }
-  #port-sections #port--about-sec {
-    background-attachment: initial; }
-    #port-sections #port--about-sec section article {
-      display: block; }
-      #port-sections #port--about-sec section article #port--about-pic {
-        display: flex;
-        justify-content: center; }
-        #port-sections #port--about-sec section article #port--about-pic img {
-          border: 5px solid #7A9F35;
-          border-radius: 10px; }
-  #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label {
-    font-size: 1.5rem;
-    width: 20%; }
-    #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
-      border-color: #D4EE9F; }
-  #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
-    border-color: #7A9F35; }
-    #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label + .c-proj {
-      left: 30%;
-      width: 70%; }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
-    padding: 3rem 0; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
-      display: none; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-        background: #7A9F35; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-        background: #7A9F35; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-        background: #7A9F35; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
-      flex: 0 0 auto; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-      background: transparent;
-      border: 2px solid #D4EE9F;
-      border-radius: 50%;
-      display: inline-flex;
-      height: 2rem;
-      margin: 0 1rem;
-      width: 2rem;
-      -webkit-transition: all ease 0.25s;
-      -moz-transition: all ease 0.25s;
-      -ms-transition: all ease 0.25s;
-      -o-transition: all ease 0.25s;
-      transition: all ease 0.25s; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-        background: #D4EE9F;
-        cursor: pointer; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-      color: #7A9F35;
-      font-size: 3rem;
-      padding: 0 3rem; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-      color: #D4EE9F; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame img {
-      padding-bottom: 3rem; }
-  #port-sections #port--project-sec #projects-container #projects-right .proj-desc {
-    border-top: 1px solid darkslategray;
-    font-size: 1.25rem; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links {
-      font-size: 1.5rem;
-      justify-content: flex-end;
-      text-decoration: underline; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a {
-      margin: 1rem 3rem; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a img {
-        margin-right: 5px;
-        width: 25px; }
 
   .bar-graphs {
     display: flex;
@@ -1933,11 +1295,6 @@ footer {
     justify-content: space-around;
     margin-bottom: 10rem;
     padding: 0 2rem; }
-
-  footer {
-    background: #7A9F35;
-    border-top: 0.5rem solid #D4EE9F;
-    color: #ecf0f1; }
 
   .tooltip .tooltip-text {
     background: #7A9F35;
@@ -1957,7 +1314,7 @@ footer {
       width: 5rem; } }
 @media (max-width: 425px) {
   body {
-    overflow: auto; }
+    overflow: hidden; }
 
   #topNavBar {
     align-items: center;
@@ -1988,36 +1345,6 @@ footer {
           font-size: 1.5rem;
           padding: 2rem 1rem;
           width: 100%; }
-    #topNavBar #search {
-      padding-bottom: 1rem;
-      width: 25%; }
-      #topNavBar #search label {
-        bottom: 0.5rem;
-        position: absolute; }
-      #topNavBar #search input {
-        font-size: 1.5rem;
-        width: 0;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -ms-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s; }
-      #topNavBar #search input[type="image"] {
-        bottom: 1.5rem;
-        right: 1rem;
-        width: 1.5rem; }
-      #topNavBar #search input:focus {
-        width: 100%; }
-        #topNavBar #search input:focus + label {
-          transform: translate(-6rem, 0rem) scale(1);
-          -webkit-transform: translate(-6rem, 0rem) scale(1);
-          -moz-transform: translate(-6rem, 0rem) scale(1);
-          -ms-transform: translate(-6rem, 0rem) scale(1); }
-        #topNavBar #search input:focus ~ input[type="image"] {
-          transform: translate(3rem, 0rem) scale(1);
-          -webkit-transform: translate(3rem, 0rem) scale(1);
-          -moz-transform: translate(3rem, 0rem) scale(1);
-          -ms-transform: translate(3rem, 0rem) scale(1); }
 
   #port-sections #port--about-sec {
     background: rgba(52, 152, 219, 0.75);
@@ -2048,83 +1375,7 @@ footer {
       padding-bottom: 7rem; }
       #port-sections #port--about-sec section article #port--about-pic img {
         border: 0 solid #ff1493;
-        border-radius: 10px; }
-  #port-sections #port--project-sec {
-    /*Begin PROJECT section*/
-    background-attachment: scroll;
-    padding-bottom: 10rem; }
-    #port-sections #port--project-sec #projects-container {
-      background: rgba(255, 255, 255, 0.75);
-      display: flex; }
-      #port-sections #port--project-sec #projects-container #projects-right {
-        display: flex;
-        flex: 1 1 auto;
-        flex-direction: column;
-        padding-bottom: 15rem;
-        position: relative; }
-        #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] {
-          display: none; }
-          #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label {
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            background: #7A9F35;
-            border: none;
-            border-bottom: 4px solid #D4EE9F;
-            cursor: pointer;
-            font-size: 2rem;
-            opacity: 0.75;
-            padding: 2rem;
-            white-space: nowrap;
-            width: 100%; }
-            #port-sections #port--project-sec #projects-container #projects-right input[name="projects"] + label:hover {
-              border-color: #D4EE9F;
-              opacity: 1; }
-          #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label {
-            border-color: none;
-            opacity: 1; }
-            #port-sections #port--project-sec #projects-container #projects-right input[name="projects"]:checked + label + .c-proj {
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              left: 0;
-              position: relative;
-              width: 100%; }
-        #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
-          align-content: center;
-          display: flex;
-          flex: 2 1 auto;
-          justify-content: center;
-          padding: 0;
-          position: relative; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame {
-            padding: 5rem 0; }
-        #port-sections #port--project-sec #projects-container #projects-right .carousel--input + div {
-          display: none; }
-        #port-sections #port--project-sec #projects-container #projects-right .carousel--input:checked + div {
-          display: flex;
-          width: 100%; }
-        #port-sections #port--project-sec #projects-container #projects-right .proj-desc {
-          border-top: 1px solid darkslategray;
-          display: flex;
-          flex: 2 0 auto;
-          flex-direction: column;
-          font-size: 1.5rem;
-          justify-content: center;
-          position: relative;
-          width: 100%; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links {
-            display: flex;
-            font-size: 1.5rem;
-            justify-content: flex-end;
-            text-decoration: underline; }
-          #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a {
-            margin: 1rem 3rem; }
-            #port-sections #port--project-sec #projects-container #projects-right .proj-desc .project--info-links a img {
-              margin-right: 5px;
-              width: 25px; } }
+        border-radius: 10px; } }
 @media (max-width: 360px) {
   strong {
     color: #0C2032; }
@@ -2230,11 +1481,6 @@ footer {
       color: #0C2032; }
     #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
       color: #42586E; }
-
-  footer {
-    background: #0C2032;
-    border-top: 0.5rem solid #42586E;
-    color: #ecf0f1; }
 
   /* TOOLTIP */
   .tooltip .tooltip-text {

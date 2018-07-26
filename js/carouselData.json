@@ -1,17 +1,6 @@
 {
   "projects" : [
     {
-      "id": 101,
-      "title": "Calculator",
-      "img_large": "../img/caro-large-calculator.png",
-      "img_thumb": "../img/caro-calc-01.png",
-      "desc": "A simple calculator. Built for a Modern Developer project. ",
-      "date": "Dec 2016",
-      "techUsed": ["JavaScript", "HTML", "CSS"],
-      "demoUrl": "http://patrickfranz.github.io/calculator/",
-      "repoUrl": "https://github.com/PatrickFranz/calculator"
-    },
-    {
       "id": 102,
       "title": "Product Listing",
       "img_large": "../img/caro-large-ProductCart.png",
@@ -63,8 +52,19 @@
       "desc": "I wanted to play with React on my own; no tutorials. Social cards allows the user to create a Social Card that they might use on different social media platforms.",
       "date": "January 2018",
       "techUsed": ["React", "JavaScript","ES6", "Sass/CSS", "HTML"],
-      "demoUrl": "https://patrickfrhttp://localhost:8000/carousel.htmlanz.github.io/social-cards/",
+      "demoUrl": "https://patrickfranz.github.io/social-cards/",
       "repoUrl": "https://github.com/PatrickFranz/social-cards"
+    },
+    {
+      "id": 107,
+      "title": "GIFolio",
+      "img_large": "../img/caro-large-Gifolio.png",
+      "img_thumb": "../img/caro-Gifolio-01.png",
+      "desc": "I LOVE GIFS! I found that Giphy had an open API and I was playing around with the new CSS Grid layout that dropped recently, so I built a fun app that you can save your favorite GIF's to.",
+      "date": "January 2018",
+      "techUsed": ["JavaScript","ES6", "Giphy API", "Sass/CSS", "HTML"],
+      "demoUrl": "https://patrickfranz.github.io/Gifolio/",
+      "repoUrl": "https://github.com/PatrickFranz/Gifolio"
     }
   ]
 }

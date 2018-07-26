@@ -14,7 +14,6 @@
   let resizeTimeout;
 
   checkCookieNotified();
-  populateNumbersApi();
 
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
@@ -39,9 +38,11 @@
     if(socialSideBar.classList.contains('minimize')){
       socialSideBar.classList.add("restore");
       socialSideBar.classList.remove('minimize');
+      socialSideBar.classList.remove('transition-bottom');
     } else {
       socialSideBar.classList.add("minimize");
       socialSideBar.classList.remove('restore');
+      socialSideBar.classList.add('transition-bottom');
     }
   });
 
@@ -128,22 +129,5 @@
         scrollWindowTo(y);
       }, 10);
     }
-  }
-
-  function populateNumbersApi(){
-    const quoteBars = Array.from(document.getElementsByClassName('quote-api-quote'));
-    quoteBars.forEach( bar => {
-      const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://talaikis.com/api/quotes/random/');
-      xhr.send();
-      xhr.onload = evt => {
-        if(evt.target.status === 200){
-          const result = JSON.parse(evt.target.response);
-          let quote = result.quote,
-              author = result.author;
-          bar.innerHTML = `${quote} -- ${author}`;
-        }
-      };
-    });   
   }
 })();

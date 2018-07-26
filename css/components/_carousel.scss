@@ -9,16 +9,16 @@
 
 #project-carousel{
   display: grid;
+  justify-content: center;
   position: relative;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: 1fr;
   margin: 50px 0;
 
-  
   .modal{
     display: grid;
     position: absolute;
-    padding: 20px;
+    justify-self: center;
     grid-template-columns: 2fr 1fr;
     grid-gap: 10px;
     overflow-y: auto;
@@ -124,6 +124,12 @@
     }
   }
 
+  @media(max-width: 600px){
+    .scroll{
+      display: none;
+    }
+  }
+
   .projects-main{
     padding: 10px 0;
 
@@ -162,5 +168,24 @@
         cursor: pointer;
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  #project-carousel{
+    margin:10px 0;
+    .modal{
+      grid-template-columns: 1fr;
+      padding: 10px;
+      grid-gap: 2px;
+      width: 85vw;
+    }
+  }
+}
+
+@media(max-width: 600px){
+  #project-carousel{
+    grid-template-columns: 1fr;
+    margin: 50px 0;
   }
 }
