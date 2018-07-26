@@ -179,6 +179,10 @@
       padding: 10px;
       grid-gap: 2px;
       width: 85vw;
+
+      .image{
+        max-width: 80%;
+      }
     }
   }
 }

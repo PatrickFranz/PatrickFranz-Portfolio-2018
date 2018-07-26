@@ -1081,7 +1081,9 @@ strong {
       grid-template-columns: 1fr;
       padding: 10px;
       grid-gap: 2px;
-      width: 85vw; } }
+      width: 85vw; }
+      #project-carousel .modal .image {
+        max-width: 80%; } }
 @media (max-width: 600px) {
   #project-carousel {
     grid-template-columns: 1fr;
