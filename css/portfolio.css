@@ -859,6 +859,9 @@ strong {
     #social-sidebar {
       width: 55px;
       right: 5px; } }
+  @media (max-width: 425px) {
+    #social-sidebar {
+      display: none; } }
   #social-sidebar ul li {
     margin: 2px 0;
     transition: transform 250ms;
@@ -971,7 +974,7 @@ strong {
   margin: 50px 0; }
   #project-carousel .modal {
     display: grid;
-    position: absolute;
+    position: fixed;
     justify-self: center;
     grid-template-columns: 2fr 1fr;
     grid-gap: 10px;
@@ -980,7 +983,8 @@ strong {
     padding: 20px;
     width: 90vw;
     height: 80vh;
-    top: 0;
+    top: 75px;
+    left: 25px;
     background-color: rgba(0, 0, 0, 0.85); }
     #project-carousel .modal .image {
       max-width: 90%; }
@@ -989,11 +993,17 @@ strong {
       margin: 10px 40px 0 0;
       font-size: 2.0rem;
       text-align: left; }
+      @media (max-width: 425px) {
+        #project-carousel .modal .content {
+          font-size: 1.5rem; } }
       #project-carousel .modal .content p {
         margin: 20px 0; }
       #project-carousel .modal .content .title {
         text-align: center;
         font-size: 3rem; }
+        @media (max-width: 425px) {
+          #project-carousel .modal .content .title {
+            font-size: 2rem; } }
       #project-carousel .modal .content .links {
         display: grid;
         grid-template-columns: 1fr 1fr; }
@@ -1087,7 +1097,9 @@ strong {
 @media (max-width: 600px) {
   #project-carousel {
     grid-template-columns: 1fr;
-    margin: 50px 0; } }
+    margin: 50px 0; }
+    #project-carousel .modal .image {
+      max-width: 70%; } }
 .b {
   border: 2px solid deeppink; }
 

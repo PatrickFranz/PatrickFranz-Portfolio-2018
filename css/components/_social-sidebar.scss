@@ -16,6 +16,10 @@
     right: 5px;
   }
 
+  @media(max-width: 425px){
+    display: none;
+  }
+
   ul{
     li{
       margin: 2px 0;

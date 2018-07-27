@@ -24,7 +24,7 @@ function showModal(e){
   const carouselData = JSON.parse(sessionStorage.carouselData);
   const projectData = carouselData.find(project => project.id == this.dataset.id);
   const modal = document.querySelector('.modal');
-  console.log(projectData.techUsed);
+  
   modal.querySelector('.modal-close').addEventListener('click', e => modal.classList.add('hide'));
   modal.classList.remove('hide');
   modal.querySelector('.image').src = projectData.img_large;
