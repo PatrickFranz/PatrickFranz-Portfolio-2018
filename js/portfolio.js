@@ -18,6 +18,8 @@
   window.addEventListener('scroll', function(event){
     if(window.pageYOffset > 200){
       returnTopButton.classList = 'fadeIn';   
+      socialSideBar.classList.add('minimize');
+      socialSideBar.classList.remove('restore');
       socialSideBar.classList.add('transition-bottom');
     } else {
       returnTopButton.classList = 'fadeOut';
