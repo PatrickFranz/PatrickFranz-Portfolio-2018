@@ -87,6 +87,167 @@
       }
     }
 
+    .resume{
+      margin: 2rem 0 0;
+    }
+  }
+}
 
+@media(max-width: 600px){
+  #topNavBar{
+    font-size: 1rem;
+  }
+
+  nav{
+    li{
+     
+      padding: 2rem 1rem;
+    }
+  }
+}
+
+@media(max-width: 425px){
+  #topNavBar{
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 10px;
+    position: relative;
+
+    .resume{
+      font-size: 1.5rem;
+    }
+
+    #logo{
+      display: none;
+      position: absolute;
+      top: 3rem;
+
+      &:after{
+        content: url("../img/hamburger-1.png");
+        font-size: 2rem;
+      }
+    }
+
+    nav{
+      margin: 0;
+
+      ul{
+        color: $text-color-white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        @include transition(all, ease, 0.5s);
+
+
+        li{
+          font-size: 1.5rem;
+          padding: 2rem 1rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:360px){
+  //POP OUT NAV BAR
+
+  #topNavBar{
+    display: none;
+  }
+
+  #mobile-menu-bar{
+    background: $primary-360;
+    border-bottom: 5px solid $primary-accent-360;
+    display: flex;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    nav{
+      background: $primary-360;
+      color: $text-color-white-360;
+      height: 100%;
+      left: 0rem;
+      overflow: auto;
+      position: fixed;
+      top: 0rem;
+      width: 0;
+      @include transition(all, 0.5s);
+
+      .resume{
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      li{
+        font-size: 2rem;
+        line-height: 2rem;
+        padding: 2rem 2rem;
+        white-space: nowrap;
+
+        &.fine-print{
+          font-size: 1rem;
+          text-align: center;
+        }
+        &:active, &:hover{
+          background: $primary-accent-360;
+        }
+      }
+    }
+
+    #lbl-hamburger{
+      cursor: pointer;
+      @include transition(all, 0.5s);
+
+      span{
+        background: white;
+        display: block;
+        height: 4px;
+        margin-bottom: 4px;
+        width: 25px;
+        @include transition(all, 0.5s);
+      }
+    }
+  }
+
+  #cb-menu-show{
+    &:checked{
+      & ~ #port-sections{
+        overflow-x: hidden;
+        transform: translate(50vw);
+      }
+
+      & ~ #mobile-menu-bar{
+        nav{
+          position: fixed;
+          width: 50vw;
+        }
+
+        #lbl-hamburger{
+          @include translateX(50vw);
+
+          span{
+            &:nth-child(1){
+              @include rotate(-45deg);
+            }
+
+            &:nth-child(2){
+              opacity: 0;
+            }
+
+            &:nth-child(3){
+              @include rotate(45deg);
+            }
+          }
+        }
+      }
+    }
   }
 }

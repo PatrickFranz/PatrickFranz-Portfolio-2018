@@ -320,14 +320,6 @@ footer{
 
 @media(max-width: 600px){
 
-
-    nav{
-      li{
-        font-size: 1rem;
-        padding: 2rem 1rem;
-      }
-    }
-
   #port-sections{
     .sec-container{
       margin: 0 1rem;
@@ -374,44 +366,6 @@ footer{
 @media(max-width: 425px){
   body{
     overflow: hidden;
-  }
-
-  #topNavBar{
-    align-items: center;
-    flex-direction: column;
-    padding: 0;
-    position: relative;
-
-    #logo{
-      display: none;
-      position: absolute;
-      top: 3rem;
-
-      &:after{
-        content: url("../img/hamburger-1.png");
-        font-size: 2rem;
-      }
-    }
-
-    nav{
-      margin: 0;
-
-      ul{
-        color: $text-color-white;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        @include transition(all, ease, 0.5s);
-
-
-        li{
-          font-size: 1.5rem;
-          padding: 2rem 1rem;
-          width: 100%;
-        }
-      }
-    }
   }
 
   #port-sections{
@@ -482,10 +436,6 @@ footer{
     color: $primary-360;
   }
   //POP OUT NAV BAR
-
-  #topNavBar{
-    display: none;
-  }
 
   #mobile-menu-bar{
     background: $primary-360;
@@ -567,56 +517,6 @@ footer{
               @include rotate(45deg);
             }
           }
-        }
-      }
-    }
-  }
-
-  #port-sections #port--project-sec #projects-container #projects-right{
-    .proj-carousel{
-      padding: 3rem 0;
-
-      .carousel--input{
-        display: none;
-
-        &:nth-of-type(1):checked{
-          ~ .carousel--radio-buttons label:nth-of-type(1){
-            background: $primary-360;
-          }
-        }
-        &:nth-of-type(2):checked{
-          ~ .carousel--radio-buttons label:nth-of-type(2){
-            background: $primary-360;
-          }
-        }
-        &:nth-of-type(3):checked{
-          ~ .carousel--radio-buttons label:nth-of-type(3){
-            background: $primary-360;
-          }
-        }
-      }
-
-      i{
-        flex: 0 0 auto;
-      }
-
-      .carousel--radio-buttons{
-        label{
-          border: 2px solid $primary-accent-360;
-
-          &:hover{
-            background: $primary-accent-360;
-          }
-        }
-      }
-
-      .project--carousel-frame{
-        .c-control{
-          color: $primary-360;
-        }
-
-        .c-control:hover{
-          color: $primary-accent-360;
         }
       }
     }

@@ -333,7 +333,135 @@ strong {
     #topNavBar .logo:after {
       content: "PF"; }
   #topNavBar nav ul li {
+    padding: 2rem 1rem; }
+  #topNavBar .resume {
+    margin: 2rem 0 0; } }
+@media (max-width: 600px) {
+  #topNavBar {
+    font-size: 1rem; }
+
+  nav li {
     padding: 2rem 1rem; } }
+@media (max-width: 425px) {
+  #topNavBar {
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 10px;
+    position: relative; }
+    #topNavBar .resume {
+      font-size: 1.5rem; }
+    #topNavBar #logo {
+      display: none;
+      position: absolute;
+      top: 3rem; }
+      #topNavBar #logo:after {
+        content: url("../img/hamburger-1.png");
+        font-size: 2rem; }
+    #topNavBar nav {
+      margin: 0; }
+      #topNavBar nav ul {
+        color: #ecf0f1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -ms-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        transition: all ease 0.5s; }
+        #topNavBar nav ul li {
+          font-size: 1.5rem;
+          padding: 2rem 1rem;
+          width: 100%; } }
+@media (max-width: 360px) {
+  #topNavBar {
+    display: none; }
+
+  #mobile-menu-bar {
+    background: #0C2032;
+    border-bottom: 5px solid #42586E;
+    display: flex;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1; }
+    #mobile-menu-bar nav {
+      background: #0C2032;
+      color: #F0F0F0;
+      height: 100%;
+      left: 0rem;
+      overflow: auto;
+      position: fixed;
+      top: 0rem;
+      width: 0;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+      #mobile-menu-bar nav .resume {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        font-size: 1.5rem;
+        text-align: center; }
+      #mobile-menu-bar nav li {
+        font-size: 2rem;
+        line-height: 2rem;
+        padding: 2rem 2rem;
+        white-space: nowrap; }
+        #mobile-menu-bar nav li.fine-print {
+          font-size: 1rem;
+          text-align: center; }
+        #mobile-menu-bar nav li:active, #mobile-menu-bar nav li:hover {
+          background: #42586E; }
+    #mobile-menu-bar #lbl-hamburger {
+      cursor: pointer;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+      #mobile-menu-bar #lbl-hamburger span {
+        background: white;
+        display: block;
+        height: 4px;
+        margin-bottom: 4px;
+        width: 25px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+
+  #cb-menu-show:checked ~ #port-sections {
+    overflow-x: hidden;
+    transform: translate(50vw); }
+  #cb-menu-show:checked ~ #mobile-menu-bar nav {
+    position: fixed;
+    width: 50vw; }
+  #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger {
+    transform: translate(50vw);
+    -o-transform: translate(50vw);
+    -ms-transform: translate(50vw);
+    -moz-transform: translate(50vw);
+    -webkit-transform: translate(50vw); }
+    #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(1) {
+      transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg); }
+    #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(2) {
+      opacity: 0; }
+    #cb-menu-show:checked ~ #mobile-menu-bar #lbl-hamburger span:nth-child(3) {
+      transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg); } }
 #bus-card-container {
   display: block;
   font-family: "Lato", "sans-serif";
@@ -1296,10 +1424,6 @@ footer {
         margin-right: 5px;
         width: 25px; } }
 @media (max-width: 600px) {
-  nav li {
-    font-size: 1rem;
-    padding: 2rem 1rem; }
-
   #port-sections .sec-container {
     margin: 0 1rem; }
 
@@ -1329,36 +1453,6 @@ footer {
 @media (max-width: 425px) {
   body {
     overflow: hidden; }
-
-  #topNavBar {
-    align-items: center;
-    flex-direction: column;
-    padding: 0;
-    position: relative; }
-    #topNavBar #logo {
-      display: none;
-      position: absolute;
-      top: 3rem; }
-      #topNavBar #logo:after {
-        content: url("../img/hamburger-1.png");
-        font-size: 2rem; }
-    #topNavBar nav {
-      margin: 0; }
-      #topNavBar nav ul {
-        color: #ecf0f1;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-        -ms-transition: all ease 0.5s;
-        -o-transition: all ease 0.5s;
-        transition: all ease 0.5s; }
-        #topNavBar nav ul li {
-          font-size: 1.5rem;
-          padding: 2rem 1rem;
-          width: 100%; }
 
   #port-sections #port--about-sec {
     background: rgba(52, 152, 219, 0.75);
@@ -1393,9 +1487,6 @@ footer {
 @media (max-width: 360px) {
   strong {
     color: #0C2032; }
-
-  #topNavBar {
-    display: none; }
 
   #mobile-menu-bar {
     background: #0C2032;
@@ -1474,27 +1565,6 @@ footer {
       -ms-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -webkit-transform: rotate(45deg); }
-
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
-    padding: 3rem 0; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
-      display: none; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-        background: #0C2032; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-        background: #0C2032; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-        background: #0C2032; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
-      flex: 0 0 auto; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-      border: 2px solid #42586E; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-        background: #42586E; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-      color: #0C2032; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-      color: #42586E; }
 
   /* TOOLTIP */
   .tooltip .tooltip-text {
