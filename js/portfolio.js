@@ -115,7 +115,7 @@
         expires = today.setMonth(today.getMonth() + 6);
     document.cookie = cookie + `expires=${new Date(expires)};`;
   }
-
+  
   function slideUp(element, slideTo){
     element.style.bottom = slideTo;
   }
