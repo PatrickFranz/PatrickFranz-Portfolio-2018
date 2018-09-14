@@ -7,430 +7,295 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css4family=Open+Sans:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="css/portfolio.css">
-
+  
   <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
-<link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <script type='text/javascript' src='js/handlebars-v4.0.12.js'></script>
 
-  <title>Showing off Patrick Franz</title>
+  <title>Patrick Franz /WebDeveloper</title>
 </head>
 <body>
-
-  <section id="topNavBar">
-    <span class="logo"></span>
-    <nav>
-      <ul>
-         <a class='menu-item' data-target="port--about-sec"><li>ABOUT</li></a
-        ><a class='menu-item' data-target="port--project-sec"><li>PROJECTS</li></a
-        ><a class='menu-item' data-target="port--skills-sec"><li>SKILLS</li></a
-        ><a class='menu-item' data-target="port--contact-sec"><li>CONTACT</li></a>
-      </ul>
-    </nav>
-  </section>
-  <!--For screens < 360px-->
-  <input type="checkbox" id="cb-menu-show" />
-  <div id="mobile-menu-bar">
-    <label id="lbl-hamburger" for="cb-menu-show">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <nav>
-      <ul>
-        <li>Patrick Franz</li>
-        <a href="#port--about-sec"><li>ABOUT</li></a
-      ><a href="#port--project-sec"><li>PROJECTS</li></a
-      ><a href="#port--skills-sec"><li>SKILLS</li></a
-      ><a href="#port--contact-sec"><li>CONTACT</li></a
-      ><li class='fine-print'>&copy;2017 Patrick Franz <br> All rights reserved.</li>
-    </ul> 
-    </nav>
-  </div>
-  <div id="cookie-alert">
-    <img class='ico' src="img/ico-cookie.png" alt="">
-    <span>My website uses Cookies to help provide a better experience to you, and give me an opportunity to experiment. You can find out more <a href="!#">here</a>.</span>
-    <a href="#"><span id='ok-cookie' class='x-closer'>OK</span></a>
-  </div>
-
-  <div id='social-sidebar' class="minimize"> 
-    <ul>
-      <li id='social-header-ico'>
-          <img src="img/social-media-integrated.png" alt="Header">
-      </li>
-      <hr>
-      <li><a href="https://github.com/PatrickFranz" target="_blank">
-          <img src="img/github3.png" alt="GitHub Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com" target="_blank">
-          <img src="img/facebook.png" alt="Facebook Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/mrfranz/" target="_blank">
-          <img src="img/linkedin.png" alt="LinkedIn Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://twitter.com/ThePatrickFranz" target="_blank">
-          <img src="img/twitter.png" alt="Twitter Logo">
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <section id='port-sections'>
-    <!--ABOUT SECTION-->
-    <div id='port--about-sec'>
-      <section class='sec-container'>
-        <div class='section--title'>
-          <p>[About]</p>
-        </div>
-        <article>
-          <div id='port--about-pic'`>
-            <img src="img/headshot-wpap.png"
-              alt="Profile image">
-          </div>
-          <div>
-          <p>Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Redwood City, CA, nestled in middle of Silicon Valley where I get my fill of the technology scene. </p>
-          <br>
-          <p>Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often. </p>
-          </div>
-        </article>
-      </section>
-    </div>
-
-    <div class="divider">
-        <img src="img/graffiti-headphones.png" alt="">
-    </div>
-    <!--PROJECTS SECTION-->
-    <div id='port--project-sec'>
-      <section class='sec-container'>
-        <div class='section--title'>
-          <p>[Projects]</p>
-        </div>
-        <div class='section-text'>
-          <p>Here you can find some of the projects I've worked on. More recent projects are at the beginning.</p>
-        </div>
-        <div id="project-carousel">
-            <div class="scroll"><i class="fas fa-angle-left"></i></div>
-            <div class="projects-main">
-              <div class="project-list">
-                <!-- Projects are stored in carouselData.json file
-                Parsed and populated by carousel.js -->
-              </div>
-            </div>
-            <div class="scroll" data-dir='right'>
-              <a>
-                <i class="fas fa-angle-right"></i>
-              </a>
-            </div>
-            
-            <div class="page-dots"></div>
-            <div class="modal hide">
-              <div class="modal-close">
-                  <i class="far fa-times-circle"></i>
-              </div>
-              <div>
-                <img class="image" src="" alt="">
-              </div>
-              <div class="content">
-                <p class="title"></p>
-                <p class="desc"></p>
-                <p class="date"></p>
-                <p class="tech"></p>
-                <div class="links">
-                  <span>
-                    <i class="fas fa-globe"></i>
-                    <span class="demo"></span>
-                  </span> 
-                  <span>
-                    <i class="fab fa-github"></i>
-                    <span class="repo"></span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-    </div>
-
-    <div class="divider">
-        <img src="img/divide_spaceinvader.png" alt="">
-    </div>
-
-    <!--SKILLS SECTION-->
-    <div id='port--skills-sec'>
-      <section class='sec-container'>
-        <div class='section--title'>
-          <p>[Skills]</p>
-        </div>
-        <div class='section-text'>
-          <p>Learning is something I absolutely love! I enjoy reading everything from whitepapers to blogs as well as getting my hands dirty and playing around with new technology and techniques. </p>
-        </div>
-        <div id='skill-graphs'>
-          <div class='flex-row graph-titles'>
-            <span class='width-75 font-md font-green' data-graph-bar='proficient'>Frontend Development</span>
-            <span class='width-25 font-md font-purple' data-graph-bar='learning'>Backend Development</span>
-          </div> 
-          <div class='graph-flex-row'>
-            <span data-skill-name="front-end"
-                  data-graph-bar="proficient"
-                  data-about="Proficient I really know my way around here."
-                  class='graph-bar bar-bg-green'>75%</span>
-            <span data-skill-name="back-end"
-                  data-graph-bar="learning" 
-                  data-about="Learning I am actively increasing my skills in this area."
-                  class='graph-bar bar-bg-purple'>25%</span>      
-          </div>
-        </div>     
-        
-        <div class='bar-graphs'>
-          <!-- GRAPH 1 -->
-          <div class='graph-container'>
-            <p class='graph-title font-green'>Frontend Skills</p>
-            <div class='graph'>
-              <div class='y-axis'>
-                <ul>
-                  <li>Expert</li>
-                  <li>Proficient</li>
-                  <li>Competent</li>
-                  <li>Learning</li>
-                </ul>
-              </div>
-              <div class='bars'>
-                <div data-skill-name="Frontend JavaScript"
-                    data-graph-bar="proficient" 
-                    class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><em>Proficient </em><i>I really know my way around here.</i></span>
-                </div>
-                <div data-skill-name="HTML/CSS"
-                    data-graph-bar="expert" 
-                    class='bar graph-bar bar-bg-yellow tooltip' >
-                      <span class='tooltip-text'><em>Expert </em><i>I can do this in my sleep.</i></span>
-                </div>
-                <div data-skill-name="RWD"
-                    data-graph-bar="competent" 
-                    data-about="Competent I can do a lot here, but I'm still learning."
-                    class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><em>Competent </em><i>I can do a lot here, but I'm still learning.</i></span>
-                    </div>
-                <div data-skill-name="SASS"
-                    data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><em>Learning </em><i>I am actively increasing my skills in this area.</i></span>
-                    </div>
-                <div data-skill-name="React"
-                    data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
-                      <span class='tooltip-text'><em>Learning </em><i>I am actively increasing my skills in this area.</i></span>
-                    </div>
-              </div>
-              <div class='x-axis'>
-                <ul>
-                  <li>JavaScript</li>
-                  <li>HTML/CSS</li>
-                  <li>Responsive Design</li>
-                  <li>SASS</li>
-                  <li>React</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- GRAPH 2 -->
-          <div class='graph-container'>
-            <p class='graph-title font-purple'>Backend Skills</p>
-            <div class='graph'>
-              <div class='y-axis'>
-                <ul>  
-                  <li>Expert</li>
-                  <li>Proficient</li>
-                  <li>Competent</li>
-                  <li>Learning</li>
-                </ul>
-              </div>
-              <div class='bars'>
-                <div data-skill-name="java"
-                    data-graph-bar="proficient" 
-                    data-about="Proficient I really know my way around here." 
-                    class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><em>Proficient </em><i>I really know my way around here.</i></span>
-                    </div>
-                <div data-skill-name="database"
-                    data-graph-bar="proficient" 
-                    data-about="Proficient I really know my way around here." 
-                    class='bar graph-bar bar-bg-yellow tooltip'>
-                      <span class='tooltip-text'><em>Proficient </em><i>I really know my way around here.</i></span>
-                    </div>
-                <div data-skill-name="RWD"
-                    data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><em>Learning </em><i>I am actively increasing my skills in this area.</i></span>
-                    </div>
-                <div data-skill-name="SASS"
-                    data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><em>Learning </em><i>I am actively increasing my skills in this area.</i></span>
-                    </div>
-                <div data-skill-name="jQuery"
-                    data-graph-bar="learning" 
-                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
-                      <span class='tooltip-text'><em>Learning </em><i>I am actively increasing my skills in this area.</i></span>
-                    </div>
-              </div>
-              <div class='x-axis'>
-                <ul>
-                  <li>Java</li>
-                  <li>Database</li>
-                  <li>React</li>
-                  <li>SASS</li>
-                  <li>jQuery</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        
-          <!-- GRAPH 3 -->
-          <div class='graph-container'>
-            <p class='graph-title'>Other</p>
-            <div class='graph'>
-              <div class='y-axis'>
-                <ul>
-                  <li>Expert</li>
-                  <li>Proficient</li>
-                  <li>Competent</li>
-                  <li>Learning</li>
-                </ul>
-              </div>
-              <div class='bars'>
-                <div data-skill-name="Written Communication"
-                    data-graph-bar="proficient" 
-                    data-about="Proficient I really know my way around here." 
-                    class='bar graph-bar bar-bg-blue tooltip'>
-                      <span class='tooltip-text'><em>Proficient </em><i>I really know my way around here.</i></span>
-                    </div>
-                <div data-skill-name="Project Management"
-                    data-graph-bar="competent"  
-                    class='bar graph-bar bar-bg-yellow tooltip'>
-                      <span class='tooltip-text'><em>Competent</em><i>I can do a lot here, but I'm still learning.</i></span>
-                    </div>
-                <div data-skill-name="Research"
-                    data-graph-bar="competent" 
-                    class='bar graph-bar bar-bg-purple tooltip'>
-                      <span class='tooltip-text'><em>Competent </em><i>I can do a lot here, but I'm still learning.</i></span>
-                    </div>
-                <div data-skill-name="Public Speaking"
-                    data-graph-bar="proficient" 
-                    class='bar graph-bar bar-bg-green2 tooltip'>
-                      <span class='tooltip-text'><em>Proficient </em><i>I really know my way around here.</i></span>
-                    </div>
-                <div data-skill-name="Inter-personal Skills"
-                    data-graph-bar="expert" 
-                    data-about="Expert I can do this in my sleep."
-                    class='bar graph-bar bar-bg-red tooltip rightmost-tooltip'>
-                      <span class='tooltip-text'><em>Expert </em><i>I can do this in my sleep.</i></span>
-                    </div>
-              </div>
-              <div class='x-axis'>
-                <ul>
-                  <li>Written Communication</li>
-                  <li>Project Management</li>
-                  <li>Research</li>
-                  <li>Public Speaking</li>
-                  <li>Inter-Personal Skills</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="divider">
-        <img src="img/graffiti-love.png" alt="">
-    </div>
-
-    <!--CONTACT SECTION-->
-    <div id='port--contact-sec'>
-      <section class='sec-container'>
-        <div class='section--title'>
-          <p>[Contact]</p>
-        </div>
-        <div class='section-text'>
-          <p>Feel free to contact me using the links on my virtual business card.</p>
-        </div>
-
-        <div id='bus-card-container'>    
-         
-          <input id='flip' type="checkbox" />
-          <div class="card">
-            <div id='front'>
-              <label for='flip'>
-                <img id='ico-flip'    src="img/ic_autorenew_white_36px.svg" alt="Flip over">
-              </label>        
-              <p class='name'>Patrick Franz</p>
-              <p class='title'>modern developer</p>
-              <div id='about-text'>
-                <p>Patrick loves to build magical things on the web. Always curious, forever wanting to try new things, a lover of adventure.</p><br>
-                <p>Patrick is currently working as a freelance web developer.</p>
-              </div>
-              <span class="purple">
-                <a href="mailto:clymbing@gmailcom">clymbing@gmail.com</a>
-              </span>
-              <span class="purple">
-                <a href="http://patrickfranz.github.io/" target="_blank">www.patrickf.com</a>
-              </span>
-              <div id='footer'>
-                <a href="https://encyclopedia.moderndeveloper.com/" target="_blank">
-                  <img src="img/enc2.png" alt="MD Encyclopedia Logo" />
-                  <div class='flex-column'>
-                    <p>Patrick Franz</p>
-                    <p>on <span class='purple'>Encyclopedia.MD</span></p>
-                  </div>
+  <div class="main-container">
+    <script id="hbs-source" type="x-handlebars-template">
+        <section id="topNavBar">
+            <span class="logo"></span>
+            <nav>
+              <ul>
+                {{#each menu}}
+                <a class='menu-item'
+                   data-target="{{target}}">
+                   <li>{{title}}</li>
                 </a>
-                <div id='social'>
-                  <a href="https://www.twitter.com" target="_blank"><img src="img/twitter.png" alt="Twitter Icon"></a>
-                  <a href="https://www.github.com" target="_blank"><img src="img/github2.png" alt="GitHub Icon"></a>
-                  <a href="https://www.facebook.com" target="_blank"><img src="img/facebook.png" alt="Facebook Logo"></a>
-                  <a href="https://www.linkedin.com" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Logo"></a>
-                </div> 
-              </div>
-            </div>
-            <div id='back'>
-              <label for='flip'>
-                <img id='ico-flip'    src="img/ic_autorenew_white_36px.svg" alt="Flip over">
-              </label>
-              <p id="name-plate">patrick franz</p>
-            </div>
+                {{/each}}
+              </ul>
+            </nav>
+          </section>
+          <input type="checkbox" id="cb-menu-show" />
+          <div id="mobile-menu-bar">
+            <label id="lbl-hamburger" for="cb-menu-show">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <nav>
+              <ul>
+                <li>{{about.fullName}}</li>
+                {{#each menu}}
+                  <a href="{{target}}"><li>{{title}}</li></a>
+                {{/each}}
+                <li class='fine-print'>&copy;2018 {{about.fullName}} <br> All rights reserved.</li>
+            </ul> 
+            </nav>
           </div>
-  
-        </div>
-      </section>
-    </div>
-  </section>
-  <footer>
-    &copy;2017 Patrick Franz
-  </footer>
-  <div id='returnTop' class='fadeOut'>
-    <a data-target="port--about-sec" class='menu-item'>
-      <img src="img/top-button.png" alt="Return to top">
-    </a>
+          <div id="cookie-alert">
+            <img class='ico' src="{{cookie-policy.icon}}" alt="{{cookie-policy.icon-alt-text}}">
+            <span class="cookie-text">{{linkReplace cookie-policy.text cookie-policy.policy-link "LINK"}}</span
+            <a href="#"><span id='ok-cookie' class='x-closer'>OK</span></a>
+          </div>
+
+          <div id='social-sidebar' class="minimize"> 
+            <ul>
+              <li id='social-header-ico'>
+                  <img src="img/social-media-integrated.png" alt="Header">
+              </li>
+              {{#each social-sidebar.list-items}}
+                <li>
+                  <a href="{{link}}" target="_blank">
+                    <img src="{{img}}" alt="{{img-alt}}">
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+          <section id='port-sections'>
+            <!--ABOUT SECTION-->
+            <div id='port--about-sec'>
+              <section class='sec-container'>
+                  <div class='section--title'>
+                    <p>[{{about.sectionTitle}}]</p>
+                  </div>
+                  <article>
+                    <div id='port--about-pic'`>
+                      <img src={{about.image}}
+                        alt={{about.image_alt}}>
+                    </div>
+                    <div>
+                      <p>{{about.bioIntro}}</p>
+                    </div>
+                  </article>
+                </section>
+              </div>
+              <div class="divider">
+                  <img src="img/graffiti-headphones.png" alt="">
+              </div>
+
+              <!--PROJECTS SECTION-->
+              <div id='port--project-sec'>
+                <section class='sec-container'>
+                  <div class='section--title'>
+                    <p>{{projects.sectionTitle}}</p>
+                  </div>
+                  <div class='section-text'>
+                    <p>{{projects.text}}</p>
+                  </div>
+                  <div id="project-carousel">
+                      <div class="scroll"><i class="fas fa-angle-left"></i></div>
+                      <div class="projects-main">
+                        <div class="project-list">
+                          <!-- Projects are stored in carouselData.json file
+                          Parsed and populated by carousel.js -->
+                        </div>
+                      </div>
+                      <div class="scroll" data-dir='right'>
+                        <a>
+                          <i class="fas fa-angle-right"></i>
+                        </a>
+                      </div>
+                      
+                      <div class="page-dots"></div>
+
+                      {{!Modal for each project}}
+                      <div class="modal hide">
+                        <div class="modal-close">
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                        <div>
+                          <img class="image" src="" alt="">
+                        </div>
+                        <div class="content">
+                          <p class="title"></p>
+                          <p class="desc"></p>
+                          <p class="date"></p>
+                          <p class="tech"></p>
+                          <div class="links">
+                            <span>
+                              <i class="fas fa-globe"></i>
+                              <span class="demo"></span>
+                            </span> 
+                            <span>
+                              <i class="fab fa-github"></i>
+                              <span class="repo"></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </section>
+              </div>
+              <div class="divider">
+                  <img src="img/divide_spaceinvader.png" alt="">
+              </div>
+
+
+              <!--SKILLS SECTION-->
+              <div id='port--skills-sec'>
+                <section class='sec-container'>
+                  <div class='section--title'>
+                    <p>{{skills.sectionTitle}}</p>
+                  </div>
+                  <div class='section-text'>
+                    <p>{{skills.text}}</p>
+                  </div>
+                  <div id='skill-graphs'>
+                    <div class='flex-row graph-titles'>
+                      <span class='width-75 font-md font-green' data-graph-bar='proficient'>Frontend Development</span>
+                      <span class='width-25 font-md font-purple' data-graph-bar='learning'>Backend Development</span>
+                    </div> 
+                    <div class='graph-flex-row'>
+                      <span data-skill-name="front-end"
+                            data-graph-bar="proficient"
+                            data-about="Proficient I really know my way around here."
+                            class='graph-bar bar-bg-green'>75%</span>
+                      <span data-skill-name="back-end"
+                            data-graph-bar="learning" 
+                            data-about="Learning I am actively increasing my skills in this area."
+                            class='graph-bar bar-bg-purple'>25%</span>      
+                    </div>
+                  </div>     
+                  
+                  <div class='bar-graphs'>
+                    <!-- GRAPH 1 -->
+                    {{#each skills.graphs}}
+                      <div class='graph-container'>
+                        <p class='graph-title font-green'>{{title}}</p>
+                        <div class='graph'>
+                          <div class='y-axis'>
+                            <ul>
+                              {{#each ../skill-levels}}
+                                <li>{{this}}</li>
+                              {{/each}}
+                            </ul>
+                          </div>
+                          <div class='bars'>
+                            {{#each skills}}
+                              <div data-skill-name="{{skill}}"
+                                  data-graph-bar="{{level}}" 
+                                  class='bar graph-bar bar-bg-{{bar-colour}} tooltip'>
+                                    <span class='tooltip-text'><em>{{level}} </em><i>{{level-text}}</i></span>
+                              </div>
+                            {{/each}}
+                          </div>
+                          <div class='x-axis'>
+                            <ul>
+                              {{#each skills}}
+                                <li>{{skill}}</li>
+                              {{/each}}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    {{/each}}
+                  </div>
+                  
+                </div>
+              </div>
+
+              <div class="divider">
+                  <img src="img/graffiti-love.png" alt="">
+              </div>
+
+              <div id='port--contact-sec'>
+                  <section class='sec-container'>
+                    <div class='section--title'>
+                      <p>[{{contact.sectionTitle}}]</p>
+                    </div>
+                    <div class='section-text'>
+                      <p>{{contact.intro}}</p>
+                    </div>
+            
+                    <div id='bus-card-container'>    
+                     
+                      <input id='flip' type="checkbox" />
+                      <div class="card">
+                        <div id='front'>
+                          <label for='flip'>
+                            <img id='ico-flip' src="img/ic_autorenew_white_36px.svg" alt="Flip over">
+                          </label>        
+                          <p class='name'>{{about.fullName}}</p>
+                          <p class='title'>{{contact.jobTitle}}</p>
+                          <div id='about-text'>
+                            <p>{{contact.aboutMeText}}</p><br>
+                            <p>{{contact.currentEmployer}}</p>
+                          </div>
+                          <span class="purple">
+                            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+                          </span>
+                          <span class="purple">
+                            <a href="{{contact.websiteURL}}" target="_blank">{{contact.websiteText}}</a>
+                          </span>
+                          <div id='footer'>
+                            <a href="https://encyclopedia.moderndeveloper.com/" target="_blank">
+                              <img src="img/enc2.png" alt="MD Encyclopedia Logo" />
+                              <div class='flex-column'>
+                                <p>Patrick Franz</p>
+                                <p>on <span class='purple'>Encyclopedia.MD</span></p>
+                              </div>
+                            </a>
+                            <div id='social'>
+                              <a href="{{contact.twitter}}" target="_blank"><img src="img/twitter.png" alt="Twitter Icon"></a>
+                              <a href="{{contact.github}}" target="_blank"><img src="img/github2.png" alt="GitHub Icon"></a>
+                              <a href="{{contact.linkedin}}" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Logo"></a>
+                            </div> 
+                          </div>
+                        </div>
+                        <div id='back'>
+                          <label for='flip'>
+                            <img id='ico-flip' src="img/ic_autorenew_white_36px.svg" alt="Flip over">
+                          </label>
+                          <p id="name-plate">{{about.fullName}}</p>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </section>
+                </div>
+
+                <footer>
+                  &copy;{{about.copyrightYear}} {{about.fullName}}
+                </footer>
+                
+                <div id='returnTop' class='fadeOut'>
+                  <a data-target="{{menu.0.target}}" class='menu-item'>
+                    <img src="img/top-button.png" alt="Return to top">
+                  </a>
+                </div>
+                <div id='search-na' class='modal'>
+                  <a href="#"><span class='modal-header'>&times;</span></a>
+                  <div class='modal-content'>
+                    <p>{{modal.text}}</p>
+                  </div>
+                </div>
+    </script>
   </div>
 
-  <div id='search-na' class='modal'>
-    <a href="#"<span class='modal-header'>&times;</span></a>
-    <div class='modal-content'>
-      <p>Sorry, the search feature is unavailable right now.</p>
-    </div>
-    
-  </div>
+
   <script src='js/portfolio.js'></script>
   <script src='js/carousel.js'></script>
+  <script src="js/handlebars_template.js"></script>
 </body>
 </html>

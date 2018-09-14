@@ -89,7 +89,7 @@
   bottom: -17rem;
   font-size: 1.2rem;
   position: absolute;
-  left: 16rem;
+  left: 9rem;
   @include rotate(-90deg);
 }
 .x-axis li{
@@ -229,7 +229,7 @@
   .x-axis{
     bottom: -18rem;
     font-size: 1.2rem;
-    left: 13rem;
+    left: 6rem;
     position: absolute;
     transform: rotate(-90deg);
   }
@@ -295,7 +295,7 @@
   .x-axis{
     bottom: -18rem;
     font-size: 1.2rem;
-    left: 11.5rem;
+    left: 4.5rem;
     position: absolute;
     @include rotate(-90deg);
   }

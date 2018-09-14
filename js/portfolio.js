@@ -1,4 +1,4 @@
-(function (){
+function init(){
   const COOKIE__NOTIFY_STRING = `cookieNotify=true;`;
 
   const menuItems    = Array.from(document.getElementsByClassName('menu-item'));
@@ -132,4 +132,4 @@
       }, 10);
     }
   }
-})();
+}

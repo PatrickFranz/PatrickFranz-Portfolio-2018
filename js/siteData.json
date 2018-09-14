@@ -1,0 +1,198 @@
+{
+  "menu": [
+    {
+      "target": "port--about-sec",
+      "title": "ABOUT"
+    },
+    {
+      "target": "port--project-sec",
+      "title": "PROJECTS"
+    },
+    {
+      "target": "port--skills-sec",
+      "title": "SKILLS"
+    },
+    {
+      "target": "port--contact-sec",
+      "title": "CONTACT"
+    }
+  ],
+  "about": {
+    "sectionTitle": "About",
+    "sectionSubtitle": "",
+    "fullName": "Patrick Franz",
+    "location": "Redwood City, CA",
+    "image": "img/headshot-wpap.png",
+    "image_alt": "Profile Image",
+    "bioIntro": "Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Redwood City, CA, nestled in middle of Silicon Valley where I get my fill of the technology scene. Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often.",
+    "copyrightYear": "2018"
+  },
+  "projects":{
+    "sectionTitle": "[Projects]",
+    "text": "Here you can find some of the projects I've worked on. More recent projects are at the beginning."
+  },
+  "skills": {
+    "sectionTitle": "[Skills]",
+    "text": "Here you can find some of the projects I've worked on. More recent projects are at the beginning.",
+    "skill-levels": ["Expert", "Proficient","Competent", "Learning"],
+    "graphs": [
+      {
+        "title": "Frontend Skills",
+        "skills" : [
+          {
+            "skill": "JavaScript",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "blue"
+          },
+          {
+            "skill": "HTML/CSS",
+            "level": "expert",
+            "level-text": "I can do this in my sleep",
+            "bar-colour": "yellow"
+          },
+          {
+            "skill": "Handlebars.JS",
+            "level": "competent",
+            "level-text": "I can do a lot here, but I'm still learning.",
+            "bar-colour": "purple"
+          },
+          {
+            "skill": "SASS",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "green2"
+          },
+          {
+            "skill": "React.JS",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "red"
+          }
+        ]
+      },
+      {
+        "title": "Backend Skills",
+        "skills" : [
+          {
+            "skill": "Java",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "blue"
+
+          },
+          {
+            "skill": "SQL Query",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "yellow"
+          },
+          {
+            "skill": "RWD",
+            "level": "learning",
+            "level-text": "I am actively increasing my skills in this area.",
+            "bar-colour": "purple"
+          },
+          {
+            "skill": "PHP",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "green2"
+          },
+          {
+            "skill": "Node.JS",
+            "level": "learning",
+            "level-text": "I am actively increasing my skills in this area.",
+            "bar-colour": "red"
+          }
+        ]
+      },
+      {
+        "title": "Other",
+        "skills" : [
+          {
+            "skill": "Written Communication",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "blue"
+          },
+          {
+            "skill": "Project Management",
+            "level": "competent",
+            "level-text": "I can do a lot here, but I'm still learning",
+            "bar-colour": "yellow"
+          },
+          {
+            "skill": "Research",
+            "level": "compentent",
+            "level-text": "I can do a lot here, but I'm still learning",
+            "bar-colour": "purple"
+          },
+          {
+            "skill": "Public Speaking",
+            "level": "proficient",
+            "level-text": "I really know my way around here",
+            "bar-colour": "green2"
+          },
+          {
+            "skill": "Inter-personal Skills",
+            "level": "expert",
+            "level-text": "I can do this in my sleep",
+            "bar-colour": "red"
+          }
+        ]
+      }
+    ]
+  },
+
+  "contact": {
+    "sectionTitle": "Contact",
+    "Intro": "Feel free to contact me using the links on my virtual business card",
+    "jobTitle": "Modern Developer",
+    "aboutMeText": "Patrick loves to build magical things on the web. Always curious, forever wanting to try new things, a lover of adventure.",
+    "currentEmployer": "Patrick is currently working as a freelance web developer.",
+    "websiteURL": "https://patrickfranz.github.io/",
+    "websiteText": "patrickfranz.github.io/",
+    "linkedIn": "https://www.linkedin.com/in/mrfranz/",
+    "github": "https://github.com/PatrickFranz",
+    "twitter": "https://twitter.com/ThePatrickFranz",
+    "email": "patrick@patrickfranz.com"
+  },
+
+  "cookie-policy": {
+    "icon": "img/ico-cookie.png",
+    "icon-alt-text": "Cookie icon",
+    "text": "My website uses Cookies to help provide a better experience to you, and give me an opportunity to experiment. You can find out more LINK",
+    "policy-link": "policy.html"
+  },
+
+  "search-modal": {
+    "text": "Sorry, the search feature is unavailable right now"
+  },
+
+  "social-sidebar": {
+    "list-items": [
+      {
+        "link": "https://github.com/PatrickFranz",
+        "img": "img/github3.png",
+        "img-alt": "GitHub Logo"
+      },
+      {
+        "link": "https://www.facebook.com",
+        "img": "img/facebook.png",
+        "img-alt": "Facebook Logo"
+      },
+      {
+        "link": "https://www.linkedin.com/in/mrfranz/",
+        "img": "img/linkedin.png",
+        "img-alt": "LinkedIn Logo"
+      },
+      {
+        "link": "https://twitter.com/ThePatrickFranz",
+        "img": "img/twitter.png",
+        "img-alt": "Twitter Logo"
+      }
+    ]
+  }
+
+}

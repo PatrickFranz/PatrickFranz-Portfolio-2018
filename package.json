@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "node-sass -w css/portfolio.scss css/portfolio.css"
   },
   "repository": {
     "type": "git",
@@ -16,12 +17,10 @@
     "url": "https://github.com/PatrickFranz/md_personal_portfolio/issues"
   },
   "homepage": "https://github.com/PatrickFranz/md_personal_portfolio#readme",
-  "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^3.2.1",
-    "grunt-contrib-watch": "^1.1.0"
+  "dependencies": {
+    "handlebars": "^4.0.12"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
 }

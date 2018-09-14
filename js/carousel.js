@@ -1,10 +1,12 @@
-let projectList = [];
-const scrollButtons = document.querySelectorAll('.scroll');
-const SHOW_ELEMENTS = 6;
-let pageNumber = 1;
-scrollButtons.forEach(btn => btn.addEventListener('click', handleScroll));
 
-getProjectData();
+function loadCarousel(){
+  window.projectList = [];
+  window.SHOW_ELEMENTS = 6;
+  window.pageNumber = 1;
+  const scrollButtons = document.querySelectorAll('.scroll');
+  scrollButtons.forEach(btn => btn.addEventListener('click', handleScroll));
+  getProjectData();
+}
 
 function getProjectData(){
   if(sessionStorage.getItem('carouselData')){
