@@ -15,11 +15,15 @@
   <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+<<<<<<< HEAD
   <script type='text/javascript' src='js/handlebars-v4.0.12.js'></script>
+=======
+>>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
 
   <title>Patrick Franz /WebDeveloper</title>
 </head>
 <body>
+<<<<<<< HEAD
   <div class="main-container">
     <script id="hbs-source" type="x-handlebars-template">
         <section id="topNavBar">
@@ -51,6 +55,97 @@
                 <li class='fine-print'>&copy;2018 {{about.fullName}} <br> All rights reserved.</li>
             </ul> 
             </nav>
+=======
+
+  <section id="topNavBar">
+    <span class="logo"></span>
+    <nav>
+      <ul>
+         <a class='menu-item' data-target="port--about-sec"><li>ABOUT</li></a
+        ><a class='menu-item' data-target="port--project-sec"><li>PROJECTS</li></a
+        ><a class='menu-item' data-target="port--skills-sec"><li>SKILLS</li></a
+        ><a class='menu-item' data-target="port--contact-sec"><li>CONTACT</li></a>
+      </ul>
+    </nav>
+    <span class="resume">
+      <a target="_blank"
+         href="https://www.dropbox.com/s/5uu2k0ot5vhywt2/PatrickFranzResume_FrontEnd--6-2018.pdf?dl=0">My Resume
+      <i class="fas fa-cloud-download-alt"></i>
+    </span>
+    </a>
+  </section>
+  <!--For screens < 360px-->
+  <input type="checkbox" id="cb-menu-show" />
+  <div id="mobile-menu-bar">
+    <label id="lbl-hamburger" for="cb-menu-show">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav>
+      <ul>
+        <li>Patrick Franz</li>
+        <a href="#port--about-sec"><li>ABOUT</li></a
+        ><a href="#port--project-sec"><li>PROJECTS</li></a
+        ><a href="#port--skills-sec"><li>SKILLS</li></a
+        ><a href="#port--contact-sec"><li>CONTACT</li></a
+        ><li class='fine-print'>&copy;2017 Patrick Franz <br> All rights reserved.</li>
+      </ul>
+
+      <div class="resume">
+        <a target="_blank"
+            href="https://www.dropbox.com/s/5uu2k0ot5vhywt2/PatrickFranzResume_FrontEnd--6-2018.pdf?dl=0">My Resume
+          <i class="fas fa-cloud-download-alt"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div id="cookie-alert">
+    <img class='ico' src="img/ico-cookie.png" alt="">
+    <span>My website uses Cookies to help provide a better experience to you, and give me an opportunity to experiment. You can find out more <a href="!#">here</a>.</span>
+    <a href="#"><span id='ok-cookie' class='x-closer'>OK</span></a>
+  </div>
+
+  <div id='social-sidebar' class="minimize"> 
+    <ul>
+      <li id='social-header-ico'>
+          <img src="img/social-media-integrated.png" alt="Header">
+      </li>
+      <hr>
+      <li><a href="https://github.com/PatrickFranz" target="_blank">
+          <img src="img/github3.png" alt="GitHub Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="img/facebook.png" alt="Facebook Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/mrfranz/" target="_blank">
+          <img src="img/linkedin.png" alt="LinkedIn Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ThePatrickFranz" target="_blank">
+          <img src="img/twitter.png" alt="Twitter Logo">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section id='port-sections'>
+    <!--ABOUT SECTION-->
+    <div id='port--about-sec'>
+      <section class='sec-container'>
+        <div class='section--title'>
+          <p>[About]</p>
+        </div>
+        <article>
+          <div id='port--about-pic'`>
+            <img src="img/headshot-wpap.png"
+              alt="Profile image">
+>>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
           </div>
           <div id="cookie-alert">
             <img class='ico' src="{{cookie-policy.icon}}" alt="{{cookie-policy.icon-alt-text}}">
