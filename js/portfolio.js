@@ -44,7 +44,6 @@ function init(){
     } else {
       socialSideBar.classList.add("minimize");
       socialSideBar.classList.remove('restore');
-      socialSideBar.classList.add('transition-bottom');
     }
   });
 
