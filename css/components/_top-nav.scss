@@ -31,6 +31,13 @@
       content: "PATRICK FRANZ";
   }
 
+  .resume{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 2rem 3rem;
+  }
+
   span{
     margin: 3rem 5rem 0;
   }
@@ -38,9 +45,8 @@
   nav{
     margin: 0 auto;
     
-    li{
+    li, .resume{
       display: inline-block;
-      padding: 3rem 4rem;
       transition: all ease 0.5s;
      
       &:hover{

@@ -307,15 +307,19 @@ strong {
   user-select: none; }
   #topNavBar .logo:after {
     content: "PATRICK FRANZ"; }
+  #topNavBar .resume {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: 2rem 3rem; }
   #topNavBar span {
     margin: 3rem 5rem 0; }
   #topNavBar nav {
     margin: 0 auto; }
-    #topNavBar nav li {
+    #topNavBar nav li, #topNavBar nav .resume {
       display: inline-block;
-      padding: 3rem 4rem;
       transition: all ease 0.5s; }
-      #topNavBar nav li:hover {
+      #topNavBar nav li:hover, #topNavBar nav .resume:hover {
         color: #3E4651;
         background: #ff47aa;
         cursor: pointer; }
