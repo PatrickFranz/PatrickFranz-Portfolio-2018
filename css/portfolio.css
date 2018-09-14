@@ -337,15 +337,13 @@ strong {
     padding: 2rem 1rem; }
   #topNavBar .resume {
     margin: 2rem 0 0; } }
+
 @media (max-width: 600px) {
   #topNavBar {
     font-size: 1rem; }
-
   nav li {
     padding: 2rem 1rem; } }
-<<<<<<< HEAD
 
-=======
 @media (max-width: 425px) {
   #topNavBar {
     align-items: center;
@@ -379,10 +377,10 @@ strong {
           font-size: 1.5rem;
           padding: 2rem 1rem;
           width: 100%; } }
+
 @media (max-width: 360px) {
   #topNavBar {
     display: none; }
-
   #mobile-menu-bar {
     background: #0C2032;
     border-bottom: 5px solid #42586E;
@@ -439,7 +437,6 @@ strong {
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
-
   #cb-menu-show:checked ~ #port-sections {
     overflow-x: hidden;
     transform: translate(50vw); }
@@ -466,7 +463,7 @@ strong {
       -ms-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -webkit-transform: rotate(45deg); } }
->>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
+
 #bus-card-container {
   display: block;
   font-family: "Lato", "sans-serif";
@@ -1402,12 +1399,6 @@ footer {
         width: 25px; } }
 
 @media (max-width: 600px) {
-<<<<<<< HEAD
-  nav li {
-    font-size: 1rem;
-    padding: 2rem 1rem; }
-=======
->>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
   #port-sections .sec-container {
     margin: 0 1rem; }
   .bar-graphs {
@@ -1435,39 +1426,6 @@ footer {
 @media (max-width: 425px) {
   body {
     overflow: hidden; }
-<<<<<<< HEAD
-  #topNavBar {
-    align-items: center;
-    flex-direction: column;
-    padding: 0;
-    position: relative; }
-    #topNavBar #logo {
-      display: none;
-      position: absolute;
-      top: 3rem; }
-      #topNavBar #logo:after {
-        content: url("../img/hamburger-1.png");
-        font-size: 2rem; }
-    #topNavBar nav {
-      margin: 0; }
-      #topNavBar nav ul {
-        color: #ecf0f1;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 100vw;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-        -ms-transition: all ease 0.5s;
-        -o-transition: all ease 0.5s;
-        transition: all ease 0.5s; }
-        #topNavBar nav ul li {
-          font-size: 1.5rem;
-          padding: 2rem 1rem;
-          width: 100%; }
-=======
-
->>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
   #port-sections #port--about-sec {
     background: rgba(52, 152, 219, 0.75);
     padding: 0 1rem; }
@@ -1502,12 +1460,6 @@ footer {
 @media (max-width: 360px) {
   strong {
     color: #0C2032; }
-<<<<<<< HEAD
-  #topNavBar {
-    display: none; }
-=======
-
->>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
   #mobile-menu-bar {
     background: #0C2032;
     border-bottom: 5px solid #42586E;
@@ -1584,30 +1536,6 @@ footer {
       -ms-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
       -webkit-transform: rotate(45deg); }
-<<<<<<< HEAD
-  #port-sections #port--project-sec #projects-container #projects-right .proj-carousel {
-    padding: 3rem 0; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input {
-      display: none; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(1):checked ~ .carousel--radio-buttons label:nth-of-type(1) {
-        background: #0C2032; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(2):checked ~ .carousel--radio-buttons label:nth-of-type(2) {
-        background: #0C2032; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--input:nth-of-type(3):checked ~ .carousel--radio-buttons label:nth-of-type(3) {
-        background: #0C2032; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel i {
-      flex: 0 0 auto; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label {
-      border: 2px solid #42586E; }
-      #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .carousel--radio-buttons label:hover {
-        background: #42586E; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control {
-      color: #0C2032; }
-    #port-sections #port--project-sec #projects-container #projects-right .proj-carousel .project--carousel-frame .c-control:hover {
-      color: #42586E; }
-=======
-
->>>>>>> 8ea53e785e612cd7bc107d6387788c45cabc7b03
   /* TOOLTIP */
   .tooltip .tooltip-text {
     background: #0C2032;
