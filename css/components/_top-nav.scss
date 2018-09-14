@@ -19,7 +19,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  padding: 0 3rem;
+  padding: 0 1rem 0 3rem;
   background: $make-it-pop;
   border-bottom: 0.5rem solid $primary-accent;
   font-size: 2rem;
@@ -33,9 +33,8 @@
 
   .resume{
     position: absolute;
-    right: 1rem;
-    top: 0;
-    padding: 2rem 3rem;
+    right: 3rem;
+    top: 0rem;
   }
 
   span{
@@ -47,6 +46,7 @@
     
     li, .resume{
       display: inline-block;
+      padding: 3rem 4rem;
       transition: all ease 0.5s;
      
       &:hover{
@@ -68,8 +68,8 @@
     }
 
     nav{
-      li{
-        padding: 2rem 2rem;
+      li, .resume{
+        padding: 2rem 0rem 2rem 2rem;
       }
     }
   }
@@ -87,26 +87,21 @@
 
     nav{
       ul{
-        li{
+        li, .resume{
           padding: 2rem 1rem;
         }
       }
     }
-
-    .resume{
-      margin: 2rem 0 0;
-    }
   }
 }
 
-@media(max-width: 600px){
+@media(max-width: 700px){
   #topNavBar{
     font-size: 1rem;
   }
 
   nav{
-    li{
-     
+    li, .resume{
       padding: 2rem 1rem;
     }
   }
@@ -119,10 +114,6 @@
     padding: 0;
     padding-bottom: 10px;
     position: relative;
-
-    .resume{
-      font-size: 1.5rem;
-    }
 
     #logo{
       display: none;
@@ -147,7 +138,7 @@
         @include transition(all, ease, 0.5s);
 
 
-        li{
+        li, .resume{
           font-size: 1.5rem;
           padding: 2rem 1rem;
           width: 100%;
