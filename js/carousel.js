@@ -33,7 +33,7 @@ function showModal(e){
   modal.querySelector('.image').alt = `${projectData.title} screenshot`;
   modal.querySelector('.title').innerHTML = `<h1>${projectData.title}</h1>`;
   modal.querySelector('.desc').innerHTML = projectData.desc;
-  modal.querySelector('.date').innerHTML = `Date: ${projectData.date}`;
+  modal.querySelector('.date').innerHTML = `Last Updated: ${projectData.date}`;
   modal.querySelector('.tech').innerHTML = `Technology: ` + projectData.techUsed.join(', ');
   modal.querySelector('.demo').innerHTML = `<a href="${projectData.demoUrl}" target="_blank">Live Demo</a>`;
   modal.querySelector('.repo').innerHTML = `<a href="${projectData.repoUrl}" target="_blank">Github Repo</a>`;
@@ -42,7 +42,7 @@ function showModal(e){
 
 function populateProjectList(projects){
   projects
-  .sort( (a, b) => new Date(a.date) < new Date(b.date) )
+  .sort( (a, b) => new Date(b.date) - new Date(a.date) )
   .map(project => {
     const template = document.createElement('template');
     const html =
