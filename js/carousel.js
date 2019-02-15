@@ -27,7 +27,13 @@ function showModal(e){
   const projectData = carouselData.find(project => project.id == this.dataset.id);
   const modal = document.querySelector('.modal');
   
-  modal.querySelector('.modal-close').addEventListener('click', e => modal.classList.add('hide'));
+  modal.querySelector('.modal-close').addEventListener('click', e => ( close_modal(modal)));
+  window.addEventListener('keyup', e => {
+    if(e.keyCode === 27 && !modal.classList.contains('hide')){
+      console.log(e.keyCode)
+      close_modal(modal);
+    }
+  });
   modal.classList.remove('hide');
   modal.querySelector('.image').src = projectData.img_large;
   modal.querySelector('.image').alt = `${projectData.title} screenshot`;
@@ -37,7 +43,10 @@ function showModal(e){
   modal.querySelector('.tech').innerHTML = `Technology: ` + projectData.techUsed.join(', ');
   modal.querySelector('.demo').innerHTML = `<a href="${projectData.demoUrl}" target="_blank">Live Demo</a>`;
   modal.querySelector('.repo').innerHTML = `<a href="${projectData.repoUrl}" target="_blank">Github Repo</a>`;
- 
+}
+
+function close_modal(modal){
+  modal.classList.add('hide')
 }
 
 function populateProjectList(projects){
