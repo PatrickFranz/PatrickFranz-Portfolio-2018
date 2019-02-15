@@ -30,7 +30,6 @@ function showModal(e){
   modal.querySelector('.modal-close').addEventListener('click', e => ( close_modal(modal)));
   window.addEventListener('keyup', e => {
     if(e.keyCode === 27 && !modal.classList.contains('hide')){
-      console.log(e.keyCode)
       close_modal(modal);
     }
   });
