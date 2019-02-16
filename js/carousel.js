@@ -27,12 +27,14 @@ function showModal(e){
   const projectData = carouselData.find(project => project.id == this.dataset.id);
   const modal = document.querySelector('.modal');
   
+  //Close modal on clicking X or ESC key
   modal.querySelector('.modal-close').addEventListener('click', e => ( close_modal(modal)));
   window.addEventListener('keyup', e => {
     if(e.keyCode === 27 && !modal.classList.contains('hide')){
       close_modal(modal);
     }
   });
+  
   modal.classList.remove('hide');
   modal.querySelector('.image').src = projectData.img_large;
   modal.querySelector('.image').alt = `${projectData.title} screenshot`;
