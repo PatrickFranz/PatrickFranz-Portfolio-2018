@@ -1,5 +1,5 @@
 {
-  "projects" : [
+  "projects": [
     {
       "id": 102,
       "title": "Product Listing",
@@ -40,7 +40,7 @@
       "img_thumb": "../img/caro-30DaysJS-01.png",
       "desc": "Wes Bos's JavaScript 30 course. I've also built a calendar looking frontend page for the exercises to make it easier to check out the projects. This is a great course on understanding advanced JavaScript/ES6.",
       "date": "Dec 2018",
-      "techUsed": ["JavaScript", "ES6", "Sass/CSS", "HTML" ],
+      "techUsed": ["JavaScript", "ES6", "Sass/CSS", "HTML"],
       "demoUrl": "https://patrickfranz.github.io/Javascript-30-days/",
       "repoUrl": "https://github.com/PatrickFranz/Javascript-30-days"
     },
@@ -51,7 +51,7 @@
       "img_thumb": "../img/caro-socialCards-01.png",
       "desc": "I wanted to play with React on my own; no tutorials. Social cards allows the user to create a Social Card that they might use on different social media platforms.",
       "date": "Jan 2018",
-      "techUsed": ["React", "JavaScript","ES6", "Sass/CSS", "HTML"],
+      "techUsed": ["React", "JavaScript", "ES6", "Sass/CSS", "HTML"],
       "demoUrl": "https://patrickfranz.github.io/social-cards/",
       "repoUrl": "https://github.com/PatrickFranz/social-cards"
     },
@@ -62,7 +62,14 @@
       "img_thumb": "../img/caro-Gifolio-01.png",
       "desc": "I LOVE GIFS! I found that Giphy had an open API and I was playing around with the new CSS Grid layout that dropped recently, so I built a fun app that you can save your favorite GIF's to.",
       "date": "Feb 2018",
-      "techUsed": ["JavaScript","ES6", "Giphy API", "Sass/CSS", "HTML", "CSS Grid"],
+      "techUsed": [
+        "JavaScript",
+        "ES6",
+        "Giphy API",
+        "Sass/CSS",
+        "HTML",
+        "CSS Grid"
+      ],
       "demoUrl": "https://patrickfranz.github.io/Gifolio/",
       "repoUrl": "https://github.com/PatrickFranz/Gifolio"
     },
@@ -73,7 +80,7 @@
       "img_thumb": "../img/caro-seatoskyhotel-01.png",
       "desc": "A former support client of mine was in need of refresh for their hotel property and approached me to see if I would like to take it on. Of course I would! They had struggled with latency and bandwidth issues with their last Wordpress site, so I built their site using minimal frameworks. I'm really proud of the router I built from scratch and the design I came up with. This site is fully responsive and looks great at all resolutions.",
       "date": "Jan 2019",
-      "techUsed": ["JavaScript","ES6", "PureCSS", "Sass/CSS", "Handlebars.js"],
+      "techUsed": ["JavaScript", "ES6", "PureCSS", "Sass/CSS", "Handlebars.js"],
       "demoUrl": "https://sea-to-sky-hotel.herokuapp.com/",
       "repoUrl": "https://github.com/PatrickFranz/seatoskyhotel"
     },
@@ -84,10 +91,10 @@
       "img_thumb": "../img/caro-portfolio-01.png",
       "desc": "I've created this Portfolio site as a way to showcase things I've learned and what I can do. With this site, in particular, I wanted to build from scratch. In other words, no CSS frameworks, no JS frameworks (ok, except Handlebars.js, but only because I love how it seperates data from design.). Everything you see on this page was hand coded by me, and I update, usually when I add a new project to the wall of fame.",
       "date": "Jan 2019",
-      "techUsed": ["JavaScript","ES6", "Sass/CSS", "Handlebars.js"],
+      "techUsed": ["JavaScript", "ES6", "Sass/CSS", "Handlebars.js"],
       "demoUrl": "https://www.patrickfranz.com/",
       "repoUrl": "https://github.com/PatrickFranz/PatrickFranz.github.io"
-    }
+    },
     {
       "id": 110,
       "title": "Blue Water Canvas Works",
@@ -95,7 +102,7 @@
       "img_thumb": "../img/caro-bluewatercanvas-01.png",
       "desc": "A really fun project for a great client using GatsbyJS and Sanity.io CMS. This is my first project using these Jamstack technologies for a professional project and it went so smoothly, I'd turn to this stack in a second.",
       "date": "Jan 2021",
-      "techUsed": ["ReactJS","GatsbyJS", "Sass/CSS", "Sanity CMS"],
+      "techUsed": ["ReactJS", "GatsbyJS", "Sass/CSS", "Sanity CMS"],
       "demoUrl": "https://www.bluewatercanvasworks.net/",
       "repoUrl": "N/A"
     }
