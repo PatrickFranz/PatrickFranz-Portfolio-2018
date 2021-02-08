@@ -88,5 +88,16 @@
       "demoUrl": "https://www.patrickfranz.com/",
       "repoUrl": "https://github.com/PatrickFranz/PatrickFranz.github.io"
     }
+    {
+      "id": 110,
+      "title": "Blue Water Canvas Works",
+      "img_large": "../img/caro-large-bluewatercanvas-01.png",
+      "img_thumb": "../img/caro-bluewatercanvas-01.png",
+      "desc": "A really fun project for a great client using GatsbyJS and Sanity.io CMS. This is my first project using these Jamstack technologies for a professional project and it went so smoothly, I'd turn to this stack in a second.",
+      "date": "Jan 2021",
+      "techUsed": ["ReactJS","GatsbyJS", "Sass/CSS", "Sanity CMS"],
+      "demoUrl": "https://www.bluewatercanvasworks.net/",
+      "repoUrl": "N/A"
+    }
   ]
 }
