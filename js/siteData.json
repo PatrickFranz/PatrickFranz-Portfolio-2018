@@ -24,21 +24,21 @@
     "location": "Redwood City, CA",
     "image": "img/headshot-wpap.png",
     "image_alt": "Profile Image",
-    "bioIntro": "Welcome to my little corner of web. My name is Patrick Franz and I am a Web Developer. I live in Redwood City, CA, nestled in middle of Silicon Valley where I get my fill of the technology scene. Here you'll find projects I've worked on, technology I'm psyched about, and articles about software development. I update this site frequently so come back often.",
-    "copyrightYear": "2018"
+    "bioIntro": "Thanks for checking out my Portfolio Site! Since this site was built to show off what I can do, I built the entire site WITHOUT using any Frontend JS or CSS Frameworks (I wanted to try out Handlebar.js to seperate data, tho.). Normally, you'll find me working with React, Gatsby, and recently Sanity CMS to build fully-featured, really fast websites. Check out my projects to see more.",
+    "copyrightYear": 2021
   },
-  "projects":{
+  "projects": {
     "sectionTitle": "[Projects]",
     "text": "Here you can find some of the projects I've worked on. More recent projects are at the beginning."
   },
   "skills": {
     "sectionTitle": "[Skills]",
     "text": "Here you can find some of the projects I've worked on. More recent projects are at the beginning.",
-    "skill-levels": ["Expert", "Proficient","Competent", "Learning"],
+    "skill-levels": ["Expert", "Proficient", "Competent", "Learning"],
     "graphs": [
       {
         "title": "Frontend Skills",
-        "skills" : [
+        "skills": [
           {
             "skill": "JavaScript",
             "level": "proficient",
@@ -73,13 +73,12 @@
       },
       {
         "title": "Backend Skills",
-        "skills" : [
+        "skills": [
           {
             "skill": "Java",
             "level": "proficient",
             "level-text": "I really know my way around here",
             "bar-colour": "blue"
-
           },
           {
             "skill": "SQL Query",
@@ -109,7 +108,7 @@
       },
       {
         "title": "Other",
-        "skills" : [
+        "skills": [
           {
             "skill": "Written Communication",
             "level": "proficient",
@@ -194,5 +193,4 @@
       }
     ]
   }
-
 }

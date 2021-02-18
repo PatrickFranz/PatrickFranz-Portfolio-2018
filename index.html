@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="css/portfolio.css">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <script type='text/javascript' src='js/handlebars-v4.0.12.js'></script>
+    <link rel="stylesheet" href="css/portfolio.css" />
 
-  <title>Patrick Franz /WebDeveloper</title>
-</head>
-<body>
-  <div class="main-container">
-    <script id="hbs-source" type="x-handlebars-template">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <script type="text/javascript" src="js/handlebars-v4.0.12.js"></script>
+
+    <title>Patrick Franz /WebDeveloper</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <script id="hbs-source" type="x-handlebars-template">
         <section id="topNavBar">
             <span class="logo"></span>
             <nav>
@@ -40,7 +65,7 @@
                   <i class="fas fa-cloud-download-alt"></i>
                 </a>
               </div>
-          
+
             </nav>
           </section>
           <input type="checkbox" id="cb-menu-show" />
@@ -57,7 +82,7 @@
                   <a href="#{{target}}"><li>{{title}}</li></a>
                 {{/each}}
                 <li class='fine-print'>&copy;2018 {{about.fullName}} <br> All rights reserved.</li>
-            </ul> 
+            </ul>
             </nav>
           </div>
           <div id="cookie-alert">
@@ -66,7 +91,7 @@
             <a href="#"><span id='ok-cookie' class='x-closer'>OK</span></a>
           </div>
 
-          <div id='social-sidebar' class="minimize"> 
+          <div id='social-sidebar' class="minimize">
             <ul>
               <li id='social-header-ico'>
                   <img src="img/social-media-integrated.png" alt="Header">
@@ -124,7 +149,7 @@
                           <i class="fas fa-angle-right"></i>
                         </a>
                       </div>
-                      
+
                       <div class="page-dots"></div>
 
                       {{!Modal for each project}}
@@ -144,7 +169,7 @@
                             <span>
                               <i class="fas fa-globe"></i>
                               <span class="demo"></span>
-                            </span> 
+                            </span>
                             <span>
                               <i class="fab fa-github"></i>
                               <span class="repo"></span>
@@ -173,19 +198,19 @@
                     <div class='flex-row graph-titles'>
                       <span class='width-75 font-md font-green' data-graph-bar='proficient'>Frontend Development</span>
                       <span class='width-25 font-md font-purple' data-graph-bar='learning'>Backend Development</span>
-                    </div> 
+                    </div>
                     <div class='graph-flex-row'>
                       <span data-skill-name="front-end"
                             data-graph-bar="proficient"
                             data-about="Proficient I really know my way around here."
                             class='graph-bar bar-bg-green'>75%</span>
                       <span data-skill-name="back-end"
-                            data-graph-bar="learning" 
+                            data-graph-bar="learning"
                             data-about="Learning I am actively increasing my skills in this area."
-                            class='graph-bar bar-bg-purple'>25%</span>      
+                            class='graph-bar bar-bg-purple'>25%</span>
                     </div>
-                  </div>     
-                  
+                  </div>
+
                   <div class='bar-graphs'>
                     <!-- GRAPH 1 -->
                     {{#each skills.graphs}}
@@ -202,7 +227,7 @@
                           <div class='bars'>
                             {{#each skills}}
                               <div data-skill-name="{{skill}}"
-                                  data-graph-bar="{{level}}" 
+                                  data-graph-bar="{{level}}"
                                   class='bar graph-bar bar-bg-{{bar-colour}} tooltip'>
                                     <span class='tooltip-text'><em>{{level}} </em><i>{{level-text}}</i></span>
                               </div>
@@ -219,9 +244,9 @@
                       </div>
                     {{/each}}
                   </div>
-                  
+
                 </div>
-              
+
 
               <div class="divider">
                   <img src="img/graffiti-love.png" alt="">
@@ -235,15 +260,15 @@
                     <div class='section-text'>
                       <p>{{contact.intro}}</p>
                     </div>
-            
-                    <div id='bus-card-container'>    
-                     
+
+                    <div id='bus-card-container'>
+
                       <input id='flip' type="checkbox" />
                       <div class="card">
                         <div id='front'>
                           <label for='flip'>
                             <img id='ico-flip' src="img/ic_autorenew_white_36px.svg" alt="Flip over">
-                          </label>        
+                          </label>
                           <p class='name'>{{about.fullName}}</p>
                           <p class='title'>{{contact.jobTitle}}</p>
                           <div id='about-text'>
@@ -267,8 +292,8 @@
                             <div id='social'>
                               <a href="{{contact.twitter}}" target="_blank"><img src="img/twitter.png" alt="Twitter Icon"></a>
                               <a href="{{contact.github}}" target="_blank"><img src="img/github2.png" alt="GitHub Icon"></a>
-                              <a href="{{contact.linkedin}}" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Logo"></a>
-                            </div> 
+                              <a href="{{contact.linkedIn}}" target="_blank"><img src="img/linkedin.png" alt="LinkedIn Logo"></a>
+                            </div>
                           </div>
                         </div>
                         <div id='back'>
@@ -278,7 +303,7 @@
                           <p id="name-plate">{{about.fullName}}</p>
                         </div>
                       </div>
-              
+
                     </div>
                   </section>
                 </div>
@@ -286,7 +311,7 @@
                 <footer>
                   &copy;{{about.copyrightYear}} {{about.fullName}}
                 </footer>
-                
+
                 <div id='returnTop' class='fadeOut'>
                   <a data-target="{{menu.0.target}}" class='menu-item'>
                     <img src="img/top-button.png" alt="Return to top">
@@ -298,12 +323,11 @@
                     <p>{{modal.text}}</p>
                   </div>
                 </div>
-    </script>
-  </div>
+      </script>
+    </div>
 
-
-  <script src='js/portfolio.js'></script>
-  <script src='js/carousel.js'></script>
-  <script src="js/handlebars_template.js"></script>
-</body>
+    <script src="js/portfolio.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/handlebars_template.js"></script>
+  </body>
 </html>
